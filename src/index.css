@@ -2382,3 +2382,30 @@ kbd { font-size: 0.7rem; font-weight: 700; padding: 1px 5px; }
   box-shadow: none;
 }
 .view-switch { border-color: var(--elevate-hairline); }
+
+
+/* elevate4: bar gap MindNode — organic chalk limbs (grown, not CAD) */
+.edge-line-under {
+  stroke-width: 13;
+  opacity: 0.55;
+  stroke: #07100c;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.edge-line {
+  stroke-width: 4.6;
+  stroke: #f7fffb;
+  opacity: 0.94;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.port-dot {
+  fill: #e09a3e;
+  opacity: 0.55;
+  r: 3.75;
+}
+.map-node:hover .port-dot,
+.map-node.is-selected .port-dot { opacity: 0.95; }
+.link-handle { opacity: 0.2; }
+.map-node:hover .link-handle,
+.map-node.is-selected .link-handle { opacity: 0.85; }
