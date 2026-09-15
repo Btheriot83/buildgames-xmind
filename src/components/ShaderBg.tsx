@@ -12,15 +12,15 @@ uniform vec2 u_res;
 void main(){
   vec2 uv = gl_FragCoord.xy / u_res;
   float n = fract(sin(dot(uv*u_res*0.35, vec2(12.9898,78.233))) * 43758.5453);
-  float grid = smoothstep(0.02, 0.0, abs(fract(uv.x*28.)-0.5)) * 0.045
-             + smoothstep(0.02, 0.0, abs(fract(uv.y*18.)-0.5)) * 0.04;
+  float grid = smoothstep(0.02, 0.0, abs(fract(uv.x*28.)-0.5)) * 0.03
+             + smoothstep(0.02, 0.0, abs(fract(uv.y*18.)-0.5)) * 0.028;
   float pulse = 0.5 + 0.5 * sin(u_t * 0.7 + uv.x * 6.0);
   vec3 ink = vec3(0.07, 0.08, 0.10);
   vec3 teal = vec3(0.11, 0.55, 0.50);
   vec3 copper = vec3(0.85, 0.52, 0.25);
-  vec3 col = ink + teal * (0.04 + 0.03 * pulse) * (1.0 - uv.y * 0.4)
-           + copper * 0.03 * uv.x * pulse
-           + vec3(n * 0.035);
+  vec3 col = ink + teal * (0.025 + 0.015 * pulse) * (1.0 - uv.y * 0.4)
+           + copper * 0.02 * uv.x * pulse
+           + vec3(n * 0.02);
   col += vec3(grid);
   gl_FragColor = vec4(col, 1.0);
 }

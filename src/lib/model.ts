@@ -51,17 +51,26 @@ export function addChild(map: MindMap, parentId: NodeId, text = 'New idea'): Min
   const parent = map.nodes.find((n) => n.id === parentId)
   if (!parent) return map
   const siblings = map.nodes.filter((n) => n.parentId === parentId)
-  const offsetY = (siblings.length - (siblings.length - 1) / 2) * 80
+  const gap = 76
   const child = createNode({
     text,
     x: parent.x + parent.width + 120,
-    y: parent.y + offsetY - 40,
+    y: parent.y + siblings.length * gap - ((siblings.length) * gap) / 2,
     parentId,
   })
   const edge = createEdge(parentId, child.id)
+  let nodes = [...map.nodes, child]
+  // Re-fan existing siblings around parent for Xmind-like insert polish
+  const kids = nodes.filter((n) => n.parentId === parentId)
+  const startY = parent.y - ((kids.length - 1) * gap) / 2
+  nodes = nodes.map((n) => {
+    if (n.parentId !== parentId) return n
+    const idx = kids.findIndex((k) => k.id === n.id)
+    return { ...n, x: parent.x + parent.width + 120, y: startY + idx * gap }
+  })
   return {
     ...map,
-    nodes: [...map.nodes, child],
+    nodes,
     edges: [...map.edges, edge],
     updatedAt: Date.now(),
   }

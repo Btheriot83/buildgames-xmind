@@ -16,7 +16,7 @@ export function OutlinePanel({ open, onClose }: { open: boolean; onClose: () => 
   const outlineToMap = useMapStore((s) => s.outlineToMap)
   const aiBusy = useMapStore((s) => s.aiBusy)
   const [text, setText] = useState(SAMPLE)
-  const [useAi, setUseAi] = useState(true)
+  const [useAi, setUseAi] = useState(false)
 
   if (!open) return null
 
@@ -46,7 +46,7 @@ export function OutlinePanel({ open, onClose }: { open: boolean; onClose: () => 
             checked={useAi}
             onChange={(e) => setUseAi(e.target.checked)}
           />
-          Prefer AI reshape
+          Ask AI to reshape
         </label>
         <button
           type="button"

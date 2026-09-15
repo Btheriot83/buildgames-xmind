@@ -480,17 +480,20 @@ kbd {
 }
 .map-node.is-root .node-input {
   color: var(--ink);
-  font-weight: 600;
+  font-weight: 700;
+  font-family: var(--font-display);
+  font-size: 15px;
+  letter-spacing: -0.02em;
 }
 .resize-handle {
-  fill: var(--acid);
+  fill: var(--bone-dim);
   stroke: var(--ink);
   stroke-width: 1.5;
   cursor: nwse-resize;
   opacity: 0;
 }
 .link-handle {
-  fill: var(--teal-glow);
+  fill: var(--teal);
   stroke: var(--ink);
   stroke-width: 1.5;
   cursor: crosshair;

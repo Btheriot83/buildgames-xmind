@@ -20,11 +20,20 @@ export default function App() {
   const selectedId = useMapStore((s) => s.selectedId)
   const connectFrom = useMapStore((s) => s.connectFrom)
   const expandSelectedAi = useMapStore((s) => s.expandSelectedAi)
+  const aiBusy = useMapStore((s) => s.aiBusy)
   const [outlineOpen, setOutlineOpen] = useState(false)
+  const [igniting, setIgniting] = useState(false)
 
   useEffect(() => {
     void boot()
   }, [boot])
+
+  useEffect(() => {
+    if (!aiBusy) return
+    setIgniting(true)
+    const id = window.setTimeout(() => setIgniting(false), 750)
+    return () => window.clearTimeout(id)
+  }, [aiBusy])
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
@@ -73,7 +82,7 @@ export default function App() {
   const booting = loadStatus === 'boot' || loadStatus === 'loading'
 
   return (
-    <div className="app-shell">
+    <div className={`app-shell ${igniting ? 'is-igniting' : ''}`}>
       <ShaderBg />
       <LoadingShell revealed={!booting} />
       {!booting && (

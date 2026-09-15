@@ -296,7 +296,7 @@ export const useMapStore = create<MapStore>((set, get) => ({
       let tree = parseOutlineText(raw)
       let title = opts?.title
       let note = 'Outline laid out locally'
-      if (opts?.useAi !== false) {
+      if (opts?.useAi === true) {
         try {
           const out = await outlineToMapAi(raw, title)
           tree = out.root
