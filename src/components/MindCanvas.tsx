@@ -16,8 +16,8 @@ export function MindCanvas() {
   const setConnectFrom = useMapStore((s) => s.setConnectFrom)
 
   const svgRef = useRef<SVGSVGElement>(null)
-  const [pan, setPan] = useState({ x: 40, y: 40 })
-  const [zoom, setZoom] = useState(1)
+  const [pan, setPan] = useState({ x: 72, y: 56 })
+  const [zoom, setZoom] = useState(0.92)
   const [drag, setDrag] = useState<DragMode>(null)
   const [panning, setPanning] = useState<{ x: number; y: number; px: number; py: number } | null>(null)
   const [pulse, setPulse] = useState(0)

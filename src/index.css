@@ -2549,3 +2549,36 @@ kbd { font-size: 0.7rem; font-weight: 700; padding: 1px 5px; }
 .workspace { grid-template-columns: 120px minmax(0, 1fr); }
 :root { --elevate-sidebar: 120px; }
 .sidebar-head .btn.sm { font-size: 0.62rem; padding: 2px 6px; }
+
+
+/* elevate11: canvas generosity — map theater vs MindNode air / Heptabase canvas */
+.canvas-wrap {
+  min-height: calc(100vh - 50px);
+  background: #0a1410;
+  box-shadow: inset 0 0 0 1px #274033;
+}
+.canvas-wrap::before { opacity: 0.55 !important; }
+.canvas-wrap::after {
+  box-shadow: inset 0 0 0 1px rgba(188, 232, 214, 0.08), inset 0 0 36px rgba(0, 0, 0, 0.18);
+}
+.btn.job-primary {
+  box-shadow: 2px 2px 0 #050a08 !important;
+  text-transform: none;
+  letter-spacing: 0.03em;
+}
+.toolbar {
+  background: #101c17;
+  border-bottom: 1.5px solid #355445;
+  min-height: 48px;
+  padding: 5px 10px;
+}
+.sidebar {
+  background: #0e1814;
+  border-right: 1.5px solid #2e463a;
+}
+.brand-mark-img { width: 30px; height: 30px; border-width: 1.5px; }
+.map-node.is-root .node-body {
+  stroke-width: 3.2;
+}
+.edge-line { stroke-width: 4.2; }
+.edge-line-under { stroke-width: 11; opacity: 0.5; }
