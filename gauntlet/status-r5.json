@@ -89,12 +89,25 @@
   },
   "workbench": "gauntlet/workbench-r5.md",
   "branch": "gauntlet/xmind-r5",
-  "finishedAtUtc": "2026-09-15T06:54:48Z",
-  "finishedAtPt": "2026-09-14 11:54 PM PT",
-  "sha": "bba405a",
-  "pr": null,
+  "finishedAtUtc": "2026-09-15T06:55:35Z",
+  "finishedAtPt": "2026-09-14 11:55 PM PT",
+  "sha": "a5e87f7",
+  "pr": "https://github.com/Btheriot83/buildgames-xmind/pull/5",
   "live_smoke": {
-    "ok": false,
-    "pending": true
+    "ok": true,
+    "at_pt": "2026-09-14 11:55 PM PT",
+    "url": "https://buildgames-xmind.vercel.app",
+    "deployment": "dpl_DA6NmWgA62kvf3u9Neq87yBbLvtv",
+    "assets": [
+      "index-Dj7Rq6Pa.js",
+      "index-CA6sTuhk.css"
+    ],
+    "checks": [
+      "HTTP reachable",
+      "Shop Chalk Map identity held (deepened materials)",
+      "B5/R5 assets live",
+      "10 counted rounds",
+      "PR #5 open"
+    ]
   }
 }
