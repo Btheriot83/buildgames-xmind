@@ -30,3 +30,9 @@
 - shot: gauntlet/shots-r5/r1-board.png
 - verdict: Root/title display denser vs Phase A; original still wins editorial marketing type on light canvas.
 - commit: 27ef651
+
+## r2 — contrast
+- files: src/index.css
+- shot: gauntlet/shots-r5/r2-board.png
+- verdict: Limb stroke and chalk-dim labels hold harder on board; original still brighter on white map photography.
+- commit: PENDING

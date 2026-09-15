@@ -1557,3 +1557,11 @@ kbd { font-size: 0.7rem; font-weight: 700; padding: 1px 5px; }
 .map-node.is-root .node-input { font-size: 18.5px; font-weight: 700; }
 .title-input input { font-size: 1.16rem; font-weight: 650; }
 .sidebar-head h2 { font-size: 0.92rem; font-weight: 700; letter-spacing: 0.12em; }
+
+
+/* r2 contrast */
+:root { --bone-dim: #d2cdb4; --limb-stroke: #f0ebd8; }
+.map-node .node-body { stroke: var(--limb-stroke); stroke-width: 2.55; }
+.edge-line { stroke: #b4e2d0; stroke-width: 3.55; }
+.stat-label, .job-cluster-label, .sidebar-foot { color: var(--bone-dim); }
+.save-pill { border-color: #5a7a68; color: var(--chalk); }
