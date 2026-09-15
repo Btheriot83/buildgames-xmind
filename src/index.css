@@ -2159,3 +2159,18 @@ kbd { font-size: 0.7rem; font-weight: 700; padding: 1px 5px; }
   stroke-width: 2.55;
 }
 .canvas-wrap::before { opacity: 0.7 !important; }
+
+
+/* beat23 buttons — Export is the only hot tablet; More is a tick */
+.btn.job-primary {
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  box-shadow: 4px 4px 0 #050a08;
+}
+.toolbar-actions .btn.ghost {
+  border: 1.5px solid #3f5e4e;
+  min-height: 32px;
+  padding: 0 10px;
+}
+.toolbar-actions .more-wrap > .btn.ghost { opacity: 0.8; }
