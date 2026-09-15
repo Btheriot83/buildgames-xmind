@@ -45,3 +45,9 @@
 - verdict: Side-attach chalk limbs close dream-loop target silhouette; original still wins soft editorial bezier photography.
 - commit: 80dc62a
 
+## r5 — fonts
+- files: src/index.css
+- shot: gauntlet/shots-r4/r5-board.png ; gauntlet/shots-r4/r5-bar-xmind.png
+- verdict: Brand/title type denser vs target; bar A/B — original marketing hero still outranks chalkboard chrome.
+- commit: 798245d
+

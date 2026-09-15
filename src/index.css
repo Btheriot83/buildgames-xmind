@@ -1421,3 +1421,8 @@ kbd {
 
 /* r4 — bar gap: side-attach endcaps */
 .edge-line { stroke-width: 3.05; stroke: #9fd4c0; stroke-linecap: round; }
+
+/* r5 — fonts */
+.brand-copy strong { font-size: clamp(1.18rem, 1.9vw, 1.48rem); font-weight: 700; }
+.title-input input { font-size: 1.12rem; font-weight: 600; }
+.map-node.is-root .node-input { font-size: 18px; }
