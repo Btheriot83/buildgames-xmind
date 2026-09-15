@@ -1,0 +1,84 @@
+{
+  "slug": "xmind",
+  "product": "Shop Chalk Map",
+  "phase": "beat-original",
+  "status": "beat_25_complete_no_critic_win",
+  "demoUrl": "https://buildgames-xmind.vercel.app",
+  "barUrl": "https://xmind.app/",
+  "path": "/workspace/build-games/apps/xmind",
+  "repo": "https://github.com/Btheriot83/buildgames-xmind",
+  "doNotMessageBrandon": true,
+  "identity": {
+    "name": "Shop Chalk Map",
+    "locked": true,
+    "copperSynapseBrandingKilled": true,
+    "path": "docs/IDENTITY.md"
+  },
+  "catalog": {
+    "prompts": "https://design-catalog-three.vercel.app/data/prompts.json",
+    "guide": "/workspace/build-games/narrow/DESIGN_CATALOG_GUIDE.md",
+    "techniquesUsed": [
+      "cut-elements",
+      "remove-ai-tells",
+      "hand-rewrite-copy",
+      "make-it-alive",
+      "specify-the-look",
+      "critic-subagents"
+    ]
+  },
+  "roundsCounted": 25,
+  "roundShas": [
+    "99e790e",
+    "4a80f02",
+    "7354e8c",
+    "6ef71a4",
+    "aee3721",
+    "db4ad2f",
+    "724799d",
+    "ced9d2a",
+    "cd30a83",
+    "4bf36a9",
+    "d861a5a",
+    "dd0b165",
+    "eddf838",
+    "8057aa5",
+    "a715c1f",
+    "4d7ad64",
+    "4b6171d",
+    "5977db6",
+    "ca1f4a1",
+    "033ed63",
+    "73c895d",
+    "b630655",
+    "da0ce8a",
+    "4bedc9d",
+    "703c0a4"
+  ],
+  "shotCount": 32,
+  "shotsDir": "gauntlet/shots-beat",
+  "barShotRounds": [
+    5,
+    10,
+    20,
+    25
+  ],
+  "critic": {
+    "independentWin": false,
+    "cloudAgents": "unavailable_on_plan",
+    "anthropicVision": "auto_review_blocked",
+    "localNote": "gauntlet/critic-beat25.md",
+    "verdict": "original preferred overall craft; candidate closer on chalkboard materials"
+  },
+  "honestNotes": [
+    "25 separate beatN commits with shots-beat/ and ~3s deltas.",
+    "Copper Synapse killed from live UI + README/docs leftovers.",
+    "No independent critic WIN \u2014 hit loop cap.",
+    "No self-cheer numeric scores as exit criterion.",
+    "Catalog JSON techniques used for cut / AI-tells / copy / alive / look / critic attempt."
+  ],
+  "workbench": "gauntlet/workbench-beat.md",
+  "branch": "beat/shop-chalk-map-original",
+  "finishedAtUtc": "2026-09-15T07:47:12Z",
+  "finishedAtPt": "2026-09-15 12:47 AM PT",
+  "sha": "9ed159f"
+}
