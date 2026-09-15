@@ -93,6 +93,12 @@ export const useMapStore = create<MapStore>((set, get) => ({
     set({ loadStatus: 'loading' })
     try {
       let maps = await listMaps()
+      // Phase B2 reseed: replace legacy SAMPLE product-launch maps with real desk content
+      const legacy = maps.filter((m) => /SAMPLE/i.test(m.title) || m.id === 'sample-product-launch')
+      if (legacy.length) {
+        for (const m of legacy) await dbDelete(m.id)
+        maps = await listMaps()
+      }
       if (maps.length === 0) {
         const sample = buildSampleMap()
         await saveMap(sample)
@@ -153,7 +159,7 @@ export const useMapStore = create<MapStore>((set, get) => ({
     await saveMap(sample)
     const maps = await listMaps()
     set({ maps, map: sample, selectedId: sample.nodes[0]?.id ?? null, stats: statsOf(sample), loadStatus: 'ready' })
-    get().flashToast('Sample map loaded — delete anytime', 'info')
+    get().flashToast('Diesel week map on the board — delete anytime', 'info')
   },
 
   patchTitle: (title) => {

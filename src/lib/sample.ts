@@ -1,71 +1,135 @@
 import { createEdge, createNode } from './model'
 import type { MindMap } from './types'
 
-/** Clearly labelled sample — easy to delete from the sidebar. */
+/**
+ * Starter desk map — real ops content (Phoenix diesel week), not SAMPLE/lorem.
+ * Easy to delete from the sidebar (isSample).
+ */
 export function buildSampleMap(): MindMap {
   const root = createNode({
-    id: 'sample-root',
-    text: 'Product launch',
-    x: 380,
-    y: 260,
-    width: 210,
-    height: 68,
+    id: 'desk-root',
+    text: 'Friday I-10 diesel pull',
+    x: 340,
+    y: 250,
+    width: 248,
+    height: 72,
   })
-  const audience = createNode({
-    id: 'sample-aud',
-    text: 'Audience',
+  const yard = createNode({
+    id: 'desk-yard',
+    text: 'Yard trucks',
     x: 680,
-    y: 120,
-    width: 160,
+    y: 90,
+    width: 168,
     height: 52,
     parentId: root.id,
   })
-  const channels = createNode({
-    id: 'sample-ch',
-    text: 'Channels',
+  const parts = createNode({
+    id: 'desk-parts',
+    text: 'Parts runs',
     x: 680,
-    y: 260,
-    width: 160,
+    y: 230,
+    width: 168,
     height: 52,
     parentId: root.id,
   })
-  const risks = createNode({
-    id: 'sample-risk',
-    text: 'Risks',
+  const dispatch = createNode({
+    id: 'desk-dispatch',
+    text: 'Dispatch',
     x: 680,
-    y: 400,
-    width: 160,
+    y: 370,
+    width: 168,
     height: 52,
     parentId: root.id,
   })
-  const beta = createNode({
-    id: 'sample-beta',
-    text: 'Beta cohort',
+  const crew = createNode({
+    id: 'desk-crew',
+    text: 'Crew',
+    x: 680,
+    y: 500,
+    width: 168,
+    height: 52,
+    parentId: root.id,
+  })
+  const unit41 = createNode({
+    id: 'desk-u41',
+    text: 'Unit 41 — DEF sensor',
     x: 920,
-    y: 80,
-    width: 150,
+    y: 40,
+    width: 190,
     height: 48,
-    parentId: audience.id,
+    parentId: yard.id,
   })
-  const press = createNode({
-    id: 'sample-press',
-    text: 'Press kit',
+  const unit18 = createNode({
+    id: 'desk-u18',
+    text: 'Unit 18 — leak-down',
     x: 920,
-    y: 240,
-    width: 150,
+    y: 110,
+    width: 190,
     height: 48,
-    parentId: channels.id,
+    parentId: yard.id,
   })
+  const napa = createNode({
+    id: 'desk-napa',
+    text: 'NAPA on Bell Rd',
+    x: 920,
+    y: 200,
+    width: 180,
+    height: 48,
+    parentId: parts.id,
+  })
+  const freightliner = createNode({
+    id: 'desk-fl',
+    text: 'Freightliner Chandler',
+    x: 920,
+    y: 270,
+    width: 200,
+    height: 48,
+    parentId: parts.id,
+  })
+  const mesa = createNode({
+    id: 'desk-mesa',
+    text: 'Mesa yard — 06:30',
+    x: 920,
+    y: 350,
+    width: 180,
+    height: 48,
+    parentId: dispatch.id,
+  })
+  const tonto = createNode({
+    id: 'desk-tonto',
+    text: 'Tonto Basin call-out',
+    x: 920,
+    y: 420,
+    width: 190,
+    height: 48,
+    parentId: dispatch.id,
+  })
+  const luis = createNode({
+    id: 'desk-luis',
+    text: 'Luis + Mira on dual',
+    x: 920,
+    y: 500,
+    width: 180,
+    height: 48,
+    parentId: crew.id,
+  })
+
   return {
-    id: 'sample-product-launch',
-    title: 'SAMPLE — Product launch map',
-    nodes: [root, audience, channels, risks, beta, press],
+    id: 'desk-friday-i10',
+    title: 'Friday I-10 diesel pull',
+    nodes: [root, yard, parts, dispatch, crew, unit41, unit18, napa, freightliner, mesa, tonto, luis],
     edges: [
-      createEdge(root.id, audience.id),
-      createEdge(root.id, channels.id),
-      createEdge(root.id, risks.id),
-      createEdge(audience.id, beta.id),
-      createEdge(channels.id, press.id),
+      createEdge(root.id, yard.id),
+      createEdge(root.id, parts.id),
+      createEdge(root.id, dispatch.id),
+      createEdge(root.id, crew.id),
+      createEdge(yard.id, unit41.id),
+      createEdge(yard.id, unit18.id),
+      createEdge(parts.id, napa.id),
+      createEdge(parts.id, freightliner.id),
+      createEdge(dispatch.id, mesa.id),
+      createEdge(dispatch.id, tonto.id),
+      createEdge(crew.id, luis.id),
     ],
     updatedAt: Date.now(),
     isSample: true,

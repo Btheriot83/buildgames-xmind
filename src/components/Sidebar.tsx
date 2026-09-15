@@ -12,7 +12,7 @@ export function Sidebar() {
       <div className="sidebar-head">
         <h2>Maps</h2>
         <button type="button" className="btn ghost sm" onClick={() => seedSample()} data-testid="load-sample">
-          Sample
+          Diesel week
         </button>
       </div>
       <ul className="map-list">
@@ -20,7 +20,7 @@ export function Sidebar() {
           <li key={m.id} className={m.id === map?.id ? 'active' : ''}>
             <button type="button" className="map-item" onClick={() => openMap(m.id)}>
               <span className="map-item-title">{m.title}</span>
-              {m.isSample && <span className="sample-tag">SAMPLE</span>}
+              {m.isSample && <span className="starter-tag">Starter</span>}
             </button>
             <button
               type="button"
@@ -39,11 +39,11 @@ export function Sidebar() {
       <div className="shortcuts">
         <h3>Keys</h3>
         <ul>
-          <li><kbd>Tab</kbd> child</li>
+          <li><kbd>Tab</kbd> branch child</li>
           <li><kbd>Enter</kbd> sibling</li>
+          <li><kbd>C</kbd> link mode</li>
           <li><kbd>⌘E</kbd> AI expand</li>
           <li><kbd>⌘O</kbd> outline</li>
-          <li><kbd>C</kbd> link mode</li>
           <li><kbd>Del</kbd> delete</li>
           <li><kbd>Alt</kbd>+drag pan</li>
         </ul>

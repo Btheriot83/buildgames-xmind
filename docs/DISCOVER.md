@@ -1,31 +1,33 @@
-# Discover — Copper Synapse (Xmind gauntlet)
+# Discover — Shop Chalk Map (Phase A reseed)
 
-**Date:** 2026-09-14 PT  
-**Seed (docs only, never in UI):** `e915a7b05a4897f43a871de1278b297707027cf986694bb87d0f2cc505f68cac`  
-Generated with `openssl rand -hex 32`.
+**Date:** 2026-09-14 ~9:15pm PT  
+**Seed (docs only, never in UI):** `b4f3242bc75ae222c035ebfa8676ebe16f9fffcf84b8a0aa53119e86c5415a49`  
+`openssl rand -hex 32`
+
+## Why reseed
+Prior Copper Synapse Desk read as dark SaaS chrome; Brandon allowed selective reseed so the aesthetic **screams mind map** in ≤3s (center → branches → connect → export).
 
 ## Seed → material reading
-Hex slices (not shown in product):
-- `e915a7` brass / warm instrument metal
-- `1de127` bench-power signal green (acid, not neon SaaS)
-- `f43a87` rose-oxide ink on rag paper
-- `07027c` deep night indigo under oilcloth (kept as ink depth, **not** vibe-purple CTAs)
-- `f98669` oxidized copper catch-light
-- `4bb87d` seafoam synapse arc
+- `b4f324` chalk amber / root
+- `2bc75a` board green
+- `e222c0` rose chalk (danger only — not CTA)
+- `35ebfa` cool chalk limb hint → tuned to `#8fc9b4` (avoid cyan SaaS)
+- `8676eb` discarded as vibe-purple slice
+- `c5415a` warm oxide for errors
 
-## Feel (sensory)
-You sit at a machinist's desk after midnight. Brass calipers click on oil-stained paper. A single signal-green LED on a bench supply breathes when a branch is live. Copper wire traces ideas into a teal synapse. The room smells like graphite and hot varnish — not a startup landing page.
+## Feel notes
+A shop chalkboard after the morning stand-up. One amber circle in the middle. White chalk arms. Teal dust on the curves. You know it’s a mind map before you read a word.
 
-## Direction briefs (ambitious)
+## Direction briefs
 
-### A — **Copper Synapse Desk** (PICKED)
-Charcoal oilcloth field, brass/copper root node, teal living links, acid telemetry. Drafting-desk craft. Serves mind-map core: branch / connect / export + AI expand. Motion = synapse pulse + success-check on export — never decorative mesh blobs.
+### A — **Shop Chalk Map** (PICKED)
+Green board, chalk limbs, amber root, job verbs on the tape. First glance = branching map.
 
-### B — **Cartographer's Floodlamp**
-Overexposed parchment, indigo registration marks, hand-ink spines. Beautiful, but too quiet for fast Tab/Enter branching and reads as note-app, not map tool. **Discarded.**
+### B — **Copper Wire Tree**
+Bare copper wires on kraft. Beautiful tree metaphor, but reads craft-object before map tool. **Discarded.**
 
-### C — **Relay Rack HUD**
-Vertical DIN-rail panels, 7-segment counters, hazard stripes. Fun industrial reference, but drifts into game-HUD / feature soup and fights calm mapping focus. **Discarded.**
+### C — **Route Atlas Fold**
+Paper road-atlas folds, highway colors. Screams “map” but drifts into cartography UI, not node branching. **Discarded.**
 
 ## Pick + why
-**A — Copper Synapse Desk.** Ambitious enough to feel hand-crafted (real desk photography, brass/copper material language) while keeping the one job sharp: grow a map with keyboard + AI expand/outline, then export.
+**A — Shop Chalk Map.** Instant mind-map silhouette, anti-slop, still copper-root accent without abstract synapse theater.

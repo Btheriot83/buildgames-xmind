@@ -97,11 +97,11 @@ export default function App() {
           ) : (
             ready && (
               <>
-                <div className="copper-tape" aria-hidden>
-                  <span>Copper Synapse Desk</span>
-                  <span>Oilcloth · brass root</span>
-                  <span>Teal links</span>
-                  <span>Acid telemetry</span>
+                <div className="job-tape" aria-label="Core job">
+                  <span>Branch</span>
+                  <span>Link</span>
+                  <span>Export</span>
+                  <span>Central topic → limbs</span>
                 </div>
                 <Toolbar onOpenOutline={() => setOutlineOpen(true)} />
                 <div className="workspace">

@@ -100,7 +100,7 @@ export function MindCanvas() {
   const byId = new Map(map.nodes.map((n) => [n.id, n]))
 
   return (
-    <div className="canvas-wrap" data-testid="mind-canvas">
+    <div className={`canvas-wrap ${connectFrom ? 'is-linking' : ''}`} data-testid="mind-canvas">
       <svg
         ref={svgRef}
         className="mind-svg"
@@ -132,18 +132,13 @@ export function MindCanvas() {
             const x2 = b.x + b.width / 2
             const y2 = b.y + b.height / 2
             const mx = (x1 + x2) / 2
-            const dash = 8 + (Math.sin(pulse * 2 + x1 * 0.01) + 1) * 4
             return (
               <g key={e.id} className="edge-group">
                 <path
                   d={`M ${x1} ${y1} C ${mx} ${y1}, ${mx} ${y2}, ${x2} ${y2}`}
-                  className="edge-glow"
-                  strokeDasharray={`${dash} 14`}
-                  strokeDashoffset={-pulse * 28}
-                />
-                <path
-                  d={`M ${x1} ${y1} C ${mx} ${y1}, ${mx} ${y2}, ${x2} ${y2}`}
                   className="edge-line"
+                  strokeDasharray="10 8"
+                  strokeDashoffset={-pulse * 18}
                 />
               </g>
             )
@@ -164,7 +159,7 @@ export function MindCanvas() {
                 <rect
                   width={n.width}
                   height={n.height}
-                  rx={12}
+                  rx={isRoot ? 28 : 10}
                   className="node-body"
                 />
                 <foreignObject width={n.width} height={n.height}>
@@ -205,9 +200,15 @@ export function MindCanvas() {
           })}
         </g>
       </svg>
-      {connectFrom && (
+      {connectFrom ? (
         <div className="connect-hint" role="status">
-          Click another node to connect · Esc to cancel
+          Click a node to link · Esc cancels
+        </div>
+      ) : (
+        <div className="job-rail" aria-hidden>
+          <span><strong>Tab</strong> branch</span>
+          <span><strong>C</strong> link</span>
+          <span><strong>Export</strong> SVG</span>
         </div>
       )}
     </div>

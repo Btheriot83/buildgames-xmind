@@ -1,49 +1,57 @@
-# IDENTITY — Copper Synapse (LOCKED)
+# IDENTITY — Shop Chalk Map (LOCKED — Phase A reseed 2026-09-14 ~9:15pm PT)
 
-**Phase A freeze.** Do not re-seed or rename aesthetics in gauntlet rounds.
+**Brandon allowed selective reseed for Copper Synapse.** Prior “Copper Synapse Desk / machinist midnight” identity retired — it hid the map job behind abstract desk chrome.
 
 ## Name
-**Copper Synapse** — machinist's desk after midnight.
+**Shop Chalk Map** — a shop chalkboard with one central topic and chalk branches.
 
 ## Feel
-Oilcloth charcoal field. Brass/copper root. Teal living links. Acid telemetry. Graphite + hot varnish — not a startup landing page.
+Green board. White chalk limbs. Amber root pill. You see a **mind map** in under three seconds: center → branches → links → export. Smells like chalk dust and shop coffee — not SaaS glass, not midnight synapse poetry.
 
 ## Palette (frozen)
 | Token | Hex | Use |
 |-------|-----|-----|
-| ink | `#12141a` | field |
-| ink-2 | `#1a1d24` | chrome |
-| bone | `#f2ebe0` | type |
-| copper | `#da843f` | root / primary accent |
-| teal | `#1d8d80` | links |
-| acid | `#c8e84a` | selection / saved |
-| rose-oxide | `#9f5762` | danger |
+| board | `#1e3328` | field |
+| board-2 | `#274033` | chrome |
+| board-3 | `#314c3d` | raised |
+| chalk | `#f3efe2` | type / limbs |
+| chalk-dim | `#b9b49a` | muted |
+| root | `#e09a3e` | central topic |
+| root-hot | `#f0b45c` | root hover |
+| limb | `#8fc9b4` | chalk-teal links |
+| select | `#e8d84a` | selection chalk |
+| danger | `#c97878` | delete |
 
-No vibe-purple CTAs. No indigo SaaS chips.
+No vibe-purple. No glass blur. No neon glow.
+No decorative linear/radial/mesh gradients on chrome (Brandon hard bar 2026-09-14) — flat fills + real photos only.
 
 ## Type (frozen)
-- Display: **Bricolage Grotesque**
+- Display / root: **Bricolage Grotesque**
 - Body/UI: **IBM Plex Mono**
-- Never ship Inter / Geist / Space Grotesk / Fraunces-everywhere
+- Never Inter / Geist / Space Grotesk / Fraunces-everywhere
 
 ## Materials
-- Real Imagine desk photo + looping `synapse-pulse.mp4` on empty state
-- Brand mark = generated copper/teal mark tile (`public/art/brand-mark-sm.png`)
-- Flat solid chrome (no glass blur, no colored button glow)
+- Chalkboard field (CSS tooth + optional chalk-board still)
+- Central topic = amber chalk pill; children = chalk-outline cards
+- Links = soft teal chalk curves (dashed pulse = chalk dust, not glow)
+- Empty state shows a mini branching diagram + job verbs
 
 ## Motion rules
-- Synapse dash pulse on edges (subtle, no drop-shadow glow)
+- Chalk-dash pulse on edges (subtle)
+- Branch pop = short chalk-dust fade
 - transitions.dev: success-check, toast, skeleton, texts-reveal, error-shake, number-pop, panel-reveal
-- Empty-state Ken Burns loop from Imagine still (`public/art/synapse-pulse.mp4`)
-- Prefer `prefers-reduced-motion` still poster
+- `prefers-reduced-motion` → still board
 
 ## Copy voice
-Short, desk-tool, specific. No “Think smarter / Work together” marketing. No fake stats.
+Shop-short. Name the job: **Branch · Link · Export**. No “synapse / midnight / machinist desk” marketing.
+
+## Product
+Still **Copper Synapse** (repo/product). Aesthetic identity = **Shop Chalk Map**.
 
 ## One job
-Mind-map core: branch / connect / export + **AI Expand** / outline→map.
+Mind map: **central topic → branch → connect → export** (+ AI Expand / outline→map).
 
-## Will NOT change in Phase B
-- Aesthetic name, palette tokens, type pairing, dark desk field
-- Product name “Copper Synapse”
-- Local-first IndexedDB story
+## Will NOT change in Phase B2
+- Aesthetic name Shop Chalk Map, palette, type pairing, chalkboard field
+- Product name Copper Synapse
+- Local-first IndexedDB

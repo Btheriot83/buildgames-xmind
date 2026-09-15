@@ -1,18 +1,20 @@
-/* Copper Synapse — seed-derived aesthetic (seed never shown in UI) */
+/* Shop Chalk Map — seed-derived aesthetic (seed never shown in UI) */
 :root {
-  --ink: #12141a;
-  --ink-2: #1a1d24;
-  --ink-3: #242833;
-  --bone: #f2ebe0;
-  --bone-dim: #c9c0b2;
-  --copper: #da843f;
-  --copper-hot: #f0b27a;
-  --teal: #1d8d80;
-  --teal-glow: #2bbfad;
-  --acid: #c8e84a;
-  --rose-oxide: #9f5762;
-  --line: #2a3140;
-  --danger: #d4656a;
+  --ink: #1e3328;
+  --ink-2: #274033;
+  --ink-3: #314c3d;
+  --bone: #f3efe2;
+  --bone-dim: #b9b49a;
+  --copper: #e09a3e;
+  --copper-hot: #f0b45c;
+  --teal: #8fc9b4;
+  --teal-glow: #a8dcc9;
+  --acid: #e8d84a;
+  --rose-oxide: #c97878;
+  --line: #3d5a4a;
+  --danger: #c97878;
+  --board: #1e3328;
+  --chalk: #f3efe2;
 
   --font-display: "Bricolage Grotesque", system-ui, sans-serif;
   --font-mono: "IBM Plex Mono", ui-monospace, monospace;
@@ -85,8 +87,8 @@ body,
 
 body {
   font-family: var(--font-mono);
-  background: var(--ink);
-  color: var(--bone);
+  background: var(--board);
+  color: var(--chalk);
   -webkit-font-smoothing: antialiased;
 }
 
@@ -144,8 +146,7 @@ input:focus-visible {
 .skel-bar {
   height: 18px;
   border-radius: 6px;
-  background: linear-gradient(90deg, #1f2430, #2a3140, #1f2430);
-  background-size: 200% 100%;
+  background: #314c3d;
 }
 .skel-brand { width: 220px; height: 28px; }
 .skel-wide { width: 60%; }
@@ -436,9 +437,9 @@ kbd {
 }
 .edge-glow {
   fill: none;
-  stroke: var(--teal-glow);
-  stroke-width: 3;
-  opacity: 0.22;
+  stroke: transparent;
+  stroke-width: 0;
+  opacity: 0;
 }
 
 .map-node { cursor: pointer; }
@@ -573,7 +574,7 @@ kbd {
   z-index: 2;
   margin: auto;
   padding: 48px 24px;
-  max-width: 420px;
+  max-width: 520px;
   text-align: center;
 }
 .empty-state .t-stagger-line--1 {
@@ -627,7 +628,7 @@ kbd {
   background: var(--ink-2);
   border: 1px solid var(--line);
   border-radius: 14px;
-  box-shadow: 0 18px 40px rgba(0,0,0,0.35);
+  box-shadow: none;
 }
 .outline-head {
   display: flex;
@@ -723,67 +724,229 @@ kbd {
   animation: synapse-ignite 700ms var(--check-ease-out);
 }
 
-/* —— VISIBLE DELTA — Copper Synapse Desk billboard (identity amplified, not reseeding) —— */
-.copper-tape {
-  display: flex; gap: 1.5rem; align-items: center; justify-content: center; flex-wrap: wrap;
+/* —— SHOP CHALK MAP — flat materials (Brandon hard bar: no decorative gradients/glow/glass) —— */
+.copper-tape, .job-tape {
+  display: flex; gap: 1.25rem; align-items: center; justify-content: center; flex-wrap: wrap;
   background: var(--copper); color: var(--ink);
-  border-bottom: 3px solid #0a0b0e;
-  padding: 0.5rem 1rem;
-  font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.16em; text-transform: uppercase;
-  font-weight: 600; position: relative; z-index: 4;
+  border-bottom: 3px solid #0f1c16;
+  padding: 0.55rem 1rem;
+  font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase;
+  font-weight: 700; position: relative; z-index: 4;
 }
-.copper-tape span:nth-child(even) { color: #3a220e; }
-.copper-tape span:nth-child(odd) { color: var(--ink); }
+.job-tape span:nth-child(odd) { color: var(--ink); }
+.job-tape span:nth-child(even) { color: #3a220e; }
 
 .toolbar {
-  border-bottom: 2px solid var(--copper);
-  box-shadow: inset 0 -1px 0 rgba(200,232,74,0.15);
-  background:
-    linear-gradient(180deg, rgba(218,132,63,0.12), transparent 70%),
-    var(--ink-2);
+  border-bottom: 2px solid var(--line);
+  background: var(--ink-2);
 }
 .brand-copy strong {
   font-family: var(--font-display);
-  font-size: clamp(1.35rem, 2.4vw, 1.85rem);
+  font-size: clamp(1.25rem, 2.2vw, 1.7rem);
   letter-spacing: -0.03em;
   line-height: 1.05;
+  color: var(--chalk);
 }
 .brand-copy span {
-  font-size: 0.78rem;
+  font-size: 0.8rem;
   color: var(--copper-hot);
-  letter-spacing: 0.04em;
+  letter-spacing: 0.03em;
   text-transform: none;
+  font-weight: 600;
 }
 .brand-mark-img {
-  width: 48px; height: 48px;
-  border-radius: 4px;
+  width: 44px; height: 44px;
+  border-radius: 50%;
   border: 2px solid var(--copper);
-  box-shadow: 3px 3px 0 var(--teal);
+  box-shadow: 3px 3px 0 var(--acid);
 }
 
 .canvas-wrap {
-  background:
-    linear-gradient(180deg, rgba(18,20,26,0.78), rgba(18,20,26,0.88)),
-    url('/art/empty-desk.jpg') center / cover;
-  border-left: 2px solid color-mix(in srgb, var(--copper) 55%, var(--line));
+  /* Flat board fill; real photo as underlay (opacity only — no gradient chrome) */
+  background: var(--board);
+  border-left: 2px solid var(--line);
+  position: relative;
 }
+.canvas-wrap::before {
+  content: "";
+  position: absolute; inset: 0; pointer-events: none; z-index: 0;
+  background: url('/art/empty-desk.jpg') center / cover no-repeat;
+  opacity: 0.2;
+}
+.canvas-wrap > * { position: relative; z-index: 1; }
 .mind-svg {
-  background-image:
-    linear-gradient(rgba(18,20,26,0.15) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(18,20,26,0.15) 1px, transparent 1px);
-  background-size: 28px 28px;
+  position: relative;
+  z-index: 1;
+  background: transparent;
 }
 .sidebar {
-  border-right: 2px solid color-mix(in srgb, var(--copper) 40%, var(--line));
-  background:
-    linear-gradient(180deg, rgba(218,132,63,0.06), transparent 40%),
-    var(--ink-2);
+  border-right: 2px solid var(--line);
+  background: var(--ink-2);
 }
-.node-root, .node.is-root rect, rect.root-fill {
-  /* handled in SVG; reinforce chrome */
+
+.map-node.is-root .node-body {
+  fill: var(--copper);
+  stroke: var(--copper-hot);
+  stroke-width: 3;
 }
+.map-node .node-body {
+  fill: #24382e;
+  stroke: color-mix(in srgb, var(--chalk) 55%, var(--line));
+  stroke-width: 2;
+}
+.map-node.is-selected .node-body {
+  stroke: var(--acid);
+  stroke-width: 3;
+}
+.map-node.is-linking .node-body {
+  stroke: var(--teal);
+  stroke-dasharray: 5 4;
+  stroke-width: 3;
+}
+.node-input {
+  color: var(--chalk);
+  font-size: 13.5px;
+}
+.map-node.is-root .node-input {
+  color: #1a2c23;
+  font-size: 16px;
+}
+.edge-line {
+  stroke: var(--teal);
+  stroke-width: 2.5;
+  opacity: 1;
+}
+.edge-glow {
+  stroke: transparent;
+  stroke-width: 0;
+  opacity: 0;
+}
+
 .btn.accent {
   border-radius: 4px;
-  box-shadow: 3px 3px 0 var(--teal);
+  box-shadow: 3px 3px 0 var(--acid);
   border-width: 2px;
+  background: var(--copper);
+  color: #1a2c23;
+}
+.btn.job {
+  border-radius: 4px;
+  border: 2px solid var(--chalk);
+  background: #24382e;
+  color: var(--chalk);
+  font-weight: 600;
+}
+.btn.job:hover:not(:disabled) {
+  border-color: var(--acid);
+  background: #2c4538;
+}
+.btn.job-primary {
+  background: var(--copper);
+  color: #1a2c23;
+  border-color: var(--copper-hot);
+  box-shadow: 3px 3px 0 var(--acid);
+}
+.job-cluster {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  padding: 4px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--ink-3);
+}
+.job-cluster-label {
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--bone-dim);
+  padding: 0 4px;
+}
+
+.connect-hint {
+  background: var(--copper);
+  color: #1a2c23;
+  border: 2px solid #1a2c23;
+  border-radius: 4px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  box-shadow: 4px 4px 0 var(--acid);
+  bottom: 56px;
+  z-index: 4;
+}
+.job-rail {
+  position: absolute;
+  left: 50%;
+  bottom: 14px;
+  transform: translateX(-50%);
+  z-index: 3;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 8px 14px;
+  background: var(--ink-2);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: 0.72rem;
+  color: var(--chalk);
+  letter-spacing: 0.04em;
+}
+.job-rail strong { color: var(--acid); font-weight: 700; }
+
+.sample-tag, .starter-tag {
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  color: var(--acid);
+  text-transform: uppercase;
+}
+
+.empty-state {
+  background: var(--ink-2);
+  border: 2px solid var(--line);
+  border-radius: 8px;
+}
+.empty-job-chips {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 12px 0 4px;
+}
+.empty-job-chips span {
+  border: 1px solid var(--line);
+  border-bottom-width: 3px;
+  border-bottom-color: var(--copper);
+  padding: 8px 14px;
+  border-radius: 4px;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--chalk);
+  background: var(--ink-2);
+}
+.empty-mini-map {
+  width: min(420px, 90vw);
+  height: 160px;
+  margin: 8px auto 4px;
+  display: block;
+}
+.canvas-wrap.is-linking {
+  outline: 2px dashed var(--teal);
+  outline-offset: -8px;
+}
+@keyframes chalk-branch-pop {
+  0% { transform: scale(0.92); opacity: 0.55; }
+  100% { transform: scale(1); opacity: 1; }
+}
+.map-node.is-new .node-body {
+  animation: chalk-branch-pop 280ms var(--check-ease-out);
+}
+
+/* Kill legacy glow ignition */
+@keyframes synapse-ignite {
+  0%, 100% { filter: none; }
+}
+.app-shell.is-igniting .edge-line {
+  animation: none;
 }
