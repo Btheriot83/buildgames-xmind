@@ -34,7 +34,7 @@ export function Sidebar() {
         ))}
       </ul>
       <p className="sidebar-foot">
-        Lives in IndexedDB (<code>copper-synapse-xmind</code>). Export JSON before you wipe site data.
+        Local-first Shop Chalk Map. Export JSON before you wipe site data.
       </p>
       <div className="shortcuts">
         <h3>Keys</h3>

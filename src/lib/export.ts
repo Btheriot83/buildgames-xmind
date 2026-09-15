@@ -62,6 +62,8 @@ export function mapToSvg(map: MindMap): string {
 
   return `<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}">
+  <title>${escapeXml(map.title)} — Shop Chalk Map</title>
+  <desc>Exported from Shop Chalk Map</desc>
   <rect width="100%" height="100%" fill="#12141a"/>
   ${lines}
   ${rects}

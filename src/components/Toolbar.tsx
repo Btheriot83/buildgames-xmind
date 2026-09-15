@@ -36,7 +36,7 @@ export function Toolbar({
       else if (kind === 'png') await downloadPng(map)
       else downloadJson(map)
       flashSuccess()
-      flashToast(`Exported ${kind.toUpperCase()}`, 'ok')
+      flashToast(`Shop Chalk Map · ${kind.toUpperCase()} exported`, 'ok')
       setExportOpen(false)
     } catch {
       flashToast('Export failed', 'err')
@@ -46,9 +46,9 @@ export function Toolbar({
   return (
     <header className="toolbar" role="banner">
       <div className="brand">
-        <img className="brand-mark-img" src="/art/brand-mark.svg" width={44} height={44} alt="" />
+        <img className="brand-mark-img" src="/art/brand-mark.svg" width={44} height={44} alt="Shop Chalk Map" />
         <div className="t-stagger is-shown brand-copy">
-          <strong className="t-stagger-line t-stagger-line--1">Copper Synapse</strong>
+          <strong className="t-stagger-line t-stagger-line--1">Shop Chalk Map</strong>
           <span className="t-stagger-line t-stagger-line--2">Branch · Link · Export</span>
         </div>
       </div>

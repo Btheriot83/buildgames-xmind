@@ -17,12 +17,12 @@ export function EmptyState() {
         src="/art/empty-chalk-map.jpg"
         width={560}
         height={320}
-        alt=""
+        alt="Shop Chalk Map empty board"
       />
       <div className={`t-stagger ${shown ? 'is-shown' : ''}`}>
-        <strong className="t-stagger-line t-stagger-line--1">Chalk the center</strong>
+        <strong className="t-stagger-line t-stagger-line--1">Shop Chalk Map</strong>
         <span className="t-stagger-line t-stagger-line--2">
-          Amber root. Chalk limbs. Link sideways. Export the board.
+          Chalk the center. Amber root. Chalk limbs. Link sideways. Export the board.
         </span>
       </div>
       <div className="empty-actions">
