@@ -14,3 +14,4 @@ Identity locked: Shop Chalk Map (0× Copper Synapse). Flat chalkboard materials.
 | 8 | Sliding Map\|Outline + outline jump | make-it-alive | elevate8-alive-switch.png | a7e9698 |
 | 9 | Calm type ladder | fonts / specify-the-look | elevate9-type-calm.png | dc54379 |
 | 10 | Sibling demoted; wider map | cut-elements | elevate10-cut-sibling.png | b0f65c6 |
+| 11 | Canvas air + quiet chrome | bar gap MindNode/Heptabase | elevate11-canvas-air.png | e007e29 |
