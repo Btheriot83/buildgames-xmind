@@ -1720,3 +1720,10 @@ kbd { font-size: 0.7rem; font-weight: 700; padding: 1px 5px; }
 .canvas-wrap { background: #172820; }
 .canvas-wrap::after { background: rgba(5, 10, 8, 0.08); }
 .brand-mark-img { border-color: var(--copper-hot); box-shadow: 4px 4px 0 #0c1611; }
+
+
+/* ===== BEAT-THE-ORIGINAL (Shop Chalk Map vs xmind.app) ===== */
+/* beat1 cut — kill redundant job-tape (catalog cut-elements); brand already carries job */
+.job-tape { display: none !important; height: 0 !important; padding: 0 !important; margin: 0 !important; border: 0 !important; }
+.app-shell { gap: 0; }
+.toolbar { border-top: 0; }

@@ -97,12 +97,6 @@ export default function App() {
           ) : (
             ready && (
               <>
-                <div className="job-tape" aria-label="Core job">
-                  <span>Branch</span>
-                  <span>Link</span>
-                  <span>Export</span>
-                  <span>Root → limbs → export</span>
-                </div>
                 <Toolbar onOpenOutline={() => setOutlineOpen(true)} />
                 <div className="workspace">
                   <Sidebar />
