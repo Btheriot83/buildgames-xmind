@@ -27,3 +27,27 @@ test('outline panel opens and sibling control exists', async ({ page }) => {
   await page.getByTestId('open-outline').click()
   await expect(page.getByTestId('outline-input')).toBeVisible()
 })
+
+test('onboarding: skip then no replay', async ({ page }) => {
+  await page.addInitScript(() => localStorage.removeItem('scm-onboard-v1'))
+  await page.goto('/')
+  await expect(page.getByTestId('mind-canvas')).toBeVisible({ timeout: 30_000 })
+  await expect(page.getByTestId('onboarding')).toBeVisible()
+  await page.getByTestId('onboard-skip').click()
+  await expect(page.getByTestId('onboarding')).toHaveCount(0)
+  await expect(page.getByTestId('map-title')).toHaveValue(/Week of hooks|Untitled/)
+  await page.reload()
+  await expect(page.getByTestId('mind-canvas')).toBeVisible({ timeout: 30_000 })
+  await expect(page.getByTestId('onboarding')).toHaveCount(0)
+})
+
+test('onboarding: complete all cards', async ({ page }) => {
+  await page.addInitScript(() => localStorage.removeItem('scm-onboard-v1'))
+  await page.goto('/')
+  await expect(page.getByTestId('onboarding')).toBeVisible({ timeout: 30_000 })
+  for (let i = 0; i < 4; i++) {
+    await page.getByTestId('onboard-next').click()
+  }
+  await expect(page.getByTestId('onboarding')).toHaveCount(0)
+  await expect(page.getByTestId('mind-canvas')).toBeVisible()
+})

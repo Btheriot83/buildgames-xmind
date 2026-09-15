@@ -53,7 +53,7 @@ export function Toolbar({
         <img className="brand-mark-img" src="/art/brand-mark.svg" width={44} height={44} alt="Shop Chalk Map" />
         <div className="t-stagger is-shown brand-copy">
           <strong className="t-stagger-line t-stagger-line--1">Shop Chalk Map</strong>
-          <span className="t-stagger-line t-stagger-line--2">Map · Outline · Export</span>
+          <span className="t-stagger-line t-stagger-line--2">Social content maps</span>
         </div>
       </div>
 

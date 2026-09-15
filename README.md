@@ -1,10 +1,10 @@
 # Shop Chalk Map — Xmind replacement
 
-Local-first browser mind mapping. Drag, resize, connect, keyboard shortcuts, **AI Expand** / outline→map, autosave to IndexedDB, export **SVG / PNG / JSON**.
+Local-first mind map for **creating social media content** — hooks, pillars, formats, CTAs. Drag, resize, connect, keyboard shortcuts, **AI Expand** / outline→map, autosave to IndexedDB, export **SVG / PNG / JSON**.
 
 **Live demo:** https://buildgames-xmind.vercel.app
 
-**Aesthetic:** Shop Chalk Map (green chalkboard + chalk limbs + amber root pill + teal chalk links). No accounts, ads, telemetry, or purple SaaS chrome.
+**Aesthetic:** Shop Chalk Map — modern chalk-on-slate for creators (clean contrast, flat materials). No accounts, ads, telemetry, or purple SaaS chrome.
 
 Motion recipes from [transitions.dev](https://transitions.dev/) (free): success-check on export, skeleton reveal on boot, texts-reveal on brand/empty, error shake on empty title, toast confirmations, number-pop-in for node/depth/link counts.
 
@@ -38,8 +38,8 @@ src/
   transitions/    # Upstream recipe markdown (source of truth for motion)
 ```
 
-- **Canvas:** SVG world with pan/zoom, node drag, corner resize, link handles, animated dashed synapse edges.
-- **Persistence:** IndexedDB database `copper-synapse-xmind`.
+- **Canvas:** SVG world with pan/zoom, node drag, corner resize, link handles.
+- **Persistence:** IndexedDB (local maps + session meta).
 - **Import/export:** Portable `.json` plus SVG/PNG downloads so you are never trapped.
 - **Gamification:** live node count, map depth, and link count with number-pop-in.
 
@@ -52,7 +52,7 @@ src/
 
 ## Data location & backup
 
-- Browser IndexedDB: `copper-synapse-xmind` → `maps`, `meta`.
+- Browser IndexedDB → `maps`, `meta`.
 - Cleared when you wipe site data for this origin.
 - Backup: toolbar **JSON**. Restore: **Import**.
 
@@ -76,6 +76,5 @@ Static Vite app: framework preset **Vite**, build `npm run build`, output `dist`
 
 ## Design notes (Lenny)
 
-- Seed-derived **Shop Chalk Map** palette (seed never shown in UI).
-- WebGL ink/grid shader backdrop + pulsing connection dashes.
+- **Shop Chalk Map** chalk-on-slate palette for content creators.
 - Anti-slop: no vibe-purple, no Inter, no 3-card marketing grid, no fake stats.

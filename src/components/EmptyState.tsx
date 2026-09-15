@@ -22,7 +22,7 @@ export function EmptyState() {
       <div className={`t-stagger ${shown ? 'is-shown' : ''}`}>
         <strong className="t-stagger-line t-stagger-line--1">Shop Chalk Map</strong>
         <span className="t-stagger-line t-stagger-line--2">
-          Center topic. Branch limbs. Link. Export the board.
+          Map a week of content. Branch hooks into posts. Export when it’s ready.
         </span>
       </div>
       <div className="empty-actions">
@@ -30,7 +30,7 @@ export function EmptyState() {
           New board
         </button>
         <button type="button" className="btn secondary" onClick={() => seedSample()} data-testid="load-sample">
-          Load diesel week
+          Load week of hooks
         </button>
       </div>
     </div>

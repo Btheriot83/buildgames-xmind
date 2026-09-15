@@ -13,7 +13,7 @@ interface ChalkMapDB extends DBSchema {
   }
 }
 
-const DB_NAME = 'copper-synapse-xmind'
+const DB_NAME = 'shop-chalk-map'
 const DB_VERSION = 1
 
 let dbPromise: Promise<IDBPDatabase<ChalkMapDB>> | null = null
