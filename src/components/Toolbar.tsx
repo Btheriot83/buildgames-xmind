@@ -105,7 +105,7 @@ export function Toolbar({
         <p className="t-error-msg">Name the map.</p>
       </div>
 
-      <div className="stats-row" aria-label="Map stats">
+      <div className="stats-row elevate-quiet-stats" aria-label="Map stats">
         <NumberPop value={stats.nodeCount} label="nodes" />
         <NumberPop value={stats.edgeCount} label="links" />
       </div>
@@ -157,9 +157,6 @@ export function Toolbar({
             )}
           </div>
         </div>
-        <button type="button" className="btn danger" onClick={() => removeSelected()} disabled={!selectedId}>
-          Delete
-        </button>
         <div className="more-wrap">
           <button type="button" className="btn ghost" onClick={() => setMoreOpen((v) => !v)} aria-expanded={moreOpen}>
             More
@@ -168,6 +165,7 @@ export function Toolbar({
             <div className="more-menu" role="menu">
               <button type="button" role="menuitem" className="btn ghost" data-testid="ai-expand" disabled={!selectedId || aiBusy} onClick={() => { void expandSelectedAi(); setMoreOpen(false) }}>{aiBusy ? 'Expanding…' : 'AI Expand'}</button>
               <button type="button" role="menuitem" className="btn ghost" data-testid="open-outline" onClick={() => { onOpenOutlineGrow(); setMoreOpen(false) }}>Grow from outline</button>
+              <button type="button" role="menuitem" className="btn ghost danger-text" onClick={() => { removeSelected(); setMoreOpen(false) }} disabled={!selectedId}>Delete</button>
               <button type="button" role="menuitem" className="btn ghost" onClick={() => { newMap(); setMoreOpen(false) }}>Blank board</button>
               <button type="button" role="menuitem" className="btn ghost" onClick={() => { fileRef.current?.click(); setMoreOpen(false) }}>Import</button>
             </div>

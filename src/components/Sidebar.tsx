@@ -36,7 +36,7 @@ export function Sidebar() {
       <p className="sidebar-foot">
         Lives in this browser. Export JSON before a wipe.
       </p>
-      <div className="shortcuts">
+      <div className="shortcuts elevate-quiet-keys" aria-hidden="true">
         <h3>Keys</h3>
         <ul>
           <li><kbd>Tab</kbd> branch</li>

@@ -2349,3 +2349,14 @@ kbd { font-size: 0.7rem; font-weight: 700; padding: 1px 5px; }
   margin-left: 18px;
   padding-left: 0;
 }
+
+
+/* elevate2: cut-elements — map owns the frame; Delete/Keys/stats off chrome */
+.elevate-quiet-stats { display: none !important; }
+.elevate-quiet-keys { display: none !important; }
+.workspace { grid-template-columns: 148px minmax(0, 1fr); }
+.sidebar { padding: 8px 8px 12px; }
+.save-pill { display: none !important; }
+.toolbar { min-height: 52px; padding: 6px 10px; }
+.brand-mark-img { width: 34px; height: 34px; }
+.brand-copy strong { font-size: clamp(1.05rem, 1.6vw, 1.28rem); }
