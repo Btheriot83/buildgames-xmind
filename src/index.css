@@ -2128,3 +2128,18 @@ kbd { font-size: 0.7rem; font-weight: 700; padding: 1px 5px; }
   filter: none;
   stroke-width: 3.8;
 }
+
+
+/* beat20 bar gap — map theater owns the frame */
+.workspace { grid-template-columns: 168px minmax(0, 1fr); }
+.sidebar { width: auto; overflow: hidden; }
+.sidebar-foot { display: none; }
+.toolbar { min-height: 56px; align-items: center; }
+.brand-mark-img { width: 40px; height: 40px; }
+.canvas-wrap { min-height: calc(100vh - 58px); }
+.app-toast {
+  border-radius: 2px;
+  border-width: 1.5px;
+  font-size: 0.78rem;
+  box-shadow: 2px 2px 0 #07100c;
+}
