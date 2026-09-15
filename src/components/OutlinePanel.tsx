@@ -30,8 +30,8 @@ export function OutlinePanel({ open, onClose }: { open: boolean; onClose: () => 
     >
       <header className="outline-head">
         <div>
-          <h2>Outline → map</h2>
-          <p>Indent with spaces or bullets. Grow into a branched desk map — then link & export.</p>
+          <h2>Grow from outline</h2>
+          <p>Indent with spaces. Paste a list — it becomes chalk limbs.</p>
         </div>
         <button type="button" className="btn ghost sm" onClick={onClose} aria-label="Close outline">
           Close
@@ -52,7 +52,7 @@ export function OutlinePanel({ open, onClose }: { open: boolean; onClose: () => 
             checked={useAi}
             onChange={(e) => setUseAi(e.target.checked)}
           />
-          Ask AI to reshape
+          AI reshape
         </label>
         <button
           type="button"
@@ -61,7 +61,7 @@ export function OutlinePanel({ open, onClose }: { open: boolean; onClose: () => 
           data-testid="outline-grow"
           onClick={() => void outlineToMap(text, { useAi }).then(() => onClose())}
         >
-          {aiBusy ? 'Growing…' : 'Grow map'}
+          {aiBusy ? 'Growing…' : 'Grow board'}
         </button>
       </div>
     </div>

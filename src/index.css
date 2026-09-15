@@ -2450,3 +2450,11 @@ kbd { font-size: 0.7rem; font-weight: 700; padding: 1px 5px; }
 .empty-hero-art { box-shadow: 2px 2px 0 #050a08 !important; }
 .outline-tree-row.is-selected > .outline-tree-item { box-shadow: none !important; }
 .stat-chip { box-shadow: none !important; }
+
+
+/* elevate7: hand-rewrite-copy — quieter brand ladder with shop voice */
+.brand-copy span {
+  font-size: 0.58rem;
+  letter-spacing: 0.14em;
+  color: var(--bone-dim);
+}

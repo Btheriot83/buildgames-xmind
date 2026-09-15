@@ -12,7 +12,7 @@ export function Sidebar() {
       <div className="sidebar-head">
         <h2>Maps</h2>
         <button type="button" className="btn ghost sm" onClick={() => seedSample()} data-testid="load-sample">
-          Diesel week
+          Diesel
         </button>
       </div>
       <ul className="map-list">

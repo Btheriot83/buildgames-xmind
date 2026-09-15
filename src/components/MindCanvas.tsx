@@ -220,7 +220,7 @@ export function MindCanvas() {
       </svg>
       {connectFrom ? (
         <div className="connect-hint" role="status">
-          Click a limb · Esc cancels
+          Pick a limb · Esc cancels
         </div>
       ) : null}
     </div>

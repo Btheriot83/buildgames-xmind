@@ -67,7 +67,7 @@ export function OutlineTree() {
     <div className="outline-tree" data-testid="outline-tree" aria-label="Outline view">
       <header className="outline-tree-head">
         <h2>Outline</h2>
-        <p>Same board as a list. Click a line to select it on the map.</p>
+        <p>Same map as a list. Pick a line — it selects on the board.</p>
       </header>
       <ul className="outline-tree-root">
         {tree.map((n) => (

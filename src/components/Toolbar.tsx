@@ -53,7 +53,7 @@ export function Toolbar({
         <img className="brand-mark-img" src="/art/brand-mark.svg" width={44} height={44} alt="Shop Chalk Map" />
         <div className="t-stagger is-shown brand-copy">
           <strong className="t-stagger-line t-stagger-line--1">Shop Chalk Map</strong>
-          <span className="t-stagger-line t-stagger-line--2">Branch · Link · Export</span>
+          <span className="t-stagger-line t-stagger-line--2">Map · Outline · Export</span>
         </div>
       </div>
 
@@ -166,7 +166,7 @@ export function Toolbar({
               <button type="button" role="menuitem" className="btn ghost" data-testid="ai-expand" disabled={!selectedId || aiBusy} onClick={() => { void expandSelectedAi(); setMoreOpen(false) }}>{aiBusy ? 'Expanding…' : 'AI Expand'}</button>
               <button type="button" role="menuitem" className="btn ghost" data-testid="open-outline" onClick={() => { onOpenOutlineGrow(); setMoreOpen(false) }}>Grow from outline</button>
               <button type="button" role="menuitem" className="btn ghost danger-text" onClick={() => { removeSelected(); setMoreOpen(false) }} disabled={!selectedId}>Delete</button>
-              <button type="button" role="menuitem" className="btn ghost" onClick={() => { newMap(); setMoreOpen(false) }}>Blank board</button>
+              <button type="button" role="menuitem" className="btn ghost" onClick={() => { newMap(); setMoreOpen(false) }}>New board</button>
               <button type="button" role="menuitem" className="btn ghost" onClick={() => { fileRef.current?.click(); setMoreOpen(false) }}>Import</button>
             </div>
           )}
