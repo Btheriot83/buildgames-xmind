@@ -2582,3 +2582,25 @@ kbd { font-size: 0.7rem; font-weight: 700; padding: 1px 5px; }
 }
 .edge-line { stroke-width: 4.2; }
 .edge-line-under { stroke-width: 11; opacity: 0.5; }
+
+
+/* elevate12: critic polish — quieter starter + outline air */
+.starter-tag {
+  opacity: 0.85;
+  border-width: 1px;
+  letter-spacing: 0.1em;
+}
+.outline-tree-head { margin-bottom: 28px; }
+.outline-tree-head p { max-width: 32rem; }
+.view-switch { border-color: #355445; }
+
+
+/* elevate12: critic polish — quieter starter + outline air */
+.starter-tag {
+  opacity: 0.85;
+  border-width: 1px;
+  letter-spacing: 0.1em;
+}
+.outline-tree-head { margin-bottom: 28px; }
+.outline-tree-head p { max-width: 32rem; }
+.view-switch { border-color: #355445; }
