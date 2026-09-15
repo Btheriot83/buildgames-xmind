@@ -2458,3 +2458,56 @@ kbd { font-size: 0.7rem; font-weight: 700; padding: 1px 5px; }
   letter-spacing: 0.14em;
   color: var(--bone-dim);
 }
+
+
+/* elevate8: make-it-alive — Map|Outline sliding pill (transitions.dev tabs-sliding) */
+:root {
+  --tabs-dur: 250ms;
+  --tabs-ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+.view-switch.t-tabs {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  padding: 0;
+  border-radius: 2px;
+  background: #12201a;
+  border: 1.5px solid #3f5e4e;
+  overflow: hidden;
+}
+.view-switch-pill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 0;
+  background: var(--copper);
+  border-radius: 1px;
+  transition: transform var(--tabs-dur) var(--tabs-ease), width var(--tabs-dur) var(--tabs-ease);
+  pointer-events: none;
+}
+.view-switch-btn {
+  position: relative;
+  z-index: 1;
+  background: transparent !important;
+  border-right: 0 !important;
+  color: var(--bone-dim);
+  transition: color var(--tabs-dur) var(--tabs-ease);
+}
+.view-switch-btn.is-active {
+  background: transparent !important;
+  color: #14241c !important;
+}
+.outline-tree,
+.canvas-wrap {
+  animation: elevate-view-in 280ms var(--tabs-ease);
+}
+@keyframes elevate-view-in {
+  from { opacity: 0.55; transform: translateY(4px); }
+  to { opacity: 1; transform: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .view-switch-pill { transition: none; }
+  .outline-tree, .canvas-wrap { animation: none; }
+}

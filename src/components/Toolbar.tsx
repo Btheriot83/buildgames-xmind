@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { downloadJson, downloadPng, downloadSvg } from '../lib/export'
 import { useMapStore } from '../store/mapStore'
 import { NumberPop } from './NumberPop'
@@ -57,26 +57,7 @@ export function Toolbar({
         </div>
       </div>
 
-      <div className="view-switch" role="group" aria-label="Map or outline">
-        <button
-          type="button"
-          className={`view-switch-btn ${viewMode === 'map' ? 'is-active' : ''}`}
-          aria-pressed={viewMode === 'map'}
-          data-testid="view-map"
-          onClick={() => onViewMode('map')}
-        >
-          Map
-        </button>
-        <button
-          type="button"
-          className={`view-switch-btn ${viewMode === 'outline' ? 'is-active' : ''}`}
-          aria-pressed={viewMode === 'outline'}
-          data-testid="view-outline"
-          onClick={() => onViewMode('outline')}
-        >
-          Outline
-        </button>
-      </div>
+      <ViewSwitch viewMode={viewMode} onViewMode={onViewMode} />
 
       <div className={`t-input-wrap title-wrap ${titleError ? 'is-error' : ''}`}>
         <div className={`t-input title-input ${titleError ? 'is-error is-shaking' : ''}`}>
@@ -197,5 +178,58 @@ export function Toolbar({
         </span>
       </div>
     </header>
+  )
+}
+
+
+function ViewSwitch({
+  viewMode,
+  onViewMode,
+}: {
+  viewMode: 'map' | 'outline'
+  onViewMode: (m: 'map' | 'outline') => void
+}) {
+  const barRef = useRef<HTMLDivElement>(null)
+  const mapRef = useRef<HTMLButtonElement>(null)
+  const outlineRef = useRef<HTMLButtonElement>(null)
+  const pillRef = useRef<HTMLSpanElement>(null)
+
+  useEffect(() => {
+    const pill = pillRef.current
+    const active = viewMode === 'map' ? mapRef.current : outlineRef.current
+    const bar = barRef.current
+    if (!pill || !active || !bar) return
+    const left = active.offsetLeft
+    const width = active.offsetWidth
+    pill.style.transform = `translateX(${left}px)`
+    pill.style.width = `${width}px`
+  }, [viewMode])
+
+  return (
+    <div className="view-switch t-tabs" role="tablist" aria-label="Map or outline" ref={barRef}>
+      <span className="view-switch-pill t-tabs-pill" ref={pillRef} aria-hidden="true" />
+      <button
+        type="button"
+        ref={mapRef}
+        role="tab"
+        className={`view-switch-btn t-tab ${viewMode === 'map' ? 'is-active' : ''}`}
+        aria-selected={viewMode === 'map'}
+        data-testid="view-map"
+        onClick={() => onViewMode('map')}
+      >
+        Map
+      </button>
+      <button
+        type="button"
+        ref={outlineRef}
+        role="tab"
+        className={`view-switch-btn t-tab ${viewMode === 'outline' ? 'is-active' : ''}`}
+        aria-selected={viewMode === 'outline'}
+        data-testid="view-outline"
+        onClick={() => onViewMode('outline')}
+      >
+        Outline
+      </button>
+    </div>
   )
 }

@@ -108,7 +108,7 @@ export default function App() {
                 />
                 <div className="workspace">
                   <Sidebar />
-                  {viewMode === 'map' ? <MindCanvas /> : <OutlineTree />}
+                  {viewMode === 'map' ? <MindCanvas /> : <OutlineTree onJumpToMap={() => setViewMode('map')} />}
                 </div>
                 <OutlinePanel open={outlineOpen} onClose={() => setOutlineOpen(false)} />
               </>

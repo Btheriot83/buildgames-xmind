@@ -24,11 +24,13 @@ function Row({
   depth,
   selectedId,
   onSelect,
+  onJumpToMap,
 }: {
   node: TreeNode
   depth: number
   selectedId: string | null
   onSelect: (id: string) => void
+  onJumpToMap?: () => void
 }) {
   const selected = node.id === selectedId
   return (
@@ -38,6 +40,10 @@ function Row({
         className="outline-tree-item"
         style={{ paddingLeft: 12 + depth * 18 }}
         onClick={() => onSelect(node.id)}
+        onDoubleClick={() => {
+          onSelect(node.id)
+          onJumpToMap?.()
+        }}
         data-testid={`outline-row-${node.id}`}
       >
         <span className="outline-tree-mark" aria-hidden />
@@ -46,7 +52,7 @@ function Row({
       {node.children.length > 0 && (
         <ul className="outline-tree-branch">
           {node.children.map((c) => (
-            <Row key={c.id} node={c} depth={depth + 1} selectedId={selectedId} onSelect={onSelect} />
+            <Row key={c.id} node={c} depth={depth + 1} selectedId={selectedId} onSelect={onSelect} onJumpToMap={onJumpToMap} />
           ))}
         </ul>
       )}
@@ -55,7 +61,7 @@ function Row({
 }
 
 /** Live outline of the open map — MindNode dual-view steal. */
-export function OutlineTree() {
+export function OutlineTree({ onJumpToMap }: { onJumpToMap?: () => void }) {
   const map = useMapStore((s) => s.map)
   const selectedId = useMapStore((s) => s.selectedId)
   const select = useMapStore((s) => s.select)
@@ -67,11 +73,11 @@ export function OutlineTree() {
     <div className="outline-tree" data-testid="outline-tree" aria-label="Outline view">
       <header className="outline-tree-head">
         <h2>Outline</h2>
-        <p>Same map as a list. Pick a line — it selects on the board.</p>
+        <p>Same map as a list. Double-click a line to jump back to the board.</p>
       </header>
       <ul className="outline-tree-root">
         {tree.map((n) => (
-          <Row key={n.id} node={n} depth={0} selectedId={selectedId} onSelect={select} />
+          <Row key={n.id} node={n} depth={0} selectedId={selectedId} onSelect={select} onJumpToMap={onJumpToMap} />
         ))}
       </ul>
     </div>
