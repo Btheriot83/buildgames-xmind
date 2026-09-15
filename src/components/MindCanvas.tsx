@@ -194,12 +194,12 @@ export function MindCanvas() {
                   onPointerDown={(e) => onResizeDown(e, n)}
                   aria-label="Resize node"
                 />
-                <circle className="port-dot" cx={0} cy={n.height / 2} r={4.5} aria-hidden />
-                <circle className="port-dot" cx={n.width} cy={n.height / 2} r={4.5} aria-hidden />
+                <circle className="port-dot" cx={0} cy={n.height / 2} r={5.25} aria-hidden />
+                <circle className="port-dot" cx={n.width} cy={n.height / 2} r={5.25} aria-hidden />
                 <circle
                   cx={n.width}
                   cy={n.height / 2}
-                  r={6}
+                  r={7}
                   className="link-handle"
                   onPointerDown={(e) => {
                     e.stopPropagation()

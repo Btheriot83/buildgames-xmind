@@ -40,3 +40,9 @@
 - shot: gauntlet/shots-r6/r3-board.png
 - verdict: Square chalk controls + Export copper primary with harder offset; original CTAs still quieter on light marketing UI.
 - commit: 190c445
+
+## r4 — bar gap
+- files: src/components/MindCanvas.tsx,src/index.css,src/lib/sample.ts,
+- shot: gauntlet/shots-r6/r4-board.png
+- verdict: Denser right-fan + brighter ports + copper root pill close dream-loop/Xmind limb silhouette; original still wins soft editorial bezier photography.
+- commit: fc05e0a

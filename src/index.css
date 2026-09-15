@@ -1655,3 +1655,11 @@ kbd { font-size: 0.7rem; font-weight: 700; padding: 1px 5px; }
 }
 .btn.secondary, .btn.ghost { border-width: 2px; font-weight: 650; border-radius: 2px; opacity: 0.92; }
 .toolbar-actions .btn.accent { background: var(--copper); color: #14241c; border-color: var(--copper-hot); }
+
+
+/* r4 bar gap — denser fan / ports toward dream-loop */
+.port-dot { r: 5.25; fill: #d8f3e8; stroke: #14241c; stroke-width: 1; }
+.link-handle { fill: var(--copper); opacity: 0.92; }
+.edge-line { stroke-width: 4; stroke-linecap: round; }
+.map-node.is-root .node-body { fill: var(--copper); stroke: var(--copper-hot); stroke-width: 3.2; }
+.map-node.is-root .node-input { color: #14241c; }
