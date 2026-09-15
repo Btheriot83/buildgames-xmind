@@ -93,3 +93,9 @@
 - verdict: Right-fan sibling spacing denser toward dream-loop tree; original still wins fluid org layouts.
 - commit: ef1783a
 
+## r13 — fonts
+- files: src/index.css
+- shot: gauntlet/shots-r4/r13-board.png
+- verdict: Job tape tracking denser billboard; still chalkboard vs Xmind photo hero.
+- commit: f91cb8c
+

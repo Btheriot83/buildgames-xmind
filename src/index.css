@@ -1462,3 +1462,6 @@ kbd {
 
 /* r12 — bar gap layout cue */
 .mind-svg { min-height: calc(100vh - 72px); }
+
+/* r13 — fonts */
+.job-tape { font-size: 0.73rem; letter-spacing: 0.15em; padding: 0.58rem 1rem; }
