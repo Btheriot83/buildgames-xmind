@@ -1364,3 +1364,17 @@ kbd {
   font-size: 1.1rem;
   font-weight: 600;
 }
+
+/* r2 — contrast: limb stroke + muted labels hold on board */
+:root {
+  --limb-stroke: #e6e1ce;
+  --chalk-dim: #d2cdb4;
+  --bone-dim: #d2cdb4;
+}
+.map-node .node-body {
+  stroke: var(--limb-stroke);
+  stroke-width: 2.4;
+}
+.stat-label, .job-cluster-label, .sidebar-foot, .shortcuts h3 {
+  color: var(--chalk-dim);
+}

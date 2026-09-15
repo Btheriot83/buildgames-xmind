@@ -12,5 +12,11 @@
 - files: src/index.css
 - shot: gauntlet/shots-r4/r1-board.png
 - verdict: Root reads larger than limbs in ~3s; original still wins editorial type polish on marketing pages.
-- commit: ab84c4e
+- commit: c71688d
+
+## r2 — contrast
+- files: src/index.css
+- shot: gauntlet/shots-r4/r2-board.png
+- verdict: Limb stroke and chalk-dim labels hold on board green; original still wins bright editorial contrast on light canvases.
+- commit: PENDING
 
