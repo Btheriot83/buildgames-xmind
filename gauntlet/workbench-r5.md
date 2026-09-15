@@ -66,3 +66,9 @@
 - shot: gauntlet/shots-r5/r7-board.png
 - verdict: Empty/job button family weights unified; original still cleaner on light marketing CTAs.
 - commit: 5d59aed
+
+## r8 — bar gap
+- files: src/components/MindCanvas.tsx, src/index.css
+- shot: gauntlet/shots-r5/r8-board.png
+- verdict: Job-rail + link handles closer to target map-tool chrome; original still subtler on product screenshots.
+- commit: 5fa28a4

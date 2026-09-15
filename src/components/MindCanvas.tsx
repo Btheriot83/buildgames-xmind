@@ -221,6 +221,7 @@ export function MindCanvas() {
           <span><strong>Tab</strong> branch</span>
           <span><strong>C</strong> link</span>
           <span><strong>Export</strong> SVG</span>
+          <span className="job-rail-hint">drag limbs · scroll zoom</span>
         </div>
       )}
     </div>

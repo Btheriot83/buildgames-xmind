@@ -1602,3 +1602,10 @@ kbd { font-size: 0.7rem; font-weight: 700; padding: 1px 5px; }
 .empty-actions .btn.secondary { border-width: 2px; min-height: 40px; font-weight: 650; }
 .btn.danger { border-width: 2px; font-weight: 800; color: #f3c8c8; }
 .btn.ghost { font-weight: 600; }
+
+
+/* r8 bar gap */
+.job-rail { gap: 10px; padding: 8px 12px; border: 2px solid var(--line); box-shadow: 3px 3px 0 #0f1c16; }
+.job-rail-hint { color: var(--bone-dim); font-size: 0.68rem; letter-spacing: 0.04em; }
+.link-handle { r: 7; stroke: #14241c; stroke-width: 1.5; }
+.map-node.is-linking .link-handle { fill: var(--acid); }
