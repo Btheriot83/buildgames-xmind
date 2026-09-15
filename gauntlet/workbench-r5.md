@@ -41,4 +41,4 @@
 - files: src/index.css
 - shot: gauntlet/shots-r5/r3-board.png
 - verdict: Export SVG sole copper primary with harder offset; original CTAs still quieter on light UI.
-- commit: PENDING
+- commit: 6177056
