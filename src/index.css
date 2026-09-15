@@ -3155,3 +3155,40 @@ body {
 .link-handle { opacity: 0.12 !important; }
 .map-node:hover .link-handle,
 .map-node.is-selected .link-handle { opacity: 0.8 !important; }
+
+/* craft8: critic polish — limb card air + quieter onboard on slate */
+.map-node:not(.is-root) .node-body {
+  rx: 4;
+}
+.node-html {
+  padding: 0 2px !important;
+}
+.map-node:not(.is-root) .node-input {
+  padding: 0 12px !important;
+}
+.onboard-card {
+  background: #181f28 !important;
+  border: 1.5px solid #3a4556 !important;
+  border-radius: 12px !important;
+  box-shadow: 2px 2px 0 #0a0e14 !important;
+}
+.onboard-card:hover {
+  transform: none !important;
+  box-shadow: 2px 2px 0 #0a0e14 !important;
+}
+.onboard-title {
+  letter-spacing: -0.035em !important;
+}
+.connect-hint {
+  background: #181f28 !important;
+  border: 1.5px solid #3a4556 !important;
+  color: var(--chalk) !important;
+  box-shadow: 2px 2px 0 #0a0e14 !important;
+  font-size: 0.78rem !important;
+}
+.mind-svg {
+  cursor: grab;
+}
+.canvas-wrap.is-linking .mind-svg {
+  cursor: crosshair;
+}
