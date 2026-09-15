@@ -58,3 +58,9 @@
 - shot: gauntlet/shots-r6/r6-board.png
 - verdict: Chalk photo tooth stronger + selection wash clearer vs target; original still preferred for light-map contrast theater.
 - commit: 244f3b6
+
+## r7 — buttons
+- files: src/index.css,
+- shot: gauntlet/shots-r6/r7-board.png
+- verdict: Empty/job button family weights unified; danger quieter until hover; original still cleaner on light marketing CTAs.
+- commit: ebb2960
