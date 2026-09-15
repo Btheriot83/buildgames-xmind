@@ -52,7 +52,7 @@ Shop-short. **Branch · Link · Export**. No synapse / midnight marketing.
 ## One job
 Mind map: **central topic → branch → connect → export** (+ AI Expand / outline→map).
 
-## Will NOT change in R5 gauntlets
+## Will NOT change in R6 gauntlets
 - Aesthetic name Shop Chalk Map, palette, type pairing, chalkboard field
 - Product name Copper Synapse
 - Local-first IndexedDB
