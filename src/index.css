@@ -2195,3 +2195,22 @@ kbd { font-size: 0.7rem; font-weight: 700; padding: 1px 5px; }
   font-size: 0.62rem;
   letter-spacing: 0.18em;
 }
+
+
+/* beat25 bar gap — coherence pass: map air + chalk materials locked */
+.toolbar {
+  background: #15231c;
+  border-bottom: 2px solid #4a6b58;
+  padding: 7px 12px;
+}
+.sidebar {
+  background: #121f19;
+  border-right: 2px solid #3a5848;
+}
+.canvas-wrap { background: #0e1a15; }
+.edge-line { stroke: #f4fffa; }
+.map-node.is-root .node-body {
+  fill: #e39b3c;
+  stroke: #f8d08a;
+}
+.brand-mark-img { border-color: #f0b45c; }
