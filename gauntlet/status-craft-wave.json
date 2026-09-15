@@ -1,0 +1,65 @@
+{
+  "slug": "xmind",
+  "product": "Shop Chalk Map",
+  "phase": "CONTEST_CRAFT_WAVE",
+  "status": "shipped",
+  "demoUrl": "https://buildgames-xmind.vercel.app",
+  "repo": "https://github.com/Btheriot83/buildgames-xmind",
+  "path": "/workspace/build-games/apps/xmind",
+  "identityLocked": "Shop Chalk Map",
+  "copperSynapseInDom": 0,
+  "dieselShopBizInDom": 0,
+  "bars": [
+    "MindNode",
+    "Heptabase"
+  ],
+  "craftLoops": [
+    {
+      "id": "craft1",
+      "focus": "organic MindNode limbs \u2014 S-curves + chalk grit dual-stick"
+    },
+    {
+      "id": "craft2",
+      "focus": "organic fan layout for content presets"
+    },
+    {
+      "id": "craft3",
+      "focus": "canvas air \u2014 Heptabase quiet + chalk tooth"
+    },
+    {
+      "id": "craft4",
+      "focus": "typography ladder display root / mono limbs"
+    },
+    {
+      "id": "craft5",
+      "focus": "contrast \u2014 brighter chalk sticks on slate"
+    },
+    {
+      "id": "craft6",
+      "focus": "Map|Outline dual \u2014 list craft + alive rename"
+    },
+    {
+      "id": "craft7",
+      "focus": "cut chrome \u2014 keys gone, map owns frame"
+    },
+    {
+      "id": "craft8",
+      "focus": "critic polish + onboard quiet + ledger"
+    }
+  ],
+  "kept": [
+    "chalk-on-slate",
+    "presets",
+    "friend onboard",
+    "Shop Chalk Map brand"
+  ],
+  "shots": "/workspace/build-games/narrow/shots/shopchalk-craft/",
+  "critic": "docs/CRITIC_CRAFT_WAVE.md",
+  "criticScore": 7.9,
+  "independentWin": false,
+  "finishedAtPt": "2026-09-15 ~12:50 PM PT",
+  "shotsRepo": "gauntlet/shots-craft-wave/",
+  "shotsNarrow": "/workspace/build-games/narrow/shots/shopchalk-craft/",
+  "finishedAtUtc": "2026-09-15T19:50:00Z",
+  "limbNote": "cubic organic bow + chalk grit dual-stick; retuned to avoid self-intersect"
+}

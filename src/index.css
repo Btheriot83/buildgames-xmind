@@ -2852,3 +2852,343 @@ body {
   grid-template-columns: 168px minmax(0, 1fr);
 }
 :root { --elevate-sidebar: 168px; }
+
+/* ===== CONTEST CRAFT WAVE — MindNode/Heptabase bars (chalk-on-slate) ===== */
+
+/* craft1: organic limbs — chalk grit dual-stick, grown S-curves */
+.edge-group {
+  opacity: 0.98;
+}
+.edge-line-under {
+  stroke: #070a0f !important;
+  stroke-width: 12.5 !important;
+  opacity: 0.58 !important;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.edge-line-dust {
+  fill: none;
+  stroke: #d8fff2;
+  stroke-width: 1.55;
+  opacity: 0.42;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  pointer-events: none;
+}
+.edge-line {
+  stroke: #b8efe0 !important;
+  stroke-width: 3.85 !important;
+  opacity: 0.96 !important;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.canvas-wrap.is-linking .edge-line {
+  stroke: #e6de6a !important;
+}
+
+/* craft3: canvas air — Heptabase thinking canvas quiet + chalk tooth */
+.canvas-wrap {
+  min-height: calc(100vh - 46px) !important;
+  background: #10151c !important;
+  box-shadow: inset 0 0 0 1px #2a3340 !important;
+  border-left: 0 !important;
+}
+.canvas-wrap::before {
+  background: url("/art/chalk-board.jpg") center / cover no-repeat !important;
+  opacity: 0.34 !important;
+  mix-blend-mode: soft-light !important;
+}
+.canvas-wrap::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background: rgba(8, 10, 14, 0.18) !important;
+  box-shadow: inset 0 0 48px rgba(0, 0, 0, 0.22), inset 0 0 0 1px rgba(184, 239, 224, 0.06) !important;
+}
+.toolbar {
+  min-height: 46px !important;
+  padding: 4px 10px !important;
+  background: #141a22 !important;
+}
+.sidebar {
+  background: #121820 !important;
+  border-right: 1px solid #2a3340 !important;
+}
+.workspace {
+  grid-template-columns: 152px minmax(0, 1fr) !important;
+}
+:root { --elevate-sidebar: 152px; }
+
+/* craft4: typography — MindNode calm ladder (display root / mono limbs) */
+.map-node.is-root .node-input {
+  font-family: var(--font-display) !important;
+  font-size: 17px !important;
+  font-weight: 750 !important;
+  letter-spacing: -0.03em !important;
+  color: #151a21 !important;
+}
+.map-node:not(.is-root) .node-input {
+  font-family: var(--font-mono) !important;
+  font-size: 13.35px !important;
+  font-weight: 560 !important;
+  letter-spacing: -0.015em !important;
+  color: #f6f2e8 !important;
+}
+.brand-copy strong {
+  font-size: clamp(1.02rem, 1.5vw, 1.22rem) !important;
+  letter-spacing: -0.032em !important;
+}
+.outline-tree-head h2 {
+  font-family: var(--font-display) !important;
+  font-size: 1.42rem !important;
+  letter-spacing: -0.035em !important;
+  color: #f6f2e8 !important;
+}
+.outline-tree-head p {
+  font-size: 0.82rem !important;
+  color: #b4b0a3 !important;
+  max-width: 28rem !important;
+  line-height: 1.4 !important;
+}
+.outline-tree-row.is-root > .outline-tree-item {
+  font-family: var(--font-display) !important;
+  font-size: 1.18rem !important;
+  font-weight: 750 !important;
+  letter-spacing: -0.03em !important;
+  min-height: 42px !important;
+  border-radius: 999px !important;
+  padding-left: 18px !important;
+  padding-right: 18px !important;
+}
+.outline-tree-item {
+  font-family: var(--font-mono) !important;
+  font-size: 0.9rem !important;
+  letter-spacing: -0.012em !important;
+  min-height: 36px !important;
+  border-radius: 4px !important;
+}
+.title-input input {
+  font-family: var(--font-display) !important;
+  font-size: 1.06rem !important;
+  letter-spacing: -0.02em !important;
+}
+
+/* craft5: contrast — chalk sticks + cards hold on cool slate */
+:root {
+  --chalk: #f7f3ea;
+  --bone: #f7f3ea;
+  --chalk-dim: #c2bdaa;
+  --bone-dim: #c2bdaa;
+  --limb-stroke: #f0ebe0;
+}
+.map-node:not(.is-root) .node-body {
+  fill: #161d27 !important;
+  stroke: #f0ebe0 !important;
+  stroke-width: 2.25 !important;
+}
+.map-node.is-root .node-body {
+  fill: #e8b86d !important;
+  stroke: #f5d19a !important;
+  stroke-width: 3.4 !important;
+}
+.map-node.is-selected:not(.is-root) .node-body {
+  fill: #1f2936 !important;
+  stroke: #e6de6a !important;
+  stroke-width: 2.8 !important;
+}
+.edge-line {
+  stroke: #c5f3e6 !important;
+  stroke-width: 4.05 !important;
+}
+.edge-line-dust {
+  stroke: #e8fff8 !important;
+  opacity: 0.5 !important;
+}
+.port-dot {
+  fill: #e8b86d !important;
+  opacity: 0.7 !important;
+}
+.preset-item-blurb,
+.sidebar-foot,
+.brand-copy span,
+.preset-packs-label {
+  color: #c2bdaa !important;
+}
+.save-pill { color: #c2bdaa !important; }
+
+/* craft6: Map|Outline dual — MindNode list craft + alive rename */
+.outline-tree {
+  background: #10151c !important;
+  padding: 28px 36px 48px !important;
+  border-left: 0 !important;
+}
+.outline-tree::before {
+  opacity: 0.08 !important;
+  background: url("/art/chalk-board.jpg") center / cover no-repeat !important;
+}
+.outline-tree-mark {
+  width: 10px !important;
+  height: 2px !important;
+  border-radius: 1px !important;
+  background: #6ec4b0 !important;
+  flex-shrink: 0;
+  margin-right: 2px;
+}
+.outline-tree-row.is-root .outline-tree-mark {
+  width: 12px !important;
+  height: 12px !important;
+  border-radius: 50% !important;
+  background: #151a21 !important;
+  box-shadow: inset 0 0 0 2px #151a21, 0 0 0 1.5px #f5d19a;
+}
+.outline-tree-item {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  width: 100%;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--chalk);
+  text-align: left;
+  cursor: default;
+}
+.outline-tree-text-btn {
+  flex: 1;
+  min-width: 0;
+  background: transparent;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  padding: 0;
+  cursor: pointer;
+}
+.outline-tree-edit-btn {
+  opacity: 0;
+  border: 0;
+  background: transparent;
+  color: var(--bone-dim);
+  cursor: pointer;
+  font-size: 0.78rem;
+  padding: 2px 6px;
+}
+.outline-tree-item:hover .outline-tree-edit-btn,
+.outline-tree-row.is-selected .outline-tree-edit-btn {
+  opacity: 0.9;
+}
+.outline-tree-edit {
+  flex: 1;
+  min-width: 0;
+  background: #1a222c;
+  border: 1.5px solid #e8b86d;
+  color: var(--chalk);
+  font: inherit;
+  border-radius: 4px;
+  padding: 4px 8px;
+}
+.outline-tree-row.is-selected > .outline-tree-item {
+  background: #1a222c !important;
+  border-color: #3a4556 !important;
+}
+.outline-tree-branch {
+  margin-left: 12px !important;
+  border-left: 1px solid #2a3340;
+  padding-left: 6px;
+}
+.view-switch.t-tabs {
+  border-radius: 3px !important;
+  border-width: 1.5px !important;
+}
+.view-switch-btn {
+  font-size: 0.72rem !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  min-height: 30px !important;
+  padding: 0 12px !important;
+  font-weight: 700 !important;
+}
+
+/* craft7: cut — map owns frame; presets stay, chrome shrinks */
+.workspace {
+  grid-template-columns: 148px minmax(0, 1fr) !important;
+}
+:root { --elevate-sidebar: 148px; }
+.elevate-quiet-stats {
+  opacity: 0.55;
+  transform: scale(0.92);
+  transform-origin: center;
+}
+.sidebar-head h2 {
+  font-size: 0.62rem !important;
+  letter-spacing: 0.16em !important;
+  margin: 0 0 6px !important;
+}
+.preset-item {
+  padding: 6px 7px !important;
+  border-radius: 3px !important;
+}
+.preset-item-title { font-size: 0.72rem !important; }
+.preset-item-blurb {
+  font-size: 0.58rem !important;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.map-item-title { font-size: 0.72rem !important; }
+.sidebar-foot {
+  font-size: 0.58rem !important;
+  line-height: 1.35 !important;
+  margin-top: 8px !important;
+}
+.brand-copy span {
+  font-size: 0.52rem !important;
+  letter-spacing: 0.16em !important;
+}
+.resize-handle { opacity: 0; }
+.map-node:hover .resize-handle,
+.map-node.is-selected .resize-handle { opacity: 0.85; }
+.link-handle { opacity: 0.12 !important; }
+.map-node:hover .link-handle,
+.map-node.is-selected .link-handle { opacity: 0.8 !important; }
+
+/* craft8: critic polish — limb card air + quieter onboard on slate */
+.map-node:not(.is-root) .node-body {
+  rx: 4;
+}
+.node-html {
+  padding: 0 2px !important;
+}
+.map-node:not(.is-root) .node-input {
+  padding: 0 12px !important;
+}
+.onboard-card {
+  background: #181f28 !important;
+  border: 1.5px solid #3a4556 !important;
+  border-radius: 12px !important;
+  box-shadow: 2px 2px 0 #0a0e14 !important;
+}
+.onboard-card:hover {
+  transform: none !important;
+  box-shadow: 2px 2px 0 #0a0e14 !important;
+}
+.onboard-title {
+  letter-spacing: -0.035em !important;
+}
+.connect-hint {
+  background: #181f28 !important;
+  border: 1.5px solid #3a4556 !important;
+  color: var(--chalk) !important;
+  box-shadow: 2px 2px 0 #0a0e14 !important;
+  font-size: 0.78rem !important;
+}
+.mind-svg {
+  cursor: grab;
+}
+.canvas-wrap.is-linking .mind-svg {
+  cursor: crosshair;
+}

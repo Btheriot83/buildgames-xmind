@@ -123,33 +123,43 @@ export function MindCanvas() {
         }}
       >
         <g transform={`translate(${pan.x},${pan.y}) scale(${zoom})`}>
+          <defs>
+            <filter id="chalk-limb-grit" x="-12%" y="-12%" width="124%" height="124%">
+              <feTurbulence type="fractalNoise" baseFrequency="1.15" numOctaves="2" seed="11" result="noise" />
+              <feDisplacementMap in="SourceGraphic" in2="noise" scale="0.55" xChannelSelector="R" yChannelSelector="G" />
+            </filter>
+          </defs>
           {map.edges.map((e) => {
             const a = byId.get(e.from)
             const b = byId.get(e.to)
             if (!a || !b) return null
-            const acx = a.x + a.width / 2
             const acy = a.y + a.height / 2
             const bcx = b.x + b.width / 2
             const bcy = b.y + b.height / 2
+            const acx = a.x + a.width / 2
             const toRight = bcx >= acx
-            const x1 = toRight ? a.x + a.width : a.x
+            const x1 = toRight ? a.x + a.width - 1 : a.x + 1
             const y1 = acy
-            const x2 = toRight ? b.x : b.x + b.width
+            const x2 = toRight ? b.x + 1 : b.x + b.width - 1
             const y2 = bcy
-            /* Organic MindNode-like limbs: seed bend from edge id */
-            const seed = e.id.charCodeAt(0) + e.id.charCodeAt(Math.min(3, e.id.length - 1)) * 7
-            const dx = Math.max(72, Math.abs(x2 - x1) * 0.62)
-            const bend = ((seed % 11) - 5) * 1.35
-            const lift = ((seed % 5) - 2) * 3.2
-            const dy = (y2 - y1) * 0.22 + bend * 5.8
+            /* Organic cubic limbs — seeded bow, no self-intersecting smooth-S */
+            const seed =
+              e.id.split('').reduce((acc, ch, i) => acc + ch.charCodeAt(0) * (i + 3), 0) || 17
+            const spanX = Math.abs(x2 - x1)
+            const dx = Math.max(64, spanX * 0.55)
+            const bend = ((seed % 11) - 5) * 4.2
+            const lift = ((seed % 7) - 3) * 2.4
+            const dy = (y2 - y1) * 0.18 + bend
             const c1x = toRight ? x1 + dx : x1 - dx
-            const c2x = toRight ? x2 - dx * 0.92 : x2 + dx * 0.92
-            const c1y = y1 + dy * 0.28 + lift
-            const c2y = y2 - dy * 0.48 - lift * 0.4
-            const d = `M ${x1} ${y1} C ${c1x} ${c1y}, ${c2x} ${c2y}, ${x2} ${y2}`
+            const c1y = y1 + dy * 0.22 + lift
+            const c2x = toRight ? x2 - dx * 0.88 : x2 + dx * 0.88
+            const c2y = y2 - dy * 0.42 - lift * 0.35
+            const d = `M ${x1.toFixed(1)} ${y1.toFixed(1)} C ${c1x.toFixed(1)} ${c1y.toFixed(1)}, ${c2x.toFixed(1)} ${c2y.toFixed(1)}, ${x2.toFixed(1)} ${y2.toFixed(1)}`
+            const dust = `M ${x1.toFixed(1)} ${(y1 + 1.2).toFixed(1)} C ${(c1x + 0.5).toFixed(1)} ${(c1y + 1.6).toFixed(1)}, ${(c2x + 0.4).toFixed(1)} ${(c2y + 1.1).toFixed(1)}, ${x2.toFixed(1)} ${(y2 + 0.9).toFixed(1)}`
             return (
-              <g key={e.id} className="edge-group">
+              <g key={e.id} className="edge-group" filter="url(#chalk-limb-grit)">
                 <path d={d} className="edge-line-under" aria-hidden />
+                <path d={dust} className="edge-line-dust" aria-hidden />
                 <path
                   d={d}
                   className="edge-line"
