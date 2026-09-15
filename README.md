@@ -1,6 +1,6 @@
 # Copper Synapse — Xmind replacement
 
-Local-first browser mind mapping. Drag, resize, connect, keyboard shortcuts, autosave to IndexedDB, export **SVG / PNG / JSON**.
+Local-first browser mind mapping. Drag, resize, connect, keyboard shortcuts, **AI Expand** / outline→map, autosave to IndexedDB, export **SVG / PNG / JSON**.
 
 **Live demo:** https://buildgames-xmind.vercel.app
 
@@ -62,11 +62,13 @@ src/
 cp .env.example .env
 ```
 
-No secrets required. Optional `VITE_APP_TITLE`.
+Server AI (optional): set `BUILD_GAMES_LLM_API_KEY` (or `XAI_API_KEY` / `OPENAI_API_KEY`) on Vercel for `/api/ai`. Locally run `npm run ai:dev` alongside Vite (proxied). App remains useful without a key for outline parse + core map loop.
+
+Optional `VITE_APP_TITLE`.
 
 ## Limitations vs paid Xmind
 
-Deliberately excluded: multiplayer cursors/comments, large template libraries, high-fidelity proprietary import/export. This ships the personal core loop only.
+Deliberately excluded: multiplayer cursors/comments, large template libraries, high-fidelity proprietary import/export, Gantt/Zones. This ships the personal core loop + AI expand/outline only.
 
 ## Vercel
 

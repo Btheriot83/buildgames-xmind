@@ -3,11 +3,16 @@ import { downloadJson, downloadPng, downloadSvg } from '../lib/export'
 import { useMapStore } from '../store/mapStore'
 import { NumberPop } from './NumberPop'
 
-export function Toolbar() {
+export function Toolbar({
+  onOpenOutline,
+}: {
+  onOpenOutline: () => void
+}) {
   const map = useMapStore((s) => s.map)
   const stats = useMapStore((s) => s.stats)
   const saveStatus = useMapStore((s) => s.saveStatus)
   const addChildToSelected = useMapStore((s) => s.addChildToSelected)
+  const addSiblingToSelected = useMapStore((s) => s.addSiblingToSelected)
   const removeSelected = useMapStore((s) => s.removeSelected)
   const setConnectFrom = useMapStore((s) => s.setConnectFrom)
   const selectedId = useMapStore((s) => s.selectedId)
@@ -16,8 +21,11 @@ export function Toolbar() {
   const importJson = useMapStore((s) => s.importJson)
   const flashSuccess = useMapStore((s) => s.flashSuccess)
   const flashToast = useMapStore((s) => s.flashToast)
+  const expandSelectedAi = useMapStore((s) => s.expandSelectedAi)
+  const aiBusy = useMapStore((s) => s.aiBusy)
   const fileRef = useRef<HTMLInputElement>(null)
   const [titleError, setTitleError] = useState(false)
+  const [moreOpen, setMoreOpen] = useState(false)
 
   if (!map) return null
 
@@ -36,10 +44,10 @@ export function Toolbar() {
   return (
     <header className="toolbar" role="banner">
       <div className="brand">
-        <span className="brand-mark" aria-hidden="true" />
+        <img className="brand-mark-img" src="/art/brand-mark-sm.png" width={28} height={28} alt="" />
         <div className="t-stagger is-shown brand-copy">
           <strong className="t-stagger-line t-stagger-line--1">Copper Synapse</strong>
-          <span className="t-stagger-line t-stagger-line--2">local mind maps</span>
+          <span className="t-stagger-line t-stagger-line--2">mind maps on the desk</span>
         </div>
       </div>
 
@@ -67,7 +75,7 @@ export function Toolbar() {
             }}
           />
         </div>
-        <p className="t-error-msg">Title cannot be empty.</p>
+        <p className="t-error-msg">Give the map a name.</p>
       </div>
 
       <div className="stats-row" aria-label="Map stats">
@@ -78,7 +86,22 @@ export function Toolbar() {
 
       <div className="toolbar-actions">
         <button type="button" className="btn" onClick={() => addChildToSelected()} disabled={!selectedId} data-testid="add-child">
-          + Child
+          Child
+        </button>
+        <button type="button" className="btn" onClick={() => addSiblingToSelected()} disabled={!selectedId} data-testid="add-sibling">
+          Sibling
+        </button>
+        <button
+          type="button"
+          className="btn accent"
+          onClick={() => void expandSelectedAi()}
+          disabled={!selectedId || aiBusy}
+          data-testid="ai-expand"
+        >
+          {aiBusy ? 'Expanding…' : 'AI Expand'}
+        </button>
+        <button type="button" className="btn" onClick={onOpenOutline} data-testid="open-outline">
+          Outline
         </button>
         <button
           type="button"
@@ -87,17 +110,27 @@ export function Toolbar() {
           disabled={!selectedId}
           data-testid="connect"
         >
-          Connect
+          Link
         </button>
         <button type="button" className="btn danger" onClick={() => removeSelected()} disabled={!selectedId}>
           Delete
         </button>
-        <button type="button" className="btn ghost" onClick={() => newMap()}>
-          New
+        <button type="button" className="btn accent" onClick={() => onExport('svg')} data-testid="export-svg">
+          SVG
         </button>
-        <button type="button" className="btn ghost" onClick={() => fileRef.current?.click()}>
-          Import
-        </button>
+        <div className="more-wrap">
+          <button type="button" className="btn ghost" onClick={() => setMoreOpen((v) => !v)} aria-expanded={moreOpen}>
+            More
+          </button>
+          {moreOpen && (
+            <div className="more-menu" role="menu">
+              <button type="button" role="menuitem" className="btn ghost" onClick={() => { newMap(); setMoreOpen(false) }}>New</button>
+              <button type="button" role="menuitem" className="btn ghost" onClick={() => { fileRef.current?.click(); setMoreOpen(false) }}>Import</button>
+              <button type="button" role="menuitem" className="btn ghost" onClick={() => { void onExport('png'); setMoreOpen(false) }}>PNG</button>
+              <button type="button" role="menuitem" className="btn ghost" onClick={() => { void onExport('json'); setMoreOpen(false) }}>JSON</button>
+            </div>
+          )}
+        </div>
         <input
           ref={fileRef}
           type="file"
@@ -116,15 +149,6 @@ export function Toolbar() {
             }
           }}
         />
-        <button type="button" className="btn accent" onClick={() => onExport('svg')} data-testid="export-svg">
-          SVG
-        </button>
-        <button type="button" className="btn accent" onClick={() => onExport('png')} data-testid="export-png">
-          PNG
-        </button>
-        <button type="button" className="btn ghost" onClick={() => onExport('json')}>
-          JSON
-        </button>
         <span className={`save-pill status-${saveStatus}`} aria-live="polite">
           {saveStatus === 'saving' && 'Saving…'}
           {saveStatus === 'saved' && 'Saved'}

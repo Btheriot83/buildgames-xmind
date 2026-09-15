@@ -1,7 +1,8 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { EmptyState } from './components/EmptyState'
 import { LoadingShell } from './components/LoadingShell'
 import { MindCanvas } from './components/MindCanvas'
+import { OutlinePanel } from './components/OutlinePanel'
 import { ShaderBg } from './components/ShaderBg'
 import { Sidebar } from './components/Sidebar'
 import { SuccessOverlay } from './components/SuccessOverlay'
@@ -13,10 +14,13 @@ export default function App() {
   const boot = useMapStore((s) => s.boot)
   const loadStatus = useMapStore((s) => s.loadStatus)
   const addChildToSelected = useMapStore((s) => s.addChildToSelected)
+  const addSiblingToSelected = useMapStore((s) => s.addSiblingToSelected)
   const removeSelected = useMapStore((s) => s.removeSelected)
   const setConnectFrom = useMapStore((s) => s.setConnectFrom)
   const selectedId = useMapStore((s) => s.selectedId)
   const connectFrom = useMapStore((s) => s.connectFrom)
+  const expandSelectedAi = useMapStore((s) => s.expandSelectedAi)
+  const [outlineOpen, setOutlineOpen] = useState(false)
 
   useEffect(() => {
     void boot()
@@ -28,22 +32,40 @@ export default function App() {
       const typing = tag === 'INPUT' || tag === 'TEXTAREA'
       if (e.key === 'Escape') {
         setConnectFrom(null)
+        setOutlineOpen(false)
         return
       }
       if (typing) return
       if (e.key === 'Tab') {
         e.preventDefault()
         addChildToSelected()
+      } else if (e.key === 'Enter') {
+        e.preventDefault()
+        addSiblingToSelected()
       } else if (e.key === 'Delete' || e.key === 'Backspace') {
         e.preventDefault()
         removeSelected()
       } else if (e.key === 'c' || e.key === 'C') {
         if (selectedId) setConnectFrom(selectedId)
+      } else if ((e.key === 'e' || e.key === 'E') && (e.metaKey || e.ctrlKey)) {
+        e.preventDefault()
+        void expandSelectedAi()
+      } else if ((e.key === 'o' || e.key === 'O') && (e.metaKey || e.ctrlKey)) {
+        e.preventDefault()
+        setOutlineOpen(true)
       }
     }
     window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
-  }, [addChildToSelected, removeSelected, setConnectFrom, selectedId, connectFrom])
+  }, [
+    addChildToSelected,
+    addSiblingToSelected,
+    removeSelected,
+    setConnectFrom,
+    selectedId,
+    connectFrom,
+    expandSelectedAi,
+  ])
 
   const ready = loadStatus === 'ready'
   const empty = loadStatus === 'empty'
@@ -66,11 +88,12 @@ export default function App() {
           ) : (
             ready && (
               <>
-                <Toolbar />
+                <Toolbar onOpenOutline={() => setOutlineOpen(true)} />
                 <div className="workspace">
                   <Sidebar />
                   <MindCanvas />
                 </div>
+                <OutlinePanel open={outlineOpen} onClose={() => setOutlineOpen(false)} />
               </>
             )
           )}

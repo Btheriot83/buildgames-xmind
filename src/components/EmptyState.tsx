@@ -12,15 +12,28 @@ export function EmptyState() {
 
   return (
     <div className="empty-state" data-testid="empty-state">
+      <div className="empty-media">
+        <video
+          className="empty-video"
+          src="/art/synapse-pulse.mp4"
+          poster="/art/empty-desk.jpg"
+          autoPlay
+          muted
+          loop
+          playsInline
+          aria-hidden="true"
+        />
+        <img className="empty-still" src="/art/empty-desk.jpg" alt="" />
+      </div>
       <div className={`t-stagger ${shown ? 'is-shown' : ''}`}>
-        <strong className="t-stagger-line t-stagger-line--1">No maps yet</strong>
+        <strong className="t-stagger-line t-stagger-line--1">Desk is clear</strong>
         <span className="t-stagger-line t-stagger-line--2">
-          Start a blank canvas or load the labelled SAMPLE map.
+          Pin a central idea, Tab for children, Enter for siblings — or grow from an outline.
         </span>
       </div>
       <div className="empty-actions">
         <button type="button" className="btn accent" onClick={() => newMap()}>
-          New map
+          Blank map
         </button>
         <button type="button" className="btn" onClick={() => seedSample()}>
           Load sample

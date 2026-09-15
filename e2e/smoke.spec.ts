@@ -18,3 +18,12 @@ test('core loop: load sample, add child, export svg', async ({ page }) => {
 
   await expect(page.locator('.success-overlay.visible')).toBeVisible()
 })
+
+test('outline panel opens and sibling control exists', async ({ page }) => {
+  await page.goto('/')
+  await expect(page.getByTestId('mind-canvas')).toBeVisible({ timeout: 30_000 })
+  await expect(page.getByTestId('add-sibling')).toBeVisible()
+  await expect(page.getByTestId('ai-expand')).toBeVisible()
+  await page.getByTestId('open-outline').click()
+  await expect(page.getByTestId('outline-input')).toBeVisible()
+})

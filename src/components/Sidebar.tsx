@@ -34,15 +34,17 @@ export function Sidebar() {
         ))}
       </ul>
       <p className="sidebar-foot">
-        Data lives in IndexedDB (<code>copper-synapse-xmind</code>). Export JSON to back up.
+        Lives in IndexedDB (<code>copper-synapse-xmind</code>). Export JSON before you wipe site data.
       </p>
       <div className="shortcuts">
-        <h3>Shortcuts</h3>
+        <h3>Keys</h3>
         <ul>
-          <li><kbd>Tab</kbd> add child</li>
-          <li><kbd>Del</kbd> delete node</li>
-          <li><kbd>C</kbd> connect mode</li>
-          <li><kbd>Esc</kbd> cancel</li>
+          <li><kbd>Tab</kbd> child</li>
+          <li><kbd>Enter</kbd> sibling</li>
+          <li><kbd>⌘E</kbd> AI expand</li>
+          <li><kbd>⌘O</kbd> outline</li>
+          <li><kbd>C</kbd> link mode</li>
+          <li><kbd>Del</kbd> delete</li>
           <li><kbd>Alt</kbd>+drag pan</li>
         </ul>
       </div>

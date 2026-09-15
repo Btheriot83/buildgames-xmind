@@ -10,6 +10,13 @@ import {
   updateNodeText,
   validateImportedMap,
 } from '../lib/model'
+import { expandNodeAi, outlineToMapAi } from '../lib/aiClient'
+import {
+  addChildrenLabels,
+  addSibling,
+  mapFromOutlineTree,
+  parseOutlineText,
+} from '../lib/outline'
 import { buildSampleMap } from '../lib/sample'
 import {
   deleteMap as dbDelete,
@@ -58,6 +65,10 @@ interface MapStore {
   flashToast: (message: string, kind?: ToastState['kind']) => void
   flashSuccess: () => void
   clearToast: () => void
+  addSiblingToSelected: () => void
+  expandSelectedAi: () => Promise<void>
+  outlineToMap: (outline: string, opts?: { useAi?: boolean; title?: string }) => Promise<void>
+  aiBusy: boolean
 }
 
 let saveTimer: ReturnType<typeof setTimeout> | null = null
@@ -76,6 +87,7 @@ export const useMapStore = create<MapStore>((set, get) => ({
   toast: { message: '', kind: 'info', open: false },
   stats: { nodeCount: 0, depth: 0, edgeCount: 0 },
   showSuccess: false,
+  aiBusy: false,
 
   boot: async () => {
     set({ loadStatus: 'loading' })
@@ -237,6 +249,83 @@ export const useMapStore = create<MapStore>((set, get) => ({
         get().flashToast('Autosave failed', 'err')
       }
     }, 350)
+  },
+
+
+  addSiblingToSelected: () => {
+    const { map, selectedId } = get()
+    if (!map || !selectedId) return
+    const next = addSibling(map, selectedId)
+    const child = next.nodes[next.nodes.length - 1]
+    set({ map: next, selectedId: child?.id ?? selectedId, stats: statsOf(next) })
+    get().persist()
+  },
+
+  expandSelectedAi: async () => {
+    const { map, selectedId } = get()
+    if (!map || !selectedId || get().aiBusy) return
+    const node = map.nodes.find((n) => n.id === selectedId)
+    if (!node) return
+    const context = map.nodes
+      .filter((n) => n.parentId === selectedId || n.parentId === node.parentId)
+      .map((n) => n.text)
+      .slice(0, 12)
+    set({ aiBusy: true })
+    try {
+      const out = await expandNodeAi(node.text, context, 5)
+      const next = addChildrenLabels(map, selectedId, out.children)
+      const last = next.nodes[next.nodes.length - 1]
+      set({ map: next, selectedId: last?.id ?? selectedId, stats: statsOf(next) })
+      get().persist()
+      get().flashToast(`Expanded via ${out.provider}`, 'ok')
+    } catch (e) {
+      get().flashToast(e instanceof Error ? e.message : 'Expand failed', 'err')
+    } finally {
+      set({ aiBusy: false })
+    }
+  },
+
+  outlineToMap: async (outline, opts) => {
+    const raw = outline.trim()
+    if (raw.length < 3) {
+      get().flashToast('Paste a longer outline', 'err')
+      return
+    }
+    set({ aiBusy: true })
+    try {
+      let tree = parseOutlineText(raw)
+      let title = opts?.title
+      let note = 'Outline laid out locally'
+      if (opts?.useAi !== false) {
+        try {
+          const out = await outlineToMapAi(raw, title)
+          tree = out.root
+          title = out.title
+          note = `Map grown via ${out.provider}`
+        } catch {
+          note = 'Outline parsed locally (AI unavailable)'
+        }
+      }
+      if (!tree) {
+        get().flashToast('Could not parse outline', 'err')
+        return
+      }
+      const map = mapFromOutlineTree(tree, title)
+      await saveMap(map)
+      const maps = await listMaps()
+      set({
+        maps,
+        map,
+        selectedId: map.nodes[0]?.id ?? null,
+        stats: statsOf(map),
+        loadStatus: 'ready',
+      })
+      get().flashToast(note, 'ok')
+    } catch (e) {
+      get().flashToast(e instanceof Error ? e.message : 'Outline failed', 'err')
+    } finally {
+      set({ aiBusy: false })
+    }
   },
 
   flashToast: (message, kind = 'info') => {

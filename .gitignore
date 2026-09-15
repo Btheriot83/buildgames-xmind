@@ -28,3 +28,11 @@ coverage
 
 # TypeScript
 *.tsbuildinfo
+
+.local/
+gauntlet/shots/
+*.local
+
+public/art/empty-desk.png
+public/art/brand-mark.png
+.local/

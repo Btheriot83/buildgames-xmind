@@ -176,8 +176,7 @@ input:focus-visible {
   gap: 14px 18px;
   padding: 14px 18px;
   border-bottom: 1px solid var(--line);
-  background: rgba(18, 20, 26, 0.82);
-  backdrop-filter: blur(8px);
+  background: var(--ink-2);
 }
 
 .brand {
@@ -187,11 +186,14 @@ input:focus-visible {
   min-width: 180px;
 }
 .brand-mark {
+  display: none;
+}
+.brand-mark-img {
   width: 28px;
   height: 28px;
-  border-radius: 50%;
-  background: radial-gradient(circle at 35% 35%, var(--copper-hot), var(--copper) 55%, #8a4a1c);
-  box-shadow: 0 0 0 2px var(--ink), 0 0 18px rgba(29, 141, 128, 0.45);
+  border-radius: 6px;
+  object-fit: cover;
+  border: 1px solid var(--line);
 }
 .brand-copy strong {
   font-family: var(--font-display);
@@ -245,10 +247,9 @@ input:focus-visible {
   min-width: 64px;
 }
 .stat-label {
-  font-size: 0.65rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--teal-glow);
+  font-size: 0.68rem;
+  letter-spacing: 0.02em;
+  color: var(--bone-dim);
 }
 .t-digit-group {
   font-family: var(--font-display);
@@ -325,7 +326,7 @@ input:focus-visible {
 
 .sidebar {
   border-right: 1px solid var(--line);
-  background: rgba(18, 20, 26, 0.88);
+  background: var(--ink-2);
   padding: 14px 12px;
   display: flex;
   flex-direction: column;
@@ -392,8 +393,7 @@ input:focus-visible {
   margin: 0 0 6px;
   font-size: 0.75rem;
   color: var(--bone-dim);
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.02em;
 }
 .shortcuts ul {
   margin: 0;
@@ -437,9 +437,8 @@ kbd {
 .edge-glow {
   fill: none;
   stroke: var(--teal-glow);
-  stroke-width: 4;
-  opacity: 0.35;
-  filter: drop-shadow(0 0 6px rgba(43, 191, 173, 0.45));
+  stroke-width: 3;
+  opacity: 0.22;
 }
 
 .map-node { cursor: pointer; }
@@ -607,4 +606,116 @@ kbd {
 
 @media (prefers-reduced-motion: reduce) {
   .edge-glow { stroke-dashoffset: 0 !important; animation: none !important; }
+}
+
+
+/* Outline dock + empty media (gauntlet) */
+.outline-panel {
+  position: fixed;
+  z-index: 30;
+  right: 18px;
+  top: 78px;
+  width: min(380px, calc(100vw - 36px));
+  max-height: calc(100vh - 110px);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 14px;
+  background: var(--ink-2);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.35);
+}
+.outline-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: flex-start;
+}
+.outline-head h2 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1rem;
+}
+.outline-head p {
+  margin: 4px 0 0;
+  font-size: 0.72rem;
+  color: var(--bone-dim);
+  line-height: 1.4;
+}
+.outline-input {
+  width: 100%;
+  min-height: 220px;
+  resize: vertical;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--ink);
+  color: var(--bone);
+  padding: 10px 12px;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  line-height: 1.45;
+}
+.outline-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.outline-ai-toggle {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 0.75rem;
+  color: var(--bone-dim);
+}
+
+.empty-media {
+  position: relative;
+  width: min(440px, 92vw);
+  margin: 0 auto 18px;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  aspect-ratio: 16 / 9;
+  background: var(--ink-3);
+}
+.empty-video,
+.empty-still {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.empty-still { opacity: 0; }
+@media (prefers-reduced-motion: reduce) {
+  .empty-video { display: none; }
+  .empty-still { opacity: 1; }
+}
+
+.more-wrap { position: relative; }
+.more-menu {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 6px);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 8px;
+  background: var(--ink-3);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  min-width: 120px;
+  z-index: 20;
+}
+
+/* Synapse ignition flash on AI expand (Tech 5 keyframe craft) */
+@keyframes synapse-ignite {
+  0% { filter: brightness(1); }
+  35% { filter: brightness(1.35); }
+  100% { filter: brightness(1); }
+}
+.app-shell.is-igniting .edge-line {
+  animation: synapse-ignite 700ms var(--check-ease-out);
 }
