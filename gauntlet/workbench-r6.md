@@ -28,3 +28,9 @@
 - shot: gauntlet/shots-r6/r1-board.png
 - verdict: Root/title/limb type denser and heavier vs R5 board; original still wins light editorial marketing type on white canvas.
 - commit: 3961e3a
+
+## r2 — contrast
+- files: src/index.css,
+- shot: gauntlet/shots-r6/r2-board.png
+- verdict: Limb stroke and chalk labels hold harder on board tooth; original still brighter on white map photography.
+- commit: 848464b
