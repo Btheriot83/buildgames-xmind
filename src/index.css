@@ -2922,3 +2922,57 @@ body {
   grid-template-columns: 152px minmax(0, 1fr) !important;
 }
 :root { --elevate-sidebar: 152px; }
+
+/* craft4: typography — MindNode calm ladder (display root / mono limbs) */
+.map-node.is-root .node-input {
+  font-family: var(--font-display) !important;
+  font-size: 17px !important;
+  font-weight: 750 !important;
+  letter-spacing: -0.03em !important;
+  color: #151a21 !important;
+}
+.map-node:not(.is-root) .node-input {
+  font-family: var(--font-mono) !important;
+  font-size: 13.35px !important;
+  font-weight: 560 !important;
+  letter-spacing: -0.015em !important;
+  color: #f6f2e8 !important;
+}
+.brand-copy strong {
+  font-size: clamp(1.02rem, 1.5vw, 1.22rem) !important;
+  letter-spacing: -0.032em !important;
+}
+.outline-tree-head h2 {
+  font-family: var(--font-display) !important;
+  font-size: 1.42rem !important;
+  letter-spacing: -0.035em !important;
+  color: #f6f2e8 !important;
+}
+.outline-tree-head p {
+  font-size: 0.82rem !important;
+  color: #b4b0a3 !important;
+  max-width: 28rem !important;
+  line-height: 1.4 !important;
+}
+.outline-tree-row.is-root > .outline-tree-item {
+  font-family: var(--font-display) !important;
+  font-size: 1.18rem !important;
+  font-weight: 750 !important;
+  letter-spacing: -0.03em !important;
+  min-height: 42px !important;
+  border-radius: 999px !important;
+  padding-left: 18px !important;
+  padding-right: 18px !important;
+}
+.outline-tree-item {
+  font-family: var(--font-mono) !important;
+  font-size: 0.9rem !important;
+  letter-spacing: -0.012em !important;
+  min-height: 36px !important;
+  border-radius: 4px !important;
+}
+.title-input input {
+  font-family: var(--font-display) !important;
+  font-size: 1.06rem !important;
+  letter-spacing: -0.02em !important;
+}
