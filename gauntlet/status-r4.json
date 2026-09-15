@@ -78,5 +78,18 @@
   "branch": "gauntlet/xmind-r4",
   "finishedAtUtc": "2026-09-15T05:18:00Z",
   "finishedAtPt": "2026-09-14 10:18 PM PT",
-  "sha": "b72d10a"
+  "sha": "981c0d6",
+  "pr": "https://github.com/Btheriot83/buildgames-xmind/pull/4",
+  "live_smoke": {
+    "ok": true,
+    "at_pt": "2026-09-14 10:18 PM PT",
+    "url": "https://buildgames-xmind.vercel.app",
+    "deployment": "dpl_FUAYRX4MfpwvedjVBZ4K66dCaLBy",
+    "checks": [
+      "HTTP reachable",
+      "Shop Chalk Map locked",
+      "B4 assets live",
+      "20 counted rounds"
+    ]
+  }
 }
