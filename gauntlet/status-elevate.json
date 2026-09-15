@@ -93,13 +93,27 @@
   ],
   "doNotMessageBrandon": true,
   "branch": "elevate/shop-chalk-map-pro-bars",
-  "finishedAtUtc": "2026-09-15T13:49:51Z",
-  "finishedAtPt": "2026-09-15 6:49 AM PT",
-  "pr_url": null,
-  "pr_merged": false,
-  "vercel_status": null,
-  "shotCount": 21,
+  "finishedAtUtc": "2026-09-15T13:52:39Z",
+  "finishedAtPt": "2026-09-15 6:52 AM PT",
+  "pr_url": "https://github.com/Btheriot83/buildgames-xmind/pull/9",
+  "pr_merged": true,
+  "vercel_status": "READY",
+  "shotCount": 22,
   "shotsDir": "gauntlet/shots-elevate",
   "workbench": "gauntlet/workbench-elevate.md",
-  "ledger": "gauntlet/shots-elevate/LEDGER.md"
+  "ledger": "gauntlet/shots-elevate/LEDGER.md",
+  "mainSha": "4a5ec81",
+  "live_smoke": {
+    "ok": true,
+    "at_pt": "2026-09-15 6:52 AM PT",
+    "http": 200,
+    "shot": "gauntlet/shots-elevate/elevate12-live-prod-smoke.png",
+    "checks": [
+      "HTTP 200",
+      "Shop Chalk Map present",
+      "0\u00d7 Copper Synapse in DOM",
+      "Map|Outline dual switch",
+      "12 elevate commits; PR #9 merged; prod READY"
+    ]
+  }
 }
