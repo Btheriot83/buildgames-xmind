@@ -43,101 +43,107 @@
 - files: src/components/MindCanvas.tsx, src/index.css
 - shot: gauntlet/shots-r4/r4-board.png
 - verdict: Side-attach chalk limbs close dream-loop target silhouette; original still wins soft editorial bezier photography.
-- commit: 80dc62a
+- commit: a9a5682
 
 ## r5 — fonts
 - files: src/index.css
 - shot: gauntlet/shots-r4/r5-board.png ; gauntlet/shots-r4/r5-bar-xmind.png
 - verdict: Brand/title type denser vs target; bar A/B — original marketing hero still outranks chalkboard chrome.
-- commit: 798245d
+- commit: 8b4f065
 
 ## r6 — contrast
 - files: src/index.css
 - shot: gauntlet/shots-r4/r6-board.png
 - verdict: Desk photo underlay killed — flat chalk board closer to dream-loop target; original still wins light map photography.
-- commit: c0129d3
+- commit: 33d3875
 
 ## r7 — buttons
 - files: src/index.css
 - shot: gauntlet/shots-r4/r7-board.png
 - verdict: Job cluster square denser matching target chrome; original CTAs still cleaner on light UI.
-- commit: 2061c4b
+- commit: 1ce06d2
 
 ## r8 — bar gap
 - files: src/components/MindCanvas.tsx, src/index.css
 - shot: gauntlet/shots-r4/r8-board.png
 - verdict: Chalk link ports on node edges — closer to dream-loop anchors; original still subtler.
-- commit: fc09014
+- commit: 91f0af7
 
 ## r9 — fonts
 - files: src/index.css
 - shot: gauntlet/shots-r4/r9-board.png
 - verdict: Limb mono 13px denser; root display holds — target type hierarchy closer; original still wins editorial type.
-- commit: 6367ad2
+- commit: 5e2105c
 
 ## r10 — contrast
 - files: src/index.css
 - shot: gauntlet/shots-r4/r10-board.png ; gauntlet/shots-r4/r10-bar-xmind.png
 - verdict: Limb stroke chalk-brighter on board; bar A/B — original light canvas contrast still preferred.
-- commit: 85621e0
+- commit: 9b6f6ac
 
 ## r11 — buttons
 - files: src/index.css
 - shot: gauntlet/shots-r4/r11-board.png
 - verdict: Export SVG sole copper primary with hard offset — matches target CTA weight; original still quieter.
-- commit: 87df507
+- commit: 976ba48
 
 ## r12 — bar gap
 - files: src/lib/model.ts, src/index.css
 - shot: gauntlet/shots-r4/r12-board.png
 - verdict: Right-fan sibling spacing denser toward dream-loop tree; original still wins fluid org layouts.
-- commit: ef1783a
+- commit: 682c4de
 
 ## r13 — fonts
 - files: src/index.css
 - shot: gauntlet/shots-r4/r13-board.png
 - verdict: Job tape tracking denser billboard; still chalkboard vs Xmind photo hero.
-- commit: f91cb8c
+- commit: a50e878
 
 ## r14 — contrast
 - files: src/index.css
 - shot: gauntlet/shots-r4/r14-board.png
 - verdict: Selected limb chalk wash + acid stroke; vs target selection clarity; original softer.
-- commit: 10c8c65
+- commit: 9627ece
 
 ## r15 — buttons
 - files: src/index.css
 - shot: gauntlet/shots-r4/r15-board.png ; gauntlet/shots-r4/r15-bar-xmind.png
 - verdict: AI Expand outline secondary vs Export primary; bar A/B — original CTA hierarchy cleaner on light UI.
-- commit: a5b8b84
+- commit: 8c355aa
 
 ## r16 — bar gap
 - files: src/components/MindCanvas.tsx, src/index.css
 - shot: gauntlet/shots-r4/r16-board.png
 - verdict: Root capsule + limb cards tighter rx — dream-loop node silhouette; original still polished.
-- commit: 87779c1
+- commit: a6f496b
 
 ## r17 — fonts
 - files: src/index.css
 - shot: gauntlet/shots-r4/r17-board.png
 - verdict: Shortcuts/kbd mono hierarchy denser; original chrome quieter.
-- commit: 6df5a44
+- commit: 77a8882
 
 ## r18 — contrast
 - files: src/index.css
 - shot: gauntlet/shots-r4/r18-board.png
 - verdict: Toast/save pill chalk contrast hold; closer to target flat chrome; original still softer.
-- commit: c83bb7d
+- commit: 57f1a3e
 
 ## r19 — buttons
 - files: src/index.css
 - shot: gauntlet/shots-r4/r19-board.png
 - verdict: Map-list cards square chalk + delete danger weight; original nav still cleaner.
-- commit: 9054344
+- commit: 5427501
 
 ## r20 — bar gap
 - files: src/index.css
 - shot: gauntlet/shots-r4/r20-board.png ; gauntlet/shots-r4/r20-bar-xmind.png
 - verdict: Final coherence vs dream-loop target + bar: candidate closer on chalkboard map craft; original still preferred for marketing photography. Honest: original wins unlabeled A/B overall.
-- commit: a2517cb
+- commit: b72d10a
 
+
+## dream-loop
+- baseline: `.dream-loop/baseline.png` (live core job board)
+- target: `.dream-loop/target.png` (Higgsfield gpt_image_2_5 refine of baseline — exact UI screenshot, not concept art)
+- closing rounds: r4 side-attach limbs, r6 flat chalk field (kill desk underlay), r8 port dots, r12 denser right-fan, r16 root/limb silhouette, r20 coherence
+- critic: each of those rounds judged vs target.png AND live xmind.app bar
