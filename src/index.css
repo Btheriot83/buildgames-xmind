@@ -3019,3 +3019,95 @@ body {
   color: #c2bdaa !important;
 }
 .save-pill { color: #c2bdaa !important; }
+
+/* craft6: Map|Outline dual — MindNode list craft + alive rename */
+.outline-tree {
+  background: #10151c !important;
+  padding: 28px 36px 48px !important;
+  border-left: 0 !important;
+}
+.outline-tree::before {
+  opacity: 0.08 !important;
+  background: url("/art/chalk-board.jpg") center / cover no-repeat !important;
+}
+.outline-tree-mark {
+  width: 10px !important;
+  height: 2px !important;
+  border-radius: 1px !important;
+  background: #6ec4b0 !important;
+  flex-shrink: 0;
+  margin-right: 2px;
+}
+.outline-tree-row.is-root .outline-tree-mark {
+  width: 12px !important;
+  height: 12px !important;
+  border-radius: 50% !important;
+  background: #151a21 !important;
+  box-shadow: inset 0 0 0 2px #151a21, 0 0 0 1.5px #f5d19a;
+}
+.outline-tree-item {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  width: 100%;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--chalk);
+  text-align: left;
+  cursor: default;
+}
+.outline-tree-text-btn {
+  flex: 1;
+  min-width: 0;
+  background: transparent;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  padding: 0;
+  cursor: pointer;
+}
+.outline-tree-edit-btn {
+  opacity: 0;
+  border: 0;
+  background: transparent;
+  color: var(--bone-dim);
+  cursor: pointer;
+  font-size: 0.78rem;
+  padding: 2px 6px;
+}
+.outline-tree-item:hover .outline-tree-edit-btn,
+.outline-tree-row.is-selected .outline-tree-edit-btn {
+  opacity: 0.9;
+}
+.outline-tree-edit {
+  flex: 1;
+  min-width: 0;
+  background: #1a222c;
+  border: 1.5px solid #e8b86d;
+  color: var(--chalk);
+  font: inherit;
+  border-radius: 4px;
+  padding: 4px 8px;
+}
+.outline-tree-row.is-selected > .outline-tree-item {
+  background: #1a222c !important;
+  border-color: #3a4556 !important;
+}
+.outline-tree-branch {
+  margin-left: 12px !important;
+  border-left: 1px solid #2a3340;
+  padding-left: 6px;
+}
+.view-switch.t-tabs {
+  border-radius: 3px !important;
+  border-width: 1.5px !important;
+}
+.view-switch-btn {
+  font-size: 0.72rem !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  min-height: 30px !important;
+  padding: 0 12px !important;
+  font-weight: 700 !important;
+}
