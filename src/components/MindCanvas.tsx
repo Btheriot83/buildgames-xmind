@@ -155,8 +155,6 @@ export function MindCanvas() {
             const c1y = y1 + (midY - y1) * 0.42 + bow
             const c2x = midX - (toRight ? dx * 0.18 : -dx * 0.18)
             const c2y = midY - bow * 0.55
-            const c3x = midX + (toRight ? dx * 0.22 : -dx * 0.22)
-            const c3y = midY + sway * 0.35
             const c4x = toRight ? x2 - dx * 0.86 : x2 + dx * 0.86
             const c4y = y2 - (y2 - midY) * 0.38 - bow * 0.4
             const d = `M ${x1.toFixed(1)} ${y1.toFixed(1)} C ${c1x.toFixed(1)} ${c1y.toFixed(1)}, ${c2x.toFixed(1)} ${c2y.toFixed(1)}, ${midX.toFixed(1)} ${midY.toFixed(1)} S ${c4x.toFixed(1)} ${c4y.toFixed(1)}, ${x2.toFixed(1)} ${y2.toFixed(1)}`
