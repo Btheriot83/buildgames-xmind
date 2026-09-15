@@ -1581,3 +1581,10 @@ kbd { font-size: 0.7rem; font-weight: 700; padding: 1px 5px; }
 .link-handle { fill: var(--copper); opacity: 0.85; }
 .edge-line { stroke-width: 3.7; }
 .map-node.is-root .node-body { rx: 999; }
+
+
+/* r5 fonts */
+.job-tape { font-size: 0.78rem; letter-spacing: 0.16em; font-weight: 800; }
+.job-rail strong { color: var(--copper-hot); font-weight: 800; }
+.map-item .map-title { font-size: 0.86rem; font-weight: 600; }
+.brand-copy span { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.04em; }
