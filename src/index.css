@@ -1346,3 +1346,21 @@ kbd {
   color: var(--chalk);
   font-size: 0.68rem;
 }
+
+/* —— PHASE B4 integrity — counted rounds (Shop Chalk Map locked) —— */
+
+/* r1 — fonts: clearer root vs limb type step */
+.map-node.is-root .node-input {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+.node-input {
+  font-size: 13.5px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+.title-input input {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
