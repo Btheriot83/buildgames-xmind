@@ -34,3 +34,9 @@
 - shot: gauntlet/shots-r6/r2-board.png
 - verdict: Limb stroke and chalk labels hold harder on board tooth; original still brighter on white map photography.
 - commit: 848464b
+
+## r3 — buttons
+- files: src/index.css,
+- shot: gauntlet/shots-r6/r3-board.png
+- verdict: Square chalk controls + Export copper primary with harder offset; original CTAs still quieter on light marketing UI.
+- commit: 190c445

@@ -1644,3 +1644,14 @@ kbd { font-size: 0.7rem; font-weight: 700; padding: 1px 5px; }
 .stat-label, .job-cluster-label, .sidebar-foot, .shortcuts li { color: var(--bone-dim); }
 .save-pill { border-color: #6a8a78; color: var(--chalk); border-width: 1.5px; }
 .canvas-wrap::before { opacity: 0.46 !important; }
+
+
+/* r3 buttons */
+.btn { border-radius: 2px; }
+.job-cluster { gap: 6px; padding: 6px 7px; background: #21362c; border: 2px solid #4a6b58; border-radius: 2px; }
+.btn.job { min-height: 38px; font-weight: 700; border-width: 2px; border-radius: 2px; }
+.btn.job-primary, .btn.primary, .btn.accent {
+  min-height: 38px; box-shadow: 5px 5px 0 #0c1611; font-weight: 800; letter-spacing: 0.03em; border-radius: 2px;
+}
+.btn.secondary, .btn.ghost { border-width: 2px; font-weight: 650; border-radius: 2px; opacity: 0.92; }
+.toolbar-actions .btn.accent { background: var(--copper); color: #14241c; border-color: var(--copper-hot); }
