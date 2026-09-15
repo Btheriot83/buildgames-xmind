@@ -4,3 +4,4 @@ Identity locked: Shop Chalk Map (0× Copper Synapse). Flat chalkboard materials.
 
 | Loop | Focus | Technique | Shot | SHA |
 | --- | --- | --- | --- | --- |
+| 1 | Map\|Outline dual switch + organic limbs | specify-the-look | elevate1-map-outline.png | c35fb14 |
