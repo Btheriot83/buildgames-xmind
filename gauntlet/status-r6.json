@@ -80,7 +80,7 @@
   "branch": "gauntlet/xmind-r6",
   "finishedAtUtc": "2026-09-15T07:16:21Z",
   "finishedAtPt": "2026-09-15 12:16 AM PT",
-  "sha": "e5f04ca",
+  "sha": "9e1fc16",
   "pr": "https://github.com/Btheriot83/buildgames-xmind/pull/6",
   "live_smoke": {
     "ok": true,
