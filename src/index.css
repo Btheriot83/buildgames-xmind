@@ -1976,3 +1976,25 @@ kbd { font-size: 0.7rem; font-weight: 700; padding: 1px 5px; }
 .sidebar-foot { font-size: 0.68rem; line-height: 1.4; color: var(--bone-dim); }
 .shortcuts h3 { font-size: 0.72rem; letter-spacing: 0.16em; }
 .shortcuts li { font-size: 0.7rem; }
+
+
+/* beat11 buttons — chalk tablet Export as sole hot control */
+.btn.job-primary, .btn.primary, .toolbar-actions .btn.accent {
+  min-width: 5.5rem;
+  padding: 0 14px;
+  box-shadow: 3px 3px 0 #07100c;
+}
+.btn.job:hover:not(:disabled) {
+  background: #24382e;
+  border-color: #8fc9b4;
+}
+.btn.danger { opacity: 0.75; }
+.btn.danger:hover:not(:disabled) { opacity: 1; }
+.more-menu {
+  border: 2px solid #4a6b58;
+  border-radius: 2px;
+  background: #16261f;
+  box-shadow: 3px 3px 0 #07100c;
+  padding: 4px;
+}
+.more-menu .btn { width: 100%; justify-content: flex-start; border-radius: 2px; }

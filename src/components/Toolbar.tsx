@@ -109,7 +109,7 @@ export function Toolbar({
             onClick={() => void onExport('svg')}
             data-testid="export-svg"
           >
-            Export SVG
+            Export
           </button>
           <div className="more-wrap">
             <button
