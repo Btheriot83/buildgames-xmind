@@ -142,10 +142,12 @@ export function MindCanvas() {
             const c2x = toRight ? x2 - dx : x2 + dx
             const c1y = y1 + dy
             const c2y = y2 - dy
+            const d = `M ${x1} ${y1} C ${c1x} ${c1y}, ${c2x} ${c2y}, ${x2} ${y2}`
             return (
               <g key={e.id} className="edge-group">
+                <path d={d} className="edge-line-under" aria-hidden />
                 <path
-                  d={`M ${x1} ${y1} C ${c1x} ${c1y}, ${c2x} ${c2y}, ${x2} ${y2}`}
+                  d={d}
                   className="edge-line"
                   strokeDasharray={connectFrom ? '8 6' : undefined}
                   strokeDashoffset={connectFrom ? -pulse * 18 : undefined}
