@@ -2059,3 +2059,24 @@ kbd { font-size: 0.7rem; font-weight: 700; padding: 1px 5px; }
   stroke-width: 3.6;
 }
 .edge-line { stroke: #e8fbf2; stroke-width: 3.85; }
+
+
+/* beat16 fonts — display root chalk billboard; mono limbs stay shop-short */
+.map-node.is-root .node-input {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
+.brand-copy strong {
+  font-family: var(--font-display);
+  font-size: clamp(1.28rem, 2vw, 1.58rem);
+}
+.empty-state .t-stagger-line--1 {
+  font-size: clamp(1.85rem, 3.6vw, 2.4rem);
+  letter-spacing: -0.04em;
+}
+.empty-state .t-stagger-line--2 {
+  font-size: 0.95rem;
+  max-width: 28rem;
+  color: var(--bone-dim);
+}
