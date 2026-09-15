@@ -57,9 +57,17 @@
   "critic": "docs/CRITIC_CRAFT_WAVE.md",
   "criticScore": 7.9,
   "independentWin": false,
-  "finishedAtPt": "2026-09-15 ~12:50 PM PT",
+  "finishedAtPt": "2026-09-15 12:34 PM PT",
   "shotsRepo": "gauntlet/shots-craft-wave/",
   "shotsNarrow": "/workspace/build-games/narrow/shots/shopchalk-craft/",
-  "finishedAtUtc": "2026-09-15T19:50:00Z",
-  "limbNote": "cubic organic bow + chalk grit dual-stick; retuned to avoid self-intersect"
+  "finishedAtUtc": "2026-09-15T19:34:00Z",
+  "limbNote": "cubic organic bow + chalk grit dual-stick; retuned to avoid self-intersect",
+  "vercel": "READY",
+  "pr": "https://github.com/Btheriot83/buildgames-xmind/pull/14",
+  "prodDeploy": "https://buildgames-xmind-l9dnce0uf-brandon-theriots-projects.vercel.app",
+  "smoke": {
+    "brand": "Shop Chalk Map",
+    "dieselOrCopperSynapse": false,
+    "liveShot": "narrow/shots/shopchalk-craft/live-prod-smoke.png"
+  }
 }
