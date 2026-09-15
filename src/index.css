@@ -2143,3 +2143,8 @@ kbd { font-size: 0.7rem; font-weight: 700; padding: 1px 5px; }
   font-size: 0.78rem;
   box-shadow: 2px 2px 0 #07100c;
 }
+
+
+/* beat21 cut — quieter save pill; toast less billboard */
+.save-pill { opacity: 0.55; font-size: 0.58rem; }
+.app-toast { opacity: 0.92; }
