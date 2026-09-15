@@ -1884,3 +1884,40 @@ kbd { font-size: 0.7rem; font-weight: 700; padding: 1px 5px; }
 .map-node.is-linking .link-handle { opacity: 0.95; }
 .toolbar { padding: 8px 12px; gap: 8px 10px; }
 .stat-chip { padding: 4px 8px; }
+
+
+/* beat6 remove-ai-tells — kill soft decoration, quiet starter badge, no fake sparkle */
+.starter-tag {
+  font-size: 0.58rem;
+  letter-spacing: 0.12em;
+  font-weight: 800;
+  text-transform: uppercase;
+  background: transparent;
+  color: var(--copper-hot);
+  border: 1.5px solid var(--copper);
+  border-radius: 2px;
+  padding: 1px 5px;
+  box-shadow: none;
+}
+.map-item { box-shadow: none; border-radius: 2px; }
+.map-list li.active .map-item {
+  box-shadow: 2px 2px 0 #0a120e;
+  border-color: var(--copper);
+  background: #21362c;
+}
+.app-toast, .save-pill, .connect-hint, .job-rail {
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  filter: none;
+}
+.stat-chip {
+  border-radius: 2px;
+  border: 1.5px solid #4a6b58;
+  background: #16261f;
+  box-shadow: none;
+}
+.brand-mark-img {
+  box-shadow: 2px 2px 0 #0a120e;
+  border-radius: 2px;
+}
+.empty-hero-art { box-shadow: 3px 3px 0 #0a120e; border-radius: 2px; }
