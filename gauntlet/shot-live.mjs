@@ -1,0 +1,17 @@
+import { chromium } from 'playwright';
+import { mkdirSync } from 'fs';
+mkdirSync('gauntlet/shots', { recursive: true });
+const browser = await chromium.launch({ headless: true });
+const ctx = await browser.newContext({ viewport: { width: 1440, height: 900 } });
+const page = await ctx.newPage();
+await page.goto('https://buildgames-xmind.vercel.app/', { waitUntil: 'networkidle', timeout: 90000 });
+await page.waitForTimeout(3500);
+await page.screenshot({ path: 'gauntlet/shots/r5-demo.png' });
+await page.getByTestId('open-outline').click();
+await page.waitForTimeout(600);
+await page.screenshot({ path: 'gauntlet/shots/r5-outline.png' });
+await page.getByTestId('outline-grow').click();
+await page.waitForTimeout(1200);
+await page.screenshot({ path: 'gauntlet/shots/r5-after-outline.png' });
+await browser.close();
+console.log('shots ok');
