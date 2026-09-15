@@ -136,13 +136,16 @@ export function MindCanvas() {
             const y1 = acy
             const x2 = toRight ? b.x : b.x + b.width
             const y2 = bcy
-            const dx = Math.max(40, Math.abs(x2 - x1) * 0.45)
+            const dx = Math.max(48, Math.abs(x2 - x1) * 0.52)
+            const dy = (y2 - y1) * 0.12
             const c1x = toRight ? x1 + dx : x1 - dx
             const c2x = toRight ? x2 - dx : x2 + dx
+            const c1y = y1 + dy
+            const c2y = y2 - dy
             return (
               <g key={e.id} className="edge-group">
                 <path
-                  d={`M ${x1} ${y1} C ${c1x} ${y1}, ${c2x} ${y2}, ${x2} ${y2}`}
+                  d={`M ${x1} ${y1} C ${c1x} ${c1y}, ${c2x} ${c2y}, ${x2} ${y2}`}
                   className="edge-line"
                   strokeDasharray={connectFrom ? '8 6' : undefined}
                   strokeDashoffset={connectFrom ? -pulse * 18 : undefined}
@@ -211,7 +214,7 @@ export function MindCanvas() {
       </svg>
       {connectFrom ? (
         <div className="connect-hint" role="status">
-          Click a node to link · Esc cancels
+          Click a limb to link · Esc cancels
         </div>
       ) : (
         <div className="job-rail" aria-hidden>

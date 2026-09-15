@@ -1,12 +1,12 @@
-# IDENTITY — Shop Chalk Map (LOCKED — Phase A reseed 2026-09-14 ~9:15pm PT)
+# IDENTITY — Shop Chalk Map (LOCKED — R5 Anshu deepen 2026-09-14 ~11:48pm PT)
 
-**Brandon allowed selective reseed for Copper Synapse.** Prior “Copper Synapse Desk / machinist midnight” identity retired — it hid the map job behind abstract desk chrome.
+**Reseed name?** No — Discover kept **Shop Chalk Map** and deepened photographic materials (REASSESS WEAK → full Anshu; may reseed; chose deepen).
 
 ## Name
-**Shop Chalk Map** — a shop chalkboard with one central topic and chalk branches.
+**Shop Chalk Map** — shop chalkboard with one central topic and chalk branches.
 
 ## Feel
-Green board. White chalk limbs. Amber root pill. You see a **mind map** in under three seconds: center → branches → links → export. Smells like chalk dust and shop coffee — not SaaS glass, not midnight synapse poetry.
+Green board with **visible chalk dust grain** (real photo underlay). White chalk limbs. Amber root pill. Mind map in under three seconds: center → branches → links → export.
 
 ## Palette (frozen)
 | Token | Hex | Use |
@@ -15,15 +15,15 @@ Green board. White chalk limbs. Amber root pill. You see a **mind map** in under
 | board-2 | `#274033` | chrome |
 | board-3 | `#314c3d` | raised |
 | chalk | `#f3efe2` | type / limbs |
-| chalk-dim | `#b9b49a` | muted |
+| chalk-dim | `#c9c4a8` | muted |
 | root | `#e09a3e` | central topic |
 | root-hot | `#f0b45c` | root hover |
 | limb | `#8fc9b4` | chalk-teal links |
 | select | `#e8d84a` | selection chalk |
 | danger | `#c97878` | delete |
 
-No vibe-purple. No glass blur. No neon glow.
-No decorative linear/radial/mesh gradients on chrome (Brandon hard bar 2026-09-14) — flat fills + real photos only.
+No vibe-purple. No glass blur. No neon glow.  
+No decorative gradients — flat fills + **real chalkboard photo** only.
 
 ## Type (frozen)
 - Display / root: **Bricolage Grotesque**
@@ -31,28 +31,29 @@ No decorative linear/radial/mesh gradients on chrome (Brandon hard bar 2026-09-1
 - Never Inter / Geist / Space Grotesk / Fraunces-everywhere
 
 ## Materials
-- Chalkboard field (CSS tooth + optional chalk-board still)
+- Real `chalk-board.jpg` tooth under canvas (low opacity)
 - Central topic = amber chalk pill; children = chalk-outline cards
-- Links = soft teal chalk curves (dashed pulse = chalk dust, not glow)
-- Empty state shows a mini branching diagram + job verbs
+- Links = solid teal chalk beziers (dash only while linking)
+- Empty state = generated chalk mind-map photo (`empty-chalk-map.jpg`)
+- Export success may layer `synapse-pulse.mp4` as chalk-dust matte
 
 ## Motion rules
-- Chalk-dash pulse on edges (subtle)
-- Branch pop = short chalk-dust fade
-- transitions.dev: success-check, toast, skeleton, texts-reveal, error-shake, number-pop, panel-reveal
+- Chalk-dash pulse only in link mode
+- Branch pop = short chalk fade
+- transitions.dev recipes on real actions
 - `prefers-reduced-motion` → still board
 
 ## Copy voice
-Shop-short. Name the job: **Branch · Link · Export**. No “synapse / midnight / machinist desk” marketing.
+Shop-short. **Branch · Link · Export**. No synapse / midnight marketing.
 
 ## Product
-Still **Copper Synapse** (repo/product). Aesthetic identity = **Shop Chalk Map**.
+**Copper Synapse** (repo/product). Aesthetic = **Shop Chalk Map**.
 
 ## One job
 Mind map: **central topic → branch → connect → export** (+ AI Expand / outline→map).
 
-## Will NOT change in Phase B2 / B3
+## Will NOT change in R5 gauntlets
 - Aesthetic name Shop Chalk Map, palette, type pairing, chalkboard field
 - Product name Copper Synapse
 - Local-first IndexedDB
-- B3 only: fonts hierarchy, contrast, button weight, map-limb craft vs live Xmind — no reseed
+- Flat no-gradient hard bar

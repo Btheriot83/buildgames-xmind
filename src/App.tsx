@@ -101,7 +101,7 @@ export default function App() {
                   <span>Branch</span>
                   <span>Link</span>
                   <span>Export</span>
-                  <span>Central topic → limbs</span>
+                  <span>Root → limbs → export</span>
                 </div>
                 <Toolbar onOpenOutline={() => setOutlineOpen(true)} />
                 <div className="workspace">
