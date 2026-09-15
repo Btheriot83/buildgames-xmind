@@ -93,8 +93,11 @@ export const useMapStore = create<MapStore>((set, get) => ({
     set({ loadStatus: 'loading' })
     try {
       let maps = await listMaps()
-      // Phase B2 reseed: replace legacy SAMPLE product-launch maps with real desk content
-      const legacy = maps.filter((m) => /SAMPLE/i.test(m.title) || m.id === 'sample-product-launch')
+      // Reseed: drop known legacy starter ids for social-content sample
+      const legacyIds = new Set(['sample-product-launch', 'sample-diesel-week', 'desk-friday-i10'])
+      const legacy = maps.filter(
+        (m) => /SAMPLE/i.test(m.title) || legacyIds.has(m.id) || (m.isSample && m.id !== 'sample-week-of-hooks'),
+      )
       if (legacy.length) {
         for (const m of legacy) await dbDelete(m.id)
         maps = await listMaps()
@@ -159,7 +162,7 @@ export const useMapStore = create<MapStore>((set, get) => ({
       if (m.isSample) await dbDelete(m.id)
     }
     const sample = buildSampleMap()
-    sample.id = 'sample-diesel-week'
+    sample.id = 'sample-week-of-hooks'
     await saveMap(sample)
     const maps = await listMaps()
     set({ maps, map: sample, selectedId: sample.nodes[0]?.id ?? null, stats: statsOf(sample), loadStatus: 'ready' })

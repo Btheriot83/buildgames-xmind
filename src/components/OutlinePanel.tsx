@@ -1,23 +1,24 @@
 import { useState } from 'react'
 import { useMapStore } from '../store/mapStore'
 
-const DESK_OUTLINE = `Friday I-10 diesel pull
-  Yard trucks
-    Unit 41 — DEF sensor
-    Unit 18 — leak-down
-  Parts runs
-    NAPA on Bell Rd
-    Freightliner Chandler
-  Dispatch
-    Mesa yard — 06:30
-    Tonto Basin call-out
-  Crew
-    Luis + Mira on dual`
+const CONTENT_OUTLINE = `Week of hooks
+  Hooks
+    Stop scrolling if…
+    I was wrong about…
+  Pillars
+    Teach one tip
+    Behind the scenes
+  Formats
+    Reel / Short
+    Carousel
+  CTAs
+    Save this for later
+    Comment your niche`
 
 export function OutlinePanel({ open, onClose }: { open: boolean; onClose: () => void }) {
   const outlineToMap = useMapStore((s) => s.outlineToMap)
   const aiBusy = useMapStore((s) => s.aiBusy)
-  const [text, setText] = useState(DESK_OUTLINE)
+  const [text, setText] = useState(CONTENT_OUTLINE)
   const [useAi, setUseAi] = useState(false)
 
   return (
@@ -31,7 +32,7 @@ export function OutlinePanel({ open, onClose }: { open: boolean; onClose: () => 
       <header className="outline-head">
         <div>
           <h2>Grow from outline</h2>
-          <p>Indent with spaces. Paste a list — it becomes chalk limbs.</p>
+          <p>Indent with spaces. Paste a content list — it becomes chalk limbs.</p>
         </div>
         <button type="button" className="btn ghost sm" onClick={onClose} aria-label="Close outline">
           Close

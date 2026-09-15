@@ -8,6 +8,7 @@ import { ShaderBg } from './components/ShaderBg'
 import { Sidebar } from './components/Sidebar'
 import { SuccessOverlay } from './components/SuccessOverlay'
 import { Toast } from './components/Toast'
+import { Onboarding } from './components/Onboarding'
 import { Toolbar } from './components/Toolbar'
 import { useMapStore } from './store/mapStore'
 
@@ -118,6 +119,7 @@ export default function App() {
       )}
       <Toast />
       <SuccessOverlay />
+      {ready && <Onboarding active={ready} />}
     </div>
   )
 }
