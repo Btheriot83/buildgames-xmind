@@ -39,13 +39,10 @@ export function Sidebar() {
       <div className="shortcuts">
         <h3>Keys</h3>
         <ul>
-          <li><kbd>Tab</kbd> branch child</li>
+          <li><kbd>Tab</kbd> branch</li>
           <li><kbd>Enter</kbd> sibling</li>
-          <li><kbd>C</kbd> link mode</li>
-          <li><kbd>⌘E</kbd> AI expand</li>
-          <li><kbd>⌘O</kbd> outline</li>
+          <li><kbd>C</kbd> link</li>
           <li><kbd>Del</kbd> delete</li>
-          <li><kbd>Alt</kbd>+drag pan</li>
         </ul>
       </div>
     </aside>
