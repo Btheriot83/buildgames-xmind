@@ -2976,3 +2976,46 @@ body {
   font-size: 1.06rem !important;
   letter-spacing: -0.02em !important;
 }
+
+/* craft5: contrast — chalk sticks + cards hold on cool slate */
+:root {
+  --chalk: #f7f3ea;
+  --bone: #f7f3ea;
+  --chalk-dim: #c2bdaa;
+  --bone-dim: #c2bdaa;
+  --limb-stroke: #f0ebe0;
+}
+.map-node:not(.is-root) .node-body {
+  fill: #161d27 !important;
+  stroke: #f0ebe0 !important;
+  stroke-width: 2.25 !important;
+}
+.map-node.is-root .node-body {
+  fill: #e8b86d !important;
+  stroke: #f5d19a !important;
+  stroke-width: 3.4 !important;
+}
+.map-node.is-selected:not(.is-root) .node-body {
+  fill: #1f2936 !important;
+  stroke: #e6de6a !important;
+  stroke-width: 2.8 !important;
+}
+.edge-line {
+  stroke: #c5f3e6 !important;
+  stroke-width: 4.05 !important;
+}
+.edge-line-dust {
+  stroke: #e8fff8 !important;
+  opacity: 0.5 !important;
+}
+.port-dot {
+  fill: #e8b86d !important;
+  opacity: 0.7 !important;
+}
+.preset-item-blurb,
+.sidebar-foot,
+.brand-copy span,
+.preset-packs-label {
+  color: #c2bdaa !important;
+}
+.save-pill { color: #c2bdaa !important; }
