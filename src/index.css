@@ -2148,3 +2148,14 @@ kbd { font-size: 0.7rem; font-weight: 700; padding: 1px 5px; }
 /* beat21 cut — quieter save pill; toast less billboard */
 .save-pill { opacity: 0.55; font-size: 0.58rem; }
 .app-toast { opacity: 0.92; }
+
+
+/* beat22 contrast — heavier chalk stick + limb cards sit in dust */
+.edge-line-under { stroke-width: 11; opacity: 0.7; }
+.edge-line { stroke-width: 5.1; stroke: #f7fffb; }
+.map-node:not(.is-root) .node-body {
+  fill: #0c1a14;
+  stroke: #fff8ea;
+  stroke-width: 2.55;
+}
+.canvas-wrap::before { opacity: 0.7 !important; }
