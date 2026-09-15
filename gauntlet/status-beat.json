@@ -80,5 +80,25 @@
   "branch": "beat/shop-chalk-map-original",
   "finishedAtUtc": "2026-09-15T07:47:12Z",
   "finishedAtPt": "2026-09-15 12:47 AM PT",
-  "sha": "9ed159f"
+  "sha": "bad11da",
+  "pr": "https://github.com/Btheriot83/buildgames-xmind/pull/8",
+  "deploy": {
+    "url": "https://buildgames-xmind.vercel.app",
+    "deploymentId": "dpl_8UNutwyNYYgRKopgPehSn8HcsrMT",
+    "readyState": "READY",
+    "aliased": true
+  },
+  "live_smoke": {
+    "ok": true,
+    "at_pt": "2026-09-15 12:48 AM PT",
+    "url": "https://buildgames-xmind.vercel.app",
+    "checks": [
+      "HTTP reachable",
+      "title Shop Chalk Map",
+      "no Copper Synapse in JS bundle",
+      "25 beat loops",
+      "PR #8 open",
+      "prod redeployed"
+    ]
+  }
 }
