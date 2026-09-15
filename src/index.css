@@ -2010,3 +2010,29 @@ kbd { font-size: 0.7rem; font-weight: 700; padding: 1px 5px; }
 .link-handle { r: 6.5; }
 .workspace { grid-template-columns: 176px 1fr; }
 .sidebar-head h2 { margin: 0; }
+
+
+/* beat13 make-it-alive — chalk dash pulse only in link mode */
+.canvas-wrap.is-linking {
+  outline: 2px solid var(--copper);
+  outline-offset: -2px;
+}
+.canvas-wrap.is-linking .edge-line {
+  stroke: #f0e6a0;
+  stroke-width: 3.2;
+  opacity: 1;
+}
+.canvas-wrap.is-linking .edge-line-under {
+  stroke: #3a2a10;
+  opacity: 0.35;
+}
+.connect-hint {
+  bottom: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+  padding: 8px 14px;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  box-shadow: 3px 3px 0 #07100c;
+}
