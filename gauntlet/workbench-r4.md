@@ -69,3 +69,9 @@
 - verdict: Chalk link ports on node edges — closer to dream-loop anchors; original still subtler.
 - commit: fc09014
 
+## r9 — fonts
+- files: src/index.css
+- shot: gauntlet/shots-r4/r9-board.png
+- verdict: Limb mono 13px denser; root display holds — target type hierarchy closer; original still wins editorial type.
+- commit: 6367ad2
+
