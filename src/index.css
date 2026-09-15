@@ -1931,3 +1931,20 @@ kbd { font-size: 0.7rem; font-weight: 700; padding: 1px 5px; }
 .stats-row { gap: 6px; }
 .stat-chip .t-digit-group { font-size: 1.05rem; font-weight: 800; }
 .stat-label { font-size: 0.58rem; letter-spacing: 0.12em; }
+
+
+/* beat9 contrast — chalk smear selection + single starter clarity */
+.map-node.is-selected .node-body {
+  fill: #2a4538;
+  stroke: #f0e6a0;
+  stroke-width: 3.2;
+  filter: none;
+}
+.map-node.is-selected .node-input { color: #fff8e0; }
+.edge-line-under { stroke-width: 7.2; opacity: 0.55; }
+.edge-line { stroke-width: 3.7; stroke: #e2f8ee; }
+.canvas-wrap {
+  background: #13221b;
+  box-shadow: inset 0 0 0 2px #3a5848;
+}
+.starter-tag { border-color: #c9893a; color: #f0b45c; }

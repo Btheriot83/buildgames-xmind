@@ -154,8 +154,12 @@ export const useMapStore = create<MapStore>((set, get) => ({
   },
 
   seedSample: async () => {
+    const existing = await listMaps()
+    for (const m of existing) {
+      if (m.isSample) await dbDelete(m.id)
+    }
     const sample = buildSampleMap()
-    sample.id = `sample-${Date.now()}`
+    sample.id = 'sample-diesel-week'
     await saveMap(sample)
     const maps = await listMaps()
     set({ maps, map: sample, selectedId: sample.nodes[0]?.id ?? null, stats: statsOf(sample), loadStatus: 'ready' })
