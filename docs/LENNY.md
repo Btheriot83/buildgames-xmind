@@ -1,4 +1,4 @@
-# Lenny / Anshu — Copper Synapse
+# Lenny / Anshu — Shop Chalk Map
 
 Phase A complete once. Identity locked.
 

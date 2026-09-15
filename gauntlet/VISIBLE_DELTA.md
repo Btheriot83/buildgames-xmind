@@ -1,6 +1,6 @@
 # Visible delta — Shop Chalk Map (Phase A reseed + B2)
 
-**Rule:** Spottable in ~3 seconds vs prior live Copper Synapse Desk demo.  
+**Rule:** Spottable in ~3 seconds vs prior live demo.  
 **Identity:** **Shop Chalk Map** (reseed allowed). Desk/midnight retired.
 
 ## Screenshots

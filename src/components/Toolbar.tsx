@@ -36,7 +36,7 @@ export function Toolbar({
       else if (kind === 'png') await downloadPng(map)
       else downloadJson(map)
       flashSuccess()
-      flashToast(`Shop Chalk Map · ${kind.toUpperCase()} exported`, 'ok')
+      flashToast(`${kind.toUpperCase()} exported`, 'ok')
       setExportOpen(false)
     } catch {
       flashToast('Export failed', 'err')
@@ -77,18 +77,16 @@ export function Toolbar({
             }}
           />
         </div>
-        <p className="t-error-msg">Give the map a name.</p>
+        <p className="t-error-msg">Name the map.</p>
       </div>
 
       <div className="stats-row" aria-label="Map stats">
         <NumberPop value={stats.nodeCount} label="nodes" />
-        <NumberPop value={stats.depth} label="depth" />
         <NumberPop value={stats.edgeCount} label="links" />
       </div>
 
       <div className="toolbar-actions">
         <div className="job-cluster" aria-label="Core job actions">
-          <span className="job-cluster-label">Job</span>
           <button type="button" className="btn job" onClick={() => addChildToSelected()} disabled={!selectedId} data-testid="add-child">
             Branch
           </button>
@@ -110,7 +108,7 @@ export function Toolbar({
             onClick={() => void onExport('svg')}
             data-testid="export-svg"
           >
-            Export SVG
+            Export
           </button>
           <div className="more-wrap">
             <button
@@ -134,18 +132,6 @@ export function Toolbar({
             )}
           </div>
         </div>
-        <button
-          type="button"
-          className="btn secondary"
-          onClick={() => void expandSelectedAi()}
-          disabled={!selectedId || aiBusy}
-          data-testid="ai-expand"
-        >
-          {aiBusy ? 'Expanding…' : 'AI Expand'}
-        </button>
-        <button type="button" className="btn ghost" onClick={onOpenOutline} data-testid="open-outline">
-          Outline
-        </button>
         <button type="button" className="btn danger" onClick={() => removeSelected()} disabled={!selectedId}>
           Delete
         </button>
@@ -155,7 +141,9 @@ export function Toolbar({
           </button>
           {moreOpen && (
             <div className="more-menu" role="menu">
-              <button type="button" role="menuitem" className="btn ghost" onClick={() => { newMap(); setMoreOpen(false) }}>New</button>
+              <button type="button" role="menuitem" className="btn ghost" data-testid="ai-expand" disabled={!selectedId || aiBusy} onClick={() => { void expandSelectedAi(); setMoreOpen(false) }}>{aiBusy ? 'Expanding…' : 'AI Expand'}</button>
+              <button type="button" role="menuitem" className="btn ghost" data-testid="open-outline" onClick={() => { onOpenOutline(); setMoreOpen(false) }}>Outline</button>
+              <button type="button" role="menuitem" className="btn ghost" onClick={() => { newMap(); setMoreOpen(false) }}>Blank board</button>
               <button type="button" role="menuitem" className="btn ghost" onClick={() => { fileRef.current?.click(); setMoreOpen(false) }}>Import</button>
             </div>
           )}

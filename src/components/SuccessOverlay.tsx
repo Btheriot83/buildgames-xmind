@@ -40,7 +40,7 @@ export function SuccessOverlay() {
           />
         </svg>
       </span>
-      <p>Shop Chalk Map exported</p>
+      <p>Board exported</p>
     </div>
   )
 }

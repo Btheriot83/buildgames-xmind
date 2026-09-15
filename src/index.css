@@ -730,7 +730,7 @@ kbd {
 }
 
 /* —— SHOP CHALK MAP — flat materials (Brandon hard bar: no decorative gradients/glow/glass) —— */
-.copper-tape, .job-tape {
+.job-tape {
   display: flex; gap: 1.25rem; align-items: center; justify-content: center; flex-wrap: wrap;
   background: var(--copper); color: var(--ink);
   border-bottom: 3px solid #0f1c16;
@@ -1720,3 +1720,497 @@ kbd { font-size: 0.7rem; font-weight: 700; padding: 1px 5px; }
 .canvas-wrap { background: #172820; }
 .canvas-wrap::after { background: rgba(5, 10, 8, 0.08); }
 .brand-mark-img { border-color: var(--copper-hot); box-shadow: 4px 4px 0 #0c1611; }
+
+
+/* ===== BEAT-THE-ORIGINAL (Shop Chalk Map vs xmind.app) ===== */
+/* beat1 cut — kill redundant job-tape (catalog cut-elements); brand already carries job */
+.job-tape { display: none !important; height: 0 !important; padding: 0 !important; margin: 0 !important; border: 0 !important; }
+.app-shell { gap: 0; }
+.toolbar { border-top: 0; }
+
+
+/* beat2 fonts — chalk display hierarchy; quiet mono chrome (specify-the-look) */
+.brand-copy strong {
+  font-size: clamp(1.36rem, 2.15vw, 1.72rem);
+  font-weight: 800;
+  letter-spacing: -0.045em;
+  line-height: 1.02;
+}
+.brand-copy span {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--copper-hot);
+}
+.map-node.is-root .node-input {
+  font-family: var(--font-display);
+  font-size: 20.5px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+.map-node:not(.is-root) .node-input {
+  font-size: 13.25px;
+  font-weight: 550;
+  letter-spacing: -0.01em;
+}
+.title-input input {
+  font-family: var(--font-display);
+  font-size: 1.28rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+.sidebar-head h2 {
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+}
+.btn { font-size: 0.82rem; letter-spacing: 0.01em; }
+
+
+/* beat3 contrast — dual chalk limb + board tooth (materials honesty) */
+.edge-line-under {
+  fill: none;
+  stroke: #0c1611;
+  stroke-width: 6.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  opacity: 0.45;
+}
+.edge-line {
+  stroke: #d8f5e8;
+  stroke-width: 3.35;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+  opacity: 0.95;
+}
+.canvas-wrap::before { opacity: 0.58 !important; }
+.shader-bg-tooth { opacity: 0.46; }
+.map-node:not(.is-root) .node-body {
+  fill: #152820;
+  stroke: #f4f0e2;
+  stroke-width: 2.35;
+}
+.map-node.is-root .node-body {
+  fill: var(--copper);
+  stroke: #f4c878;
+  stroke-width: 3.4;
+}
+.toolbar { background: #1c3026; border-bottom: 2px solid #4e7260; }
+.sidebar { background: #1a2c24; border-right: 2px solid #3f5e4e; }
+
+
+/* beat4 buttons — chalk tablet primary; quieter secondaries (cut chrome weight) */
+.job-cluster {
+  gap: 4px;
+  padding: 4px 5px;
+  background: #16261f;
+  border: 2px solid #3f5e4e;
+  border-radius: 2px;
+  box-shadow: none;
+}
+.job-cluster-label {
+  font-size: 0.62rem;
+  letter-spacing: 0.16em;
+  font-weight: 800;
+  color: var(--bone-dim);
+}
+.btn.job {
+  min-height: 34px;
+  border-radius: 2px;
+  font-weight: 650;
+  background: transparent;
+  border-color: #5a7a68;
+  color: var(--chalk);
+}
+.btn.job-primary, .btn.primary, .btn.accent, .toolbar-actions .btn.accent {
+  min-height: 36px;
+  border-radius: 2px;
+  background: var(--copper);
+  color: #14241c;
+  border: 2px solid var(--copper-hot);
+  box-shadow: 3px 3px 0 #0a120e;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+.btn.secondary, .btn.ghost {
+  min-height: 34px;
+  border-radius: 2px;
+  border-width: 1.5px;
+  font-weight: 600;
+  opacity: 0.88;
+  box-shadow: none;
+}
+.btn.danger {
+  border-radius: 2px;
+  border-width: 1.5px;
+  background: transparent;
+  color: #d9a8a8;
+  border-color: #6a4545;
+  box-shadow: none;
+  font-weight: 650;
+}
+.empty-actions .btn.primary {
+  min-height: 40px;
+  box-shadow: 3px 3px 0 #0a120e;
+}
+
+
+/* beat5 bar gap — map air + chalk curve room; hide resize until hover */
+.workspace { grid-template-columns: 188px 1fr; }
+.sidebar { padding: 10px 10px 14px; }
+.job-rail {
+  gap: 10px;
+  padding: 6px 12px;
+  border: 1.5px solid #4a6b58;
+  border-radius: 2px;
+  box-shadow: none;
+  background: rgba(20, 36, 28, 0.82);
+  font-size: 0.68rem;
+}
+.job-rail strong { color: var(--copper-hot); font-weight: 800; }
+.job-rail-hint { opacity: 0.75; font-size: 0.64rem; }
+.resize-handle { opacity: 0; transition: opacity 120ms linear; }
+.map-node:hover .resize-handle,
+.map-node.is-selected .resize-handle { opacity: 0.8; }
+.port-dot { opacity: 0.55; }
+.map-node:hover .port-dot,
+.map-node.is-selected .port-dot,
+.map-node.is-linking .port-dot { opacity: 1; }
+.link-handle { opacity: 0.35; }
+.map-node:hover .link-handle,
+.map-node.is-selected .link-handle,
+.map-node.is-linking .link-handle { opacity: 0.95; }
+.toolbar { padding: 8px 12px; gap: 8px 10px; }
+.stat-chip { padding: 4px 8px; }
+
+
+/* beat6 remove-ai-tells — kill soft decoration, quiet starter badge, no fake sparkle */
+.starter-tag {
+  font-size: 0.58rem;
+  letter-spacing: 0.12em;
+  font-weight: 800;
+  text-transform: uppercase;
+  background: transparent;
+  color: var(--copper-hot);
+  border: 1.5px solid var(--copper);
+  border-radius: 2px;
+  padding: 1px 5px;
+  box-shadow: none;
+}
+.map-item { box-shadow: none; border-radius: 2px; }
+.map-list li.active .map-item {
+  box-shadow: 2px 2px 0 #0a120e;
+  border-color: var(--copper);
+  background: #21362c;
+}
+.app-toast, .save-pill, .connect-hint, .job-rail {
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  filter: none;
+}
+.stat-chip {
+  border-radius: 2px;
+  border: 1.5px solid #4a6b58;
+  background: #16261f;
+  box-shadow: none;
+}
+.brand-mark-img {
+  box-shadow: 2px 2px 0 #0a120e;
+  border-radius: 2px;
+}
+.empty-hero-art { box-shadow: 3px 3px 0 #0a120e; border-radius: 2px; }
+
+
+/* beat8 cut — less toolbar chrome; map owns the frame */
+.job-cluster-label { display: none !important; }
+.job-rail { display: none !important; }
+.toolbar-actions { gap: 6px; }
+.job-cluster { padding: 3px 4px; }
+.stats-row { gap: 6px; }
+.stat-chip .t-digit-group { font-size: 1.05rem; font-weight: 800; }
+.stat-label { font-size: 0.58rem; letter-spacing: 0.12em; }
+
+
+/* beat9 contrast — chalk smear selection + single starter clarity */
+.map-node.is-selected .node-body {
+  fill: #2a4538;
+  stroke: #f0e6a0;
+  stroke-width: 3.2;
+  filter: none;
+}
+.map-node.is-selected .node-input { color: #fff8e0; }
+.edge-line-under { stroke-width: 7.2; opacity: 0.55; }
+.edge-line { stroke-width: 3.7; stroke: #e2f8ee; }
+.canvas-wrap {
+  background: #13221b;
+  box-shadow: inset 0 0 0 2px #3a5848;
+}
+.starter-tag { border-color: #c9893a; color: #f0b45c; }
+
+
+/* beat10 fonts — root owns the board; chrome quieter */
+.map-node.is-root .node-input {
+  font-size: 21.5px;
+  font-weight: 800;
+  letter-spacing: -0.035em;
+}
+.map-node:not(.is-root) .node-input {
+  font-size: 12.85px;
+  font-weight: 500;
+}
+.brand-copy strong {
+  font-size: clamp(1.2rem, 1.9vw, 1.48rem);
+  font-weight: 800;
+}
+.brand-copy span {
+  font-size: 0.66rem;
+  letter-spacing: 0.16em;
+}
+.title-input input {
+  font-size: 1.12rem;
+  font-weight: 700;
+}
+.btn { font-size: 0.78rem; }
+.sidebar-foot { font-size: 0.68rem; line-height: 1.4; color: var(--bone-dim); }
+.shortcuts h3 { font-size: 0.72rem; letter-spacing: 0.16em; }
+.shortcuts li { font-size: 0.7rem; }
+
+
+/* beat11 buttons — chalk tablet Export as sole hot control */
+.btn.job-primary, .btn.primary, .toolbar-actions .btn.accent {
+  min-width: 5.5rem;
+  padding: 0 14px;
+  box-shadow: 3px 3px 0 #07100c;
+}
+.btn.job:hover:not(:disabled) {
+  background: #24382e;
+  border-color: #8fc9b4;
+}
+.btn.danger { opacity: 0.75; }
+.btn.danger:hover:not(:disabled) { opacity: 1; }
+.more-menu {
+  border: 2px solid #4a6b58;
+  border-radius: 2px;
+  background: #16261f;
+  box-shadow: 3px 3px 0 #07100c;
+  padding: 4px;
+}
+.more-menu .btn { width: 100%; justify-content: flex-start; border-radius: 2px; }
+
+
+/* beat12 bar gap — chalk card corners + denser limb silhouette */
+.map-node:not(.is-root) .node-body {
+  rx: 3;
+  stroke-width: 2.15;
+  fill: #12241c;
+}
+.port-dot { r: 4.25; fill: #cfeeda; opacity: 0.7; }
+.link-handle { r: 6.5; }
+.workspace { grid-template-columns: 176px 1fr; }
+.sidebar-head h2 { margin: 0; }
+
+
+/* beat13 make-it-alive — chalk dash pulse only in link mode */
+.canvas-wrap.is-linking {
+  outline: 2px solid var(--copper);
+  outline-offset: -2px;
+}
+.canvas-wrap.is-linking .edge-line {
+  stroke: #f0e6a0;
+  stroke-width: 3.2;
+  opacity: 1;
+}
+.canvas-wrap.is-linking .edge-line-under {
+  stroke: #3a2a10;
+  opacity: 0.35;
+}
+.connect-hint {
+  bottom: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+  padding: 8px 14px;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  box-shadow: 3px 3px 0 #07100c;
+}
+
+
+/* beat14 cut — two stats only; title gets room */
+.stats-row { gap: 8px; margin-left: auto; }
+.stat-chip { min-width: 64px; }
+.title-wrap { flex: 1 1 280px; max-width: 420px; }
+
+
+/* beat15 contrast — chalkboard frame + dust tooth */
+.canvas-wrap::before { opacity: 0.64 !important; }
+.shader-bg-tooth { opacity: 0.5; }
+.canvas-wrap::after {
+  background: rgba(4, 8, 6, 0.12);
+  box-shadow: inset 0 0 0 2px rgba(188, 232, 214, 0.14), inset 0 0 48px rgba(0, 0, 0, 0.22);
+}
+.toolbar { background: #182820; }
+.sidebar { background: #15241d; }
+.map-node.is-root .node-body {
+  fill: #e09a3e;
+  stroke: #f6c878;
+  stroke-width: 3.6;
+}
+.edge-line { stroke: #e8fbf2; stroke-width: 3.85; }
+
+
+/* beat16 fonts — display root chalk billboard; mono limbs stay shop-short */
+.map-node.is-root .node-input {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
+.brand-copy strong {
+  font-family: var(--font-display);
+  font-size: clamp(1.28rem, 2vw, 1.58rem);
+}
+.empty-state .t-stagger-line--1 {
+  font-size: clamp(1.85rem, 3.6vw, 2.4rem);
+  letter-spacing: -0.04em;
+}
+.empty-state .t-stagger-line--2 {
+  font-size: 0.95rem;
+  max-width: 28rem;
+  color: var(--bone-dim);
+}
+
+
+/* beat18 buttons — Branch/Sibling/Link as chalk ticks; Delete ghosted */
+.btn.job {
+  min-height: 32px;
+  padding: 0 10px;
+  border-width: 1.5px;
+  font-weight: 650;
+}
+.btn.job-primary {
+  min-height: 34px;
+  padding: 0 16px;
+}
+.save-pill {
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
+  padding: 3px 8px;
+  opacity: 0.7;
+  border-width: 1px;
+  box-shadow: none;
+}
+.btn.danger {
+  min-height: 32px;
+  padding: 0 10px;
+  opacity: 0.65;
+}
+
+
+/* beat19 contrast — chalk stick limbs (studio materials) */
+.edge-line-under {
+  stroke-width: 9;
+  opacity: 0.62;
+  stroke: #0a120e;
+}
+.edge-line {
+  stroke-width: 4.4;
+  stroke: #f2fff8;
+  opacity: 0.92;
+}
+.map-node:not(.is-root) .node-body {
+  fill: #0f1f18;
+  stroke: #f7f3e6;
+  stroke-width: 2.4;
+}
+.map-node.is-root .node-body {
+  filter: none;
+  stroke-width: 3.8;
+}
+
+
+/* beat20 bar gap — map theater owns the frame */
+.workspace { grid-template-columns: 168px minmax(0, 1fr); }
+.sidebar { width: auto; overflow: hidden; }
+.sidebar-foot { display: none; }
+.toolbar { min-height: 56px; align-items: center; }
+.brand-mark-img { width: 40px; height: 40px; }
+.canvas-wrap { min-height: calc(100vh - 58px); }
+.app-toast {
+  border-radius: 2px;
+  border-width: 1.5px;
+  font-size: 0.78rem;
+  box-shadow: 2px 2px 0 #07100c;
+}
+
+
+/* beat21 cut — quieter save pill; toast less billboard */
+.save-pill { opacity: 0.55; font-size: 0.58rem; }
+.app-toast { opacity: 0.92; }
+
+
+/* beat22 contrast — heavier chalk stick + limb cards sit in dust */
+.edge-line-under { stroke-width: 11; opacity: 0.7; }
+.edge-line { stroke-width: 5.1; stroke: #f7fffb; }
+.map-node:not(.is-root) .node-body {
+  fill: #0c1a14;
+  stroke: #fff8ea;
+  stroke-width: 2.55;
+}
+.canvas-wrap::before { opacity: 0.7 !important; }
+
+
+/* beat23 buttons — Export is the only hot tablet; More is a tick */
+.btn.job-primary {
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  box-shadow: 4px 4px 0 #050a08;
+}
+.toolbar-actions .btn.ghost {
+  border: 1.5px solid #3f5e4e;
+  min-height: 32px;
+  padding: 0 10px;
+}
+.toolbar-actions .more-wrap > .btn.ghost { opacity: 0.8; }
+
+
+/* beat24 fonts — final type ladder toward studio chalkboard */
+.map-node.is-root .node-input {
+  font-size: 23px;
+  font-weight: 800;
+  letter-spacing: -0.045em;
+}
+.map-node:not(.is-root) .node-input {
+  font-size: 12.6px;
+  font-weight: 550;
+  letter-spacing: -0.012em;
+}
+.title-input input {
+  font-size: 1.18rem;
+  letter-spacing: -0.03em;
+}
+.brand-copy span {
+  font-size: 0.62rem;
+  letter-spacing: 0.18em;
+}
+
+
+/* beat25 bar gap — coherence pass: map air + chalk materials locked */
+.toolbar {
+  background: #15231c;
+  border-bottom: 2px solid #4a6b58;
+  padding: 7px 12px;
+}
+.sidebar {
+  background: #121f19;
+  border-right: 2px solid #3a5848;
+}
+.canvas-wrap { background: #0e1a15; }
+.edge-line { stroke: #f4fffa; }
+.map-node.is-root .node-body {
+  fill: #e39b3c;
+  stroke: #f8d08a;
+}
+.brand-mark-img { border-color: #f0b45c; }

@@ -136,16 +136,19 @@ export function MindCanvas() {
             const y1 = acy
             const x2 = toRight ? b.x : b.x + b.width
             const y2 = bcy
-            const dx = Math.max(48, Math.abs(x2 - x1) * 0.52)
-            const dy = (y2 - y1) * 0.12
+            const dx = Math.max(56, Math.abs(x2 - x1) * 0.58)
+            const bend = ((e.id.charCodeAt(0) + e.id.charCodeAt(e.id.length - 1)) % 7) - 3
+            const dy = (y2 - y1) * 0.18 + bend * 4.5
             const c1x = toRight ? x1 + dx : x1 - dx
             const c2x = toRight ? x2 - dx : x2 + dx
-            const c1y = y1 + dy
-            const c2y = y2 - dy
+            const c1y = y1 + dy * 0.35
+            const c2y = y2 - dy * 0.55
+            const d = `M ${x1} ${y1} C ${c1x} ${c1y}, ${c2x} ${c2y}, ${x2} ${y2}`
             return (
               <g key={e.id} className="edge-group">
+                <path d={d} className="edge-line-under" aria-hidden />
                 <path
-                  d={`M ${x1} ${y1} C ${c1x} ${c1y}, ${c2x} ${c2y}, ${x2} ${y2}`}
+                  d={d}
                   className="edge-line"
                   strokeDasharray={connectFrom ? '8 6' : undefined}
                   strokeDashoffset={connectFrom ? -pulse * 18 : undefined}
@@ -169,7 +172,7 @@ export function MindCanvas() {
                 <rect
                   width={n.width}
                   height={n.height}
-                  rx={isRoot ? 999 : 5}
+                  rx={isRoot ? 999 : 3}
                   className="node-body"
                 />
                 <foreignObject width={n.width} height={n.height}>
@@ -214,16 +217,9 @@ export function MindCanvas() {
       </svg>
       {connectFrom ? (
         <div className="connect-hint" role="status">
-          Click a limb to link · Esc cancels
+          Click a limb · Esc cancels
         </div>
-      ) : (
-        <div className="job-rail" aria-hidden>
-          <span><strong>Tab</strong> branch</span>
-          <span><strong>C</strong> link</span>
-          <span><strong>Export</strong> SVG</span>
-          <span className="job-rail-hint">drag limbs · scroll zoom</span>
-        </div>
-      )}
+      ) : null}
     </div>
   )
 }
