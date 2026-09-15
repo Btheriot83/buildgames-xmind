@@ -44,10 +44,10 @@ export function Toolbar({
   return (
     <header className="toolbar" role="banner">
       <div className="brand">
-        <img className="brand-mark-img" src="/art/brand-mark-sm.png" width={28} height={28} alt="" />
+        <img className="brand-mark-img" src="/art/brand-mark-sm.png" width={48} height={48} alt="" />
         <div className="t-stagger is-shown brand-copy">
           <strong className="t-stagger-line t-stagger-line--1">Copper Synapse</strong>
-          <span className="t-stagger-line t-stagger-line--2">mind maps on the desk</span>
+          <span className="t-stagger-line t-stagger-line--2">machinist desk · midnight maps</span>
         </div>
       </div>
 
