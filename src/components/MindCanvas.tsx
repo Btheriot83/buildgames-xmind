@@ -124,42 +124,38 @@ export function MindCanvas() {
       >
         <g transform={`translate(${pan.x},${pan.y}) scale(${zoom})`}>
           <defs>
-            <filter id="chalk-limb-grit" x="-20%" y="-20%" width="140%" height="140%">
-              <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" seed="7" result="noise" />
-              <feDisplacementMap in="SourceGraphic" in2="noise" scale="1.35" xChannelSelector="R" yChannelSelector="G" />
+            <filter id="chalk-limb-grit" x="-12%" y="-12%" width="124%" height="124%">
+              <feTurbulence type="fractalNoise" baseFrequency="1.15" numOctaves="2" seed="11" result="noise" />
+              <feDisplacementMap in="SourceGraphic" in2="noise" scale="0.55" xChannelSelector="R" yChannelSelector="G" />
             </filter>
           </defs>
           {map.edges.map((e) => {
             const a = byId.get(e.from)
             const b = byId.get(e.to)
             if (!a || !b) return null
-            const acx = a.x + a.width / 2
             const acy = a.y + a.height / 2
             const bcx = b.x + b.width / 2
             const bcy = b.y + b.height / 2
+            const acx = a.x + a.width / 2
             const toRight = bcx >= acx
-            const x1 = toRight ? a.x + a.width - 2 : a.x + 2
+            const x1 = toRight ? a.x + a.width - 1 : a.x + 1
             const y1 = acy
-            const x2 = toRight ? b.x + 2 : b.x + b.width - 2
+            const x2 = toRight ? b.x + 1 : b.x + b.width - 1
             const y2 = bcy
-            /* Organic MindNode limbs: seeded S-curve + mid sway (grown, not CAD) */
+            /* Organic cubic limbs — seeded bow, no self-intersecting smooth-S */
             const seed =
               e.id.split('').reduce((acc, ch, i) => acc + ch.charCodeAt(0) * (i + 3), 0) || 17
-            const span = Math.hypot(x2 - x1, y2 - y1)
-            const dx = Math.max(54, Math.abs(x2 - x1) * 0.48 + span * 0.08)
-            const sway = ((seed % 17) - 8) * 2.15
-            const bow = ((seed % 13) - 6) * 1.7
-            const midY = (y1 + y2) / 2 + sway * 3.4 + (y2 - y1) * 0.06
-            const midX = (x1 + x2) / 2 + (toRight ? bow * 2.2 : -bow * 2.2)
+            const spanX = Math.abs(x2 - x1)
+            const dx = Math.max(64, spanX * 0.55)
+            const bend = ((seed % 11) - 5) * 4.2
+            const lift = ((seed % 7) - 3) * 2.4
+            const dy = (y2 - y1) * 0.18 + bend
             const c1x = toRight ? x1 + dx : x1 - dx
-            const c1y = y1 + (midY - y1) * 0.42 + bow
-            const c2x = midX - (toRight ? dx * 0.18 : -dx * 0.18)
-            const c2y = midY - bow * 0.55
-            const c4x = toRight ? x2 - dx * 0.86 : x2 + dx * 0.86
-            const c4y = y2 - (y2 - midY) * 0.38 - bow * 0.4
-            const d = `M ${x1.toFixed(1)} ${y1.toFixed(1)} C ${c1x.toFixed(1)} ${c1y.toFixed(1)}, ${c2x.toFixed(1)} ${c2y.toFixed(1)}, ${midX.toFixed(1)} ${midY.toFixed(1)} S ${c4x.toFixed(1)} ${c4y.toFixed(1)}, ${x2.toFixed(1)} ${y2.toFixed(1)}`
-            /* slight parallel chalk dust stick for taper/volume */
-            const dust = `M ${(x1 + (toRight ? 0.6 : -0.6)).toFixed(1)} ${(y1 + 1.1).toFixed(1)} C ${(c1x + 0.4).toFixed(1)} ${(c1y + 1.4).toFixed(1)}, ${(c2x + 0.3).toFixed(1)} ${(c2y + 1.2).toFixed(1)}, ${(midX + 0.2).toFixed(1)} ${(midY + 1.1).toFixed(1)} S ${(c4x + 0.3).toFixed(1)} ${(c4y + 0.9).toFixed(1)}, ${(x2 + (toRight ? -0.4 : 0.4)).toFixed(1)} ${(y2 + 0.8).toFixed(1)}`
+            const c1y = y1 + dy * 0.22 + lift
+            const c2x = toRight ? x2 - dx * 0.88 : x2 + dx * 0.88
+            const c2y = y2 - dy * 0.42 - lift * 0.35
+            const d = `M ${x1.toFixed(1)} ${y1.toFixed(1)} C ${c1x.toFixed(1)} ${c1y.toFixed(1)}, ${c2x.toFixed(1)} ${c2y.toFixed(1)}, ${x2.toFixed(1)} ${y2.toFixed(1)}`
+            const dust = `M ${x1.toFixed(1)} ${(y1 + 1.2).toFixed(1)} C ${(c1x + 0.5).toFixed(1)} ${(c1y + 1.6).toFixed(1)}, ${(c2x + 0.4).toFixed(1)} ${(c2y + 1.1).toFixed(1)}, ${x2.toFixed(1)} ${(y2 + 0.9).toFixed(1)}`
             return (
               <g key={e.id} className="edge-group" filter="url(#chalk-limb-grit)">
                 <path d={d} className="edge-line-under" aria-hidden />
