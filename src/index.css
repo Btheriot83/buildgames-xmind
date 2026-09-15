@@ -1452,3 +1452,10 @@ kbd {
 :root { --limb-stroke: #ebe6d4; --chalk-dim: #d6d1b8; }
 .map-node .node-body { stroke: var(--limb-stroke); stroke-width: 2.5; }
 .edge-line { stroke: #a8dcc9; }
+
+/* r11 — buttons */
+.btn.job-primary, .btn.primary {
+  background: var(--copper); color: #14241c; border: 2px solid var(--copper-hot);
+  box-shadow: 3px 3px 0 #0f1c16; font-weight: 700; font-size: 0.82rem;
+}
+.btn.secondary, .btn.accent { box-shadow: none; border: 2px solid var(--copper); }

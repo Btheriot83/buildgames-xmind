@@ -81,3 +81,9 @@
 - verdict: Limb stroke chalk-brighter on board; bar A/B — original light canvas contrast still preferred.
 - commit: 85621e0
 
+## r11 — buttons
+- files: src/index.css
+- shot: gauntlet/shots-r4/r11-board.png
+- verdict: Export SVG sole copper primary with hard offset — matches target CTA weight; original still quieter.
+- commit: 87df507
+
