@@ -3,12 +3,15 @@ import { EmptyState } from './components/EmptyState'
 import { LoadingShell } from './components/LoadingShell'
 import { MindCanvas } from './components/MindCanvas'
 import { OutlinePanel } from './components/OutlinePanel'
+import { OutlineTree } from './components/OutlineTree'
 import { ShaderBg } from './components/ShaderBg'
 import { Sidebar } from './components/Sidebar'
 import { SuccessOverlay } from './components/SuccessOverlay'
 import { Toast } from './components/Toast'
 import { Toolbar } from './components/Toolbar'
 import { useMapStore } from './store/mapStore'
+
+export type ViewMode = 'map' | 'outline'
 
 export default function App() {
   const boot = useMapStore((s) => s.boot)
@@ -22,6 +25,7 @@ export default function App() {
   const expandSelectedAi = useMapStore((s) => s.expandSelectedAi)
   const aiBusy = useMapStore((s) => s.aiBusy)
   const [outlineOpen, setOutlineOpen] = useState(false)
+  const [viewMode, setViewMode] = useState<ViewMode>('map')
   const [igniting, setIgniting] = useState(false)
 
   useEffect(() => {
@@ -61,7 +65,7 @@ export default function App() {
         void expandSelectedAi()
       } else if ((e.key === 'o' || e.key === 'O') && (e.metaKey || e.ctrlKey)) {
         e.preventDefault()
-        setOutlineOpen(true)
+        setViewMode((v) => (v === 'map' ? 'outline' : 'map'))
       }
     }
     window.addEventListener('keydown', onKey)
@@ -97,10 +101,14 @@ export default function App() {
           ) : (
             ready && (
               <>
-                <Toolbar onOpenOutline={() => setOutlineOpen(true)} />
+                <Toolbar
+                  viewMode={viewMode}
+                  onViewMode={setViewMode}
+                  onOpenOutlineGrow={() => setOutlineOpen(true)}
+                />
                 <div className="workspace">
                   <Sidebar />
-                  <MindCanvas />
+                  {viewMode === 'map' ? <MindCanvas /> : <OutlineTree onJumpToMap={() => setViewMode('map')} />}
                 </div>
                 <OutlinePanel open={outlineOpen} onClose={() => setOutlineOpen(false)} />
               </>

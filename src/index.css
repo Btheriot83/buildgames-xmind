@@ -719,14 +719,14 @@ kbd {
   z-index: 20;
 }
 
-/* Synapse ignition flash on AI expand (Tech 5 keyframe craft) */
-@keyframes synapse-ignite {
+/* Chalk pulse on AI expand — materials only */
+@keyframes chalk-ignite {
   0% { filter: brightness(1); }
   35% { filter: brightness(1.35); }
   100% { filter: brightness(1); }
 }
 .app-shell.is-igniting .edge-line {
-  animation: synapse-ignite 700ms var(--check-ease-out);
+  animation: chalk-ignite 700ms var(--check-ease-out);
 }
 
 /* —— SHOP CHALK MAP — flat materials (Brandon hard bar: no decorative gradients/glow/glass) —— */
@@ -949,7 +949,7 @@ kbd {
 }
 
 /* Kill legacy glow ignition */
-@keyframes synapse-ignite {
+@keyframes chalk-ignite-dead {
   0%, 100% { filter: none; }
 }
 .app-shell.is-igniting .edge-line {
@@ -2214,3 +2214,393 @@ kbd { font-size: 0.7rem; font-weight: 700; padding: 1px 5px; }
   stroke: #f8d08a;
 }
 .brand-mark-img { border-color: #f0b45c; }
+
+
+/* ===== ELEVATE vs MindNode / Heptabase (Shop Chalk Map locked) ===== */
+/* elevate1: specify-the-look — Map|Outline dual switch (MindNode steal) */
+.view-switch {
+  display: inline-flex;
+  align-items: stretch;
+  border: 1.5px solid #3f5e4e;
+  border-radius: 2px;
+  overflow: hidden;
+  background: #12201a;
+  flex-shrink: 0;
+}
+.view-switch-btn {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: var(--bone-dim);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 7px 14px;
+  min-height: 32px;
+  cursor: pointer;
+  border-right: 1px solid #3f5e4e;
+}
+.view-switch-btn:last-child { border-right: 0; }
+.view-switch-btn.is-active {
+  background: var(--copper);
+  color: #14241c;
+}
+.view-switch-btn:not(.is-active):hover {
+  background: #1c3026;
+  color: var(--chalk);
+}
+
+.outline-tree {
+  position: relative;
+  z-index: 1;
+  min-height: calc(100vh - 58px);
+  overflow: auto;
+  background: #0e1a15;
+  border-left: 2px solid #3a5848;
+  padding: 28px 36px 48px;
+}
+.outline-tree::before {
+  content: "";
+  position: absolute; inset: 0; pointer-events: none; z-index: 0;
+  background: url('/art/empty-desk.jpg') center / cover no-repeat;
+  opacity: 0.28;
+}
+.outline-tree > * { position: relative; z-index: 1; }
+.outline-tree-head {
+  margin-bottom: 22px;
+  max-width: 36rem;
+}
+.outline-tree-head h2 {
+  margin: 0 0 6px;
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--chalk);
+}
+.outline-tree-head p {
+  margin: 0;
+  font-size: 0.78rem;
+  color: var(--bone-dim);
+  line-height: 1.45;
+}
+.outline-tree-root,
+.outline-tree-branch {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.outline-tree-row { margin: 0; }
+.outline-tree-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  max-width: 42rem;
+  text-align: left;
+  border: 1.5px solid transparent;
+  background: transparent;
+  color: var(--chalk);
+  font-family: var(--font-mono);
+  font-size: 0.92rem;
+  font-weight: 550;
+  padding: 8px 12px;
+  border-radius: 2px;
+  cursor: pointer;
+  min-height: 36px;
+}
+.outline-tree-item:hover {
+  background: #152820;
+  border-color: #3f5e4e;
+}
+.outline-tree-row.is-selected > .outline-tree-item {
+  background: #21362c;
+  border-color: var(--copper);
+  box-shadow: 2px 2px 0 #0a120e;
+}
+.outline-tree-row.is-root > .outline-tree-item {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: #14241c;
+  background: var(--copper);
+  border-color: var(--copper-hot);
+  max-width: 28rem;
+  margin-bottom: 10px;
+}
+.outline-tree-mark {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #cfeeda;
+  flex-shrink: 0;
+  opacity: 0.7;
+}
+.outline-tree-row.is-root .outline-tree-mark {
+  background: #14241c;
+  opacity: 0.85;
+}
+.outline-tree-text { flex: 1; min-width: 0; }
+.outline-tree-branch {
+  border-left: 1.5px solid #3a5848;
+  margin-left: 18px;
+  padding-left: 0;
+}
+
+
+/* elevate2: cut-elements — map owns the frame; Delete/Keys/stats off chrome */
+.elevate-quiet-stats { display: none !important; }
+.elevate-quiet-keys { display: none !important; }
+.workspace { grid-template-columns: 148px minmax(0, 1fr); }
+.sidebar { padding: 8px 8px 12px; }
+.save-pill { display: none !important; }
+.toolbar { min-height: 52px; padding: 6px 10px; }
+.brand-mark-img { width: 34px; height: 34px; }
+.brand-copy strong { font-size: clamp(1.05rem, 1.6vw, 1.28rem); }
+
+
+/* elevate3: design-system-from-assets — space tokens + quieter chrome ladder */
+:root {
+  --elevate-sidebar: 148px;
+  --elevate-toolbar-h: 52px;
+  --elevate-outline-pad-x: 36px;
+  --elevate-outline-indent: 18px;
+  --elevate-card-pad-y: 10px;
+  --elevate-hairline: #3a5848;
+}
+.workspace { grid-template-columns: var(--elevate-sidebar) minmax(0, 1fr); }
+.toolbar { min-height: var(--elevate-toolbar-h); }
+.outline-tree { padding-left: var(--elevate-outline-pad-x); padding-right: var(--elevate-outline-pad-x); }
+.outline-tree-branch { margin-left: var(--elevate-outline-indent); }
+.title-input {
+  border-radius: 2px;
+  border: 1.5px solid var(--elevate-hairline);
+  background: #12201a;
+  box-shadow: none;
+}
+.view-switch { border-color: var(--elevate-hairline); }
+
+
+/* elevate4: bar gap MindNode — organic chalk limbs (grown, not CAD) */
+.edge-line-under {
+  stroke-width: 13;
+  opacity: 0.55;
+  stroke: #07100c;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.edge-line {
+  stroke-width: 4.6;
+  stroke: #f7fffb;
+  opacity: 0.94;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.port-dot {
+  fill: #e09a3e;
+  opacity: 0.55;
+  r: 3.75;
+}
+.map-node:hover .port-dot,
+.map-node.is-selected .port-dot { opacity: 0.95; }
+.link-handle { opacity: 0.2; }
+.map-node:hover .link-handle,
+.map-node.is-selected .link-handle { opacity: 0.85; }
+
+
+/* elevate5: bar gap Heptabase — limb cards breathe on thinking canvas */
+.map-node:not(.is-root) .node-body {
+  fill: #0c1a14;
+  stroke: #fff8ea;
+  stroke-width: 2.1;
+}
+.map-node:not(.is-root) .node-input {
+  font-size: 13.1px;
+  font-weight: 550;
+  letter-spacing: -0.01em;
+  padding: 0 10px;
+}
+.node-html {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 2px 2px;
+}
+.canvas-wrap {
+  background: #0c1612;
+  box-shadow: inset 0 0 0 1.5px #2e4a3c;
+}
+.workspace { grid-template-columns: 132px minmax(0, 1fr); }
+:root { --elevate-sidebar: 132px; }
+
+
+/* elevate6: remove-ai-tells — kill soft decoration + acid digit glow */
+.t-digit-group { color: var(--chalk) !important; }
+.brand-mark-img { box-shadow: none !important; }
+.btn.job-primary, .btn.primary {
+  box-shadow: 2px 2px 0 #050a08 !important;
+}
+.map-list li.active .map-item { box-shadow: none !important; border-width: 1.5px; }
+.more-menu { box-shadow: 2px 2px 0 #050a08 !important; }
+.connect-hint { box-shadow: 2px 2px 0 #050a08 !important; }
+.app-toast { box-shadow: none !important; }
+.empty-hero-art { box-shadow: 2px 2px 0 #050a08 !important; }
+.outline-tree-row.is-selected > .outline-tree-item { box-shadow: none !important; }
+.stat-chip { box-shadow: none !important; }
+
+
+/* elevate7: hand-rewrite-copy — quieter brand ladder with shop voice */
+.brand-copy span {
+  font-size: 0.58rem;
+  letter-spacing: 0.14em;
+  color: var(--bone-dim);
+}
+
+
+/* elevate8: make-it-alive — Map|Outline sliding pill (transitions.dev tabs-sliding) */
+:root {
+  --tabs-dur: 250ms;
+  --tabs-ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+.view-switch.t-tabs {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  padding: 0;
+  border-radius: 2px;
+  background: #12201a;
+  border: 1.5px solid #3f5e4e;
+  overflow: hidden;
+}
+.view-switch-pill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 0;
+  background: var(--copper);
+  border-radius: 1px;
+  transition: transform var(--tabs-dur) var(--tabs-ease), width var(--tabs-dur) var(--tabs-ease);
+  pointer-events: none;
+}
+.view-switch-btn {
+  position: relative;
+  z-index: 1;
+  background: transparent !important;
+  border-right: 0 !important;
+  color: var(--bone-dim);
+  transition: color var(--tabs-dur) var(--tabs-ease);
+}
+.view-switch-btn.is-active {
+  background: transparent !important;
+  color: #14241c !important;
+}
+.outline-tree,
+.canvas-wrap {
+  animation: elevate-view-in 280ms var(--tabs-ease);
+}
+@keyframes elevate-view-in {
+  from { opacity: 0.55; transform: translateY(4px); }
+  to { opacity: 1; transform: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .view-switch-pill { transition: none; }
+  .outline-tree, .canvas-wrap { animation: none; }
+}
+
+
+/* elevate9: fonts — MindNode calm type ladder on outline + chrome */
+.outline-tree-head h2 {
+  font-size: 1.28rem;
+  font-weight: 750;
+  letter-spacing: -0.028em;
+}
+.outline-tree-item {
+  font-size: 0.88rem;
+  line-height: 1.35;
+  min-height: 34px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+.outline-tree-row.is-root > .outline-tree-item {
+  font-size: 1.12rem;
+  margin-bottom: 14px;
+}
+.brand-copy strong {
+  font-size: clamp(0.98rem, 1.4vw, 1.18rem);
+  font-weight: 750;
+}
+.title-input input {
+  font-size: 1.02rem;
+  font-weight: 650;
+}
+.btn { font-size: 0.74rem; }
+.job-cluster .btn.job { letter-spacing: 0.02em; }
+
+
+/* elevate10: cut — Sibling demoted; primary job is Branch · Link · Export */
+.job-cluster { gap: 3px; padding: 2px 3px; }
+.btn.job { min-height: 30px; padding: 0 9px; }
+.btn.job-primary { min-height: 32px; padding: 0 14px; font-size: 0.76rem; }
+.workspace { grid-template-columns: 120px minmax(0, 1fr); }
+:root { --elevate-sidebar: 120px; }
+.sidebar-head .btn.sm { font-size: 0.62rem; padding: 2px 6px; }
+
+
+/* elevate11: canvas generosity — map theater vs MindNode air / Heptabase canvas */
+.canvas-wrap {
+  min-height: calc(100vh - 50px);
+  background: #0a1410;
+  box-shadow: inset 0 0 0 1px #274033;
+}
+.canvas-wrap::before { opacity: 0.55 !important; }
+.canvas-wrap::after {
+  box-shadow: inset 0 0 0 1px rgba(188, 232, 214, 0.08), inset 0 0 36px rgba(0, 0, 0, 0.18);
+}
+.btn.job-primary {
+  box-shadow: 2px 2px 0 #050a08 !important;
+  text-transform: none;
+  letter-spacing: 0.03em;
+}
+.toolbar {
+  background: #101c17;
+  border-bottom: 1.5px solid #355445;
+  min-height: 48px;
+  padding: 5px 10px;
+}
+.sidebar {
+  background: #0e1814;
+  border-right: 1.5px solid #2e463a;
+}
+.brand-mark-img { width: 30px; height: 30px; border-width: 1.5px; }
+.map-node.is-root .node-body {
+  stroke-width: 3.2;
+}
+.edge-line { stroke-width: 4.2; }
+.edge-line-under { stroke-width: 11; opacity: 0.5; }
+
+
+/* elevate12: critic polish — quieter starter + outline air */
+.starter-tag {
+  opacity: 0.85;
+  border-width: 1px;
+  letter-spacing: 0.1em;
+}
+.outline-tree-head { margin-bottom: 28px; }
+.outline-tree-head p { max-width: 32rem; }
+.view-switch { border-color: #355445; }
+
+
+/* elevate12: critic polish — quieter starter + outline air */
+.starter-tag {
+  opacity: 0.85;
+  border-width: 1px;
+  letter-spacing: 0.1em;
+}
+.outline-tree-head { margin-bottom: 28px; }
+.outline-tree-head p { max-width: 32rem; }
+.view-switch { border-color: #355445; }

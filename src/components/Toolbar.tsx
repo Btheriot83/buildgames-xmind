@@ -1,12 +1,16 @@
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { downloadJson, downloadPng, downloadSvg } from '../lib/export'
 import { useMapStore } from '../store/mapStore'
 import { NumberPop } from './NumberPop'
 
 export function Toolbar({
-  onOpenOutline,
+  viewMode,
+  onViewMode,
+  onOpenOutlineGrow,
 }: {
-  onOpenOutline: () => void
+  viewMode: 'map' | 'outline'
+  onViewMode: (m: 'map' | 'outline') => void
+  onOpenOutlineGrow: () => void
 }) {
   const map = useMapStore((s) => s.map)
   const stats = useMapStore((s) => s.stats)
@@ -49,9 +53,11 @@ export function Toolbar({
         <img className="brand-mark-img" src="/art/brand-mark.svg" width={44} height={44} alt="Shop Chalk Map" />
         <div className="t-stagger is-shown brand-copy">
           <strong className="t-stagger-line t-stagger-line--1">Shop Chalk Map</strong>
-          <span className="t-stagger-line t-stagger-line--2">Branch · Link · Export</span>
+          <span className="t-stagger-line t-stagger-line--2">Map · Outline · Export</span>
         </div>
       </div>
+
+      <ViewSwitch viewMode={viewMode} onViewMode={onViewMode} />
 
       <div className={`t-input-wrap title-wrap ${titleError ? 'is-error' : ''}`}>
         <div className={`t-input title-input ${titleError ? 'is-error is-shaking' : ''}`}>
@@ -80,7 +86,7 @@ export function Toolbar({
         <p className="t-error-msg">Name the map.</p>
       </div>
 
-      <div className="stats-row" aria-label="Map stats">
+      <div className="stats-row elevate-quiet-stats" aria-label="Map stats">
         <NumberPop value={stats.nodeCount} label="nodes" />
         <NumberPop value={stats.edgeCount} label="links" />
       </div>
@@ -89,9 +95,6 @@ export function Toolbar({
         <div className="job-cluster" aria-label="Core job actions">
           <button type="button" className="btn job" onClick={() => addChildToSelected()} disabled={!selectedId} data-testid="add-child">
             Branch
-          </button>
-          <button type="button" className="btn job" onClick={() => addSiblingToSelected()} disabled={!selectedId} data-testid="add-sibling">
-            Sibling
           </button>
           <button
             type="button"
@@ -132,18 +135,17 @@ export function Toolbar({
             )}
           </div>
         </div>
-        <button type="button" className="btn danger" onClick={() => removeSelected()} disabled={!selectedId}>
-          Delete
-        </button>
         <div className="more-wrap">
           <button type="button" className="btn ghost" onClick={() => setMoreOpen((v) => !v)} aria-expanded={moreOpen}>
             More
           </button>
           {moreOpen && (
             <div className="more-menu" role="menu">
+              <button type="button" role="menuitem" className="btn ghost" data-testid="add-sibling" onClick={() => { addSiblingToSelected(); setMoreOpen(false) }} disabled={!selectedId}>Sibling</button>
               <button type="button" role="menuitem" className="btn ghost" data-testid="ai-expand" disabled={!selectedId || aiBusy} onClick={() => { void expandSelectedAi(); setMoreOpen(false) }}>{aiBusy ? 'Expanding…' : 'AI Expand'}</button>
-              <button type="button" role="menuitem" className="btn ghost" data-testid="open-outline" onClick={() => { onOpenOutline(); setMoreOpen(false) }}>Outline</button>
-              <button type="button" role="menuitem" className="btn ghost" onClick={() => { newMap(); setMoreOpen(false) }}>Blank board</button>
+              <button type="button" role="menuitem" className="btn ghost" data-testid="open-outline" onClick={() => { onOpenOutlineGrow(); setMoreOpen(false) }}>Grow from outline</button>
+              <button type="button" role="menuitem" className="btn ghost danger-text" onClick={() => { removeSelected(); setMoreOpen(false) }} disabled={!selectedId}>Delete</button>
+              <button type="button" role="menuitem" className="btn ghost" onClick={() => { newMap(); setMoreOpen(false) }}>New board</button>
               <button type="button" role="menuitem" className="btn ghost" onClick={() => { fileRef.current?.click(); setMoreOpen(false) }}>Import</button>
             </div>
           )}
@@ -174,5 +176,58 @@ export function Toolbar({
         </span>
       </div>
     </header>
+  )
+}
+
+
+function ViewSwitch({
+  viewMode,
+  onViewMode,
+}: {
+  viewMode: 'map' | 'outline'
+  onViewMode: (m: 'map' | 'outline') => void
+}) {
+  const barRef = useRef<HTMLDivElement>(null)
+  const mapRef = useRef<HTMLButtonElement>(null)
+  const outlineRef = useRef<HTMLButtonElement>(null)
+  const pillRef = useRef<HTMLSpanElement>(null)
+
+  useEffect(() => {
+    const pill = pillRef.current
+    const active = viewMode === 'map' ? mapRef.current : outlineRef.current
+    const bar = barRef.current
+    if (!pill || !active || !bar) return
+    const left = active.offsetLeft
+    const width = active.offsetWidth
+    pill.style.transform = `translateX(${left}px)`
+    pill.style.width = `${width}px`
+  }, [viewMode])
+
+  return (
+    <div className="view-switch t-tabs" role="tablist" aria-label="Map or outline" ref={barRef}>
+      <span className="view-switch-pill t-tabs-pill" ref={pillRef} aria-hidden="true" />
+      <button
+        type="button"
+        ref={mapRef}
+        role="tab"
+        className={`view-switch-btn t-tab ${viewMode === 'map' ? 'is-active' : ''}`}
+        aria-selected={viewMode === 'map'}
+        data-testid="view-map"
+        onClick={() => onViewMode('map')}
+      >
+        Map
+      </button>
+      <button
+        type="button"
+        ref={outlineRef}
+        role="tab"
+        className={`view-switch-btn t-tab ${viewMode === 'outline' ? 'is-active' : ''}`}
+        aria-selected={viewMode === 'outline'}
+        data-testid="view-outline"
+        onClick={() => onViewMode('outline')}
+      >
+        Outline
+      </button>
+    </div>
   )
 }
