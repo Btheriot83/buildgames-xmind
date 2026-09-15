@@ -1616,3 +1616,12 @@ kbd { font-size: 0.7rem; font-weight: 700; padding: 1px 5px; }
 .shortcuts li { font-size: 0.76rem; }
 .empty-state .t-stagger-line--1 { font-size: clamp(1.65rem, 3.2vw, 2.15rem); }
 .node-input { letter-spacing: -0.01em; }
+
+
+/* r10 contrast coherence */
+.toolbar { background: #24362c; border-bottom: 2px solid #4a6b58; }
+.sidebar { background: #22352c; }
+.app-toast, .save-pill.status-saved { background: #2a4538; color: var(--chalk); }
+.edge-line { stroke: #bce8d6; }
+.map-node .node-body { fill: #1c3228; }
+.canvas-wrap::after { background: rgba(8, 14, 11, 0.14); }

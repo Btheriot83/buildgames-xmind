@@ -78,3 +78,9 @@
 - shot: gauntlet/shots-r5/r9-board.png
 - verdict: Shortcuts/empty display hierarchy denser; original still wins editorial type polish.
 - commit: a192481
+
+## r10 — contrast
+- files: src/index.css
+- shot: gauntlet/shots-r5/r10-board.png ; gauntlet/shots-r5/r10-bar-xmind.png
+- verdict: Final coherence — candidate closer on chalkboard map craft + photo tooth; original still preferred unlabeled A/B for marketing photography / light canvas product depth.
+- commit: 6e2aee1
