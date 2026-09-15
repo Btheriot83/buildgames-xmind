@@ -9,10 +9,10 @@ export function buildSampleMap(): MindMap {
   const root = createNode({
     id: 'desk-root',
     text: 'Friday I-10 diesel pull',
-    x: 220,
+    x: 200,
     y: 250,
-    width: 236,
-    height: 72,
+    width: 268,
+    height: 74,
   })
   const yard = createNode({
     id: 'desk-yard',
