@@ -36,6 +36,12 @@
 - files: src/components/OutlinePanel.tsx, src/components/Sidebar.tsx, src/components/SuccessOverlay.tsx, src/index.css, gauntlet/workbench-r4.md
 - shot: gauntlet/shots-r4/r3-board.png
 - verdict: Outline dock uses real panel-reveal; success-check chalk flat on export — original still quieter on chrome motion.
-- commit: PENDING
+- commit: a55680c
 - dream-loop: target locked at .dream-loop/target.png (from live baseline refine); critic also vs bar
+
+## r4 — bar gap
+- files: src/components/MindCanvas.tsx, src/index.css
+- shot: gauntlet/shots-r4/r4-board.png
+- verdict: Side-attach chalk limbs close dream-loop target silhouette; original still wins soft editorial bezier photography.
+- commit: 80dc62a
 

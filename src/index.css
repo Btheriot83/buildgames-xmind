@@ -1418,3 +1418,6 @@ kbd {
   text-transform: uppercase;
   color: var(--chalk);
 }
+
+/* r4 — bar gap: side-attach endcaps */
+.edge-line { stroke-width: 3.05; stroke: #9fd4c0; stroke-linecap: round; }
