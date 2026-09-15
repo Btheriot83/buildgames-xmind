@@ -57,3 +57,9 @@
 - verdict: Desk photo underlay killed — flat chalk board closer to dream-loop target; original still wins light map photography.
 - commit: c0129d3
 
+## r7 — buttons
+- files: src/index.css
+- shot: gauntlet/shots-r4/r7-board.png
+- verdict: Job cluster square denser matching target chrome; original CTAs still cleaner on light UI.
+- commit: 2061c4b
+
