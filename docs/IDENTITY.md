@@ -47,13 +47,13 @@ No decorative gradients — flat fills + **real chalkboard photo** only.
 Shop-short. **Branch · Link · Export**. No synapse / midnight marketing.
 
 ## Product
-**Copper Synapse** (repo/product). Aesthetic = **Shop Chalk Map**.
+**Shop Chalk Map** (user-facing product + aesthetic). Repo slug remains buildgames-xmind.
 
 ## One job
 Mind map: **central topic → branch → connect → export** (+ AI Expand / outline→map).
 
 ## Will NOT change in R6 gauntlets
 - Aesthetic name Shop Chalk Map, palette, type pairing, chalkboard field
-- Product name Copper Synapse
+- User-facing product name Shop Chalk Map (never Copper Synapse in DOM/UI)
 - Local-first IndexedDB
 - Flat no-gradient hard bar
