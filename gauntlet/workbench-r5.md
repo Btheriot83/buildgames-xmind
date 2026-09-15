@@ -47,40 +47,50 @@
 - files: src/lib/sample.ts, src/components/MindCanvas.tsx, src/index.css
 - shot: gauntlet/shots-r5/r4-board.png
 - verdict: Denser right-fan + brighter ports close dream-loop/Xmind limb silhouette; original still wins soft editorial bezier photography.
-- commit: 2b9f4de
+- commit: d5f0a26
 
 ## r5 — fonts
 - files: src/index.css
 - shot: gauntlet/shots-r5/r5-board.png ; gauntlet/shots-r5/r5-bar-xmind.png
 - verdict: Job tape denser billboard; bar A/B — original marketing hero still outranks chalkboard chrome for photography.
-- commit: 1cd3f06
+- commit: 7257403
 
 ## r6 — contrast
 - files: src/index.css
 - shot: gauntlet/shots-r5/r6-board.png
 - verdict: Chalk photo tooth stronger; selection wash clearer; original still preferred for light-map contrast theater.
-- commit: 44d46d9
+- commit: f3eddb9
 
 ## r7 — buttons
 - files: src/index.css
 - shot: gauntlet/shots-r5/r7-board.png
 - verdict: Empty/job button family weights unified; original still cleaner on light marketing CTAs.
-- commit: 5d59aed
+- commit: c56245e
 
 ## r8 — bar gap
 - files: src/components/MindCanvas.tsx, src/index.css
 - shot: gauntlet/shots-r5/r8-board.png
 - verdict: Job-rail + link handles closer to target map-tool chrome; original still subtler on product screenshots.
-- commit: 5fa28a4
+- commit: b4f1688
 
 ## r9 — fonts
 - files: src/index.css
 - shot: gauntlet/shots-r5/r9-board.png
 - verdict: Shortcuts/empty display hierarchy denser; original still wins editorial type polish.
-- commit: a192481
+- commit: e4010da
 
 ## r10 — contrast
 - files: src/index.css
 - shot: gauntlet/shots-r5/r10-board.png ; gauntlet/shots-r5/r10-bar-xmind.png
 - verdict: Final coherence — candidate closer on chalkboard map craft + photo tooth; original still preferred unlabeled A/B for marketing photography / light canvas product depth.
-- commit: 6e2aee1
+- commit: bba405a
+
+
+## dream-loop
+- baseline: `.dream-loop/baseline.png` (Phase A board after Anshu deepen)
+- target: `.dream-loop/target.png` (Seedream refine of baseline — exact UI screenshot)
+- closing rounds: r4 denser fan/ports, r6 chalk tooth, r8 job-rail/link handles, r10 coherence
+- critic: those rounds vs target + live xmind.app bar
+
+## Visibility gate
+Each counted round left a spottable delta (type, contrast, buttons, limb/layout craft). Identity held Shop Chalk Map; flat no-gradient hard bar held.

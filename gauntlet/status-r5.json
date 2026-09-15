@@ -1,0 +1,100 @@
+{
+  "slug": "xmind",
+  "product": "Copper Synapse",
+  "phase": "B5",
+  "status": "gauntlet_r5_complete",
+  "demoUrl": "https://buildgames-xmind.vercel.app",
+  "demo_url": "https://buildgames-xmind.vercel.app",
+  "barUrl": "https://xmind.app/",
+  "bar": "https://xmind.app/",
+  "path": "/workspace/build-games/apps/xmind",
+  "repo": "https://github.com/Btheriot83/buildgames-xmind",
+  "doNotMessageBrandon": true,
+  "identity": {
+    "name": "Shop Chalk Map",
+    "locked": true,
+    "reseededInR5": false,
+    "deepenedInR5": true,
+    "path": "docs/IDENTITY.md"
+  },
+  "phaseA": {
+    "done": true,
+    "techniquesDone": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "reseeded": false,
+    "deepened": true,
+    "seed": "f12352638f969751b74b120a078625bc86ec84b79a7ddfe553de7caca08cc375",
+    "commit": "d419e40",
+    "imagesGenerated": [
+      "public/art/chalk-board.jpg",
+      "public/art/empty-chalk-map.jpg",
+      "public/art/brand-mark.svg"
+    ],
+    "videoOrMotionPath": "public/art/synapse-pulse.mp4",
+    "criticFreshContext": true,
+    "copyHandRewritten": true
+  },
+  "roundsCounted": 10,
+  "roundShas": [
+    "27ef651",
+    "00b90c2",
+    "6177056",
+    "d5f0a26",
+    "7257403",
+    "f3eddb9",
+    "c56245e",
+    "b4f1688",
+    "e4010da",
+    "bba405a"
+  ],
+  "shotCount": 15,
+  "barShotRounds": [
+    5,
+    10
+  ],
+  "honestNotes": [
+    "Original still preferred unlabeled A/B for marketing photography / light map theater.",
+    "Candidate closer on chalkboard map craft: photo tooth, denser limbs/ports, one Export primary, square chalk controls.",
+    "Identity name held (Shop Chalk Map); materials deepened via full Anshu 1\u20138 \u2014 not a rename reseed.",
+    "No self-cheer numeric scores.",
+    "dream-loop target at .dream-loop/target.png; closing rounds r4/r6/r8/r10.",
+    "transitions.dev wired to real actions."
+  ],
+  "transitionsDev": {
+    "success-check": "Export SVG/PNG/JSON",
+    "toast": "Export ok/fail + AI/import messages",
+    "error-state-shake": "Empty map title validation",
+    "skeleton-reveal": "Boot LoadingShell",
+    "texts-reveal": "Brand + empty-state lines",
+    "number-pop-in": "Nodes/Links/Depth stats",
+    "panel-reveal": "Outline dock open/close"
+  },
+  "dreamLoop": {
+    "baseline": ".dream-loop/baseline.png",
+    "target": ".dream-loop/target.png",
+    "closingRounds": [
+      4,
+      6,
+      8,
+      10
+    ]
+  },
+  "workbench": "gauntlet/workbench-r5.md",
+  "branch": "gauntlet/xmind-r5",
+  "finishedAtUtc": "2026-09-15T06:54:48Z",
+  "finishedAtPt": "2026-09-14 11:54 PM PT",
+  "sha": "bba405a",
+  "pr": null,
+  "live_smoke": {
+    "ok": false,
+    "pending": true
+  }
+}
