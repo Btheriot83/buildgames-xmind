@@ -46,7 +46,7 @@ export function Toolbar({
   return (
     <header className="toolbar" role="banner">
       <div className="brand">
-        <img className="brand-mark-img" src="/art/brand-mark-sm.png" width={44} height={44} alt="" />
+        <img className="brand-mark-img" src="/art/brand-mark.svg" width={44} height={44} alt="" />
         <div className="t-stagger is-shown brand-copy">
           <strong className="t-stagger-line t-stagger-line--1">Copper Synapse</strong>
           <span className="t-stagger-line t-stagger-line--2">Branch · Link · Export</span>

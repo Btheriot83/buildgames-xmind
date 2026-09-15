@@ -1428,7 +1428,7 @@ kbd {
 .map-node.is-root .node-input { font-size: 18px; }
 
 /* r6 — contrast: flat chalk field (dream-loop: no desk tree underlay) */
-.canvas-wrap::before { opacity: 0 !important; background: none !important; }
+.canvas-wrap::before { /* r6 desk kill superseded by R5 chalk-board.jpg */ }
 .canvas-wrap { background: #1c3026; }
 .canvas-wrap::after {
   content: ""; position: absolute; inset: 0; pointer-events: none; z-index: 0;
@@ -1497,3 +1497,131 @@ kbd { font-size: 0.7rem; font-weight: 700; padding: 1px 5px; }
 .workspace { grid-template-columns: 220px 1fr; }
 .edge-line { stroke-width: 3.1; }
 .brand-copy strong { font-size: clamp(1.1rem, 1.6vw, 1.36rem); }
+
+
+/* R5 Phase A photographic Shop Chalk Map deepen */
+.shader-bg-fill { position: absolute; inset: 0; background: #1e3328; }
+.shader-bg-tooth {
+  position: absolute; inset: 0;
+  background: url("/art/chalk-board.jpg") center / cover no-repeat;
+  opacity: 0.28; mix-blend-mode: soft-light; pointer-events: none;
+}
+.canvas-wrap { background: #1c3026; }
+.canvas-wrap::before {
+  content: "" !important; position: absolute; inset: 0; pointer-events: none; z-index: 0;
+  background: url("/art/chalk-board.jpg") center / cover no-repeat !important;
+  opacity: 0.34 !important; mix-blend-mode: soft-light;
+}
+.canvas-wrap::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none; z-index: 0;
+  background: rgba(10, 18, 14, 0.18);
+  box-shadow: inset 0 0 0 1px rgba(143, 201, 180, 0.12);
+}
+.brand-mark-img {
+  width: 44px; height: 44px; border-radius: 4px; border: 2px solid var(--copper);
+  box-shadow: 3px 3px 0 #0f1c16; background: #1e3328; object-fit: cover;
+}
+.empty-state {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 1.1rem; padding: 2rem 1.25rem 3rem; text-align: center;
+  min-height: calc(100vh - 24px); position: relative; z-index: 2;
+}
+.empty-hero-art {
+  width: min(560px, 92vw); height: auto; border: 2px solid var(--line);
+  border-radius: 4px; box-shadow: 4px 4px 0 #0f1c16; background: #14241c;
+}
+.empty-state .t-stagger-line--1 {
+  font-family: var(--font-display); font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700; color: var(--chalk);
+}
+.empty-state .t-stagger-line--2 { color: var(--bone-dim); max-width: 34rem; font-size: 0.95rem; line-height: 1.45; }
+.edge-line { stroke: #a8dcc9; stroke-width: 3.4; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+.map-node.is-root .node-body { stroke-width: 3.5; }
+.map-node .node-body { fill: #1f352b; stroke: #ebe6d4; stroke-width: 2.4; }
+.success-overlay { background: rgba(30, 51, 40, 0.92); }
+.success-pulse-wrap {
+  position: absolute; inset: 0; display: grid; place-items: center;
+  opacity: 0.35; pointer-events: none; overflow: hidden;
+}
+.success-pulse-video {
+  width: min(420px, 70vw); height: auto; object-fit: cover;
+  filter: grayscale(0.2) contrast(1.05);
+}
+.success-overlay .t-success-check, .success-overlay p { position: relative; z-index: 2; }
+.success-overlay p { font-family: var(--font-display); font-weight: 700; letter-spacing: 0.04em; }
+.app-shell.is-igniting .edge-line { animation: none; filter: none; }
+
+
+/* r1 fonts */
+.brand-copy strong { font-size: clamp(1.22rem, 1.85vw, 1.52rem); font-weight: 700; letter-spacing: -0.035em; }
+.map-node.is-root .node-input { font-size: 18.5px; font-weight: 700; }
+.title-input input { font-size: 1.16rem; font-weight: 650; }
+.sidebar-head h2 { font-size: 0.92rem; font-weight: 700; letter-spacing: 0.12em; }
+
+
+/* r2 contrast */
+:root { --bone-dim: #d2cdb4; --limb-stroke: #f0ebd8; }
+.map-node .node-body { stroke: var(--limb-stroke); stroke-width: 2.55; }
+.edge-line { stroke: #b4e2d0; stroke-width: 3.55; }
+.stat-label, .job-cluster-label, .sidebar-foot { color: var(--bone-dim); }
+.save-pill { border-color: #5a7a68; color: var(--chalk); }
+
+
+/* r3 buttons */
+.job-cluster { gap: 5px; padding: 5px 6px; background: #24382e; border: 2px solid var(--line); }
+.btn.job { min-height: 36px; font-weight: 600; border-width: 2px; }
+.btn.job-primary, .btn.primary {
+  min-height: 36px; box-shadow: 4px 4px 0 #0f1c16; font-weight: 800; letter-spacing: 0.02em;
+}
+.btn.secondary { border-width: 2px; font-weight: 600; }
+
+
+/* r4 bar gap */
+.port-dot { r: 4.5; fill: #b4e2d0; }
+.link-handle { fill: var(--copper); opacity: 0.85; }
+.edge-line { stroke-width: 3.7; }
+.map-node.is-root .node-body { rx: 999; }
+
+
+/* r5 fonts */
+.job-tape { font-size: 0.78rem; letter-spacing: 0.16em; font-weight: 800; }
+.job-rail strong { color: var(--copper-hot); font-weight: 800; }
+.map-item .map-title { font-size: 0.86rem; font-weight: 600; }
+.brand-copy span { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.04em; }
+
+
+/* r6 contrast */
+.canvas-wrap::before { opacity: 0.42 !important; }
+.shader-bg-tooth { opacity: 0.34; }
+.map-node.is-selected .node-body { fill: #2a4a3a; stroke: var(--acid); stroke-width: 3.4; }
+.connect-hint { background: var(--copper); color: #14241c; border: 2px solid var(--copper-hot); font-weight: 800; }
+
+
+/* r7 buttons */
+.empty-actions .btn.primary { box-shadow: 4px 4px 0 #0f1c16; font-weight: 800; min-height: 40px; }
+.empty-actions .btn.secondary { border-width: 2px; min-height: 40px; font-weight: 650; }
+.btn.danger { border-width: 2px; font-weight: 800; color: #f3c8c8; }
+.btn.ghost { font-weight: 600; }
+
+
+/* r8 bar gap */
+.job-rail { gap: 10px; padding: 8px 12px; border: 2px solid var(--line); box-shadow: 3px 3px 0 #0f1c16; }
+.job-rail-hint { color: var(--bone-dim); font-size: 0.68rem; letter-spacing: 0.04em; }
+.link-handle { r: 7; stroke: #14241c; stroke-width: 1.5; }
+.map-node.is-linking .link-handle { fill: var(--acid); }
+
+
+/* r9 fonts */
+.shortcuts h3 { font-family: var(--font-display); font-size: 0.82rem; letter-spacing: 0.08em; font-weight: 700; }
+.shortcuts li { font-size: 0.76rem; }
+.empty-state .t-stagger-line--1 { font-size: clamp(1.65rem, 3.2vw, 2.15rem); }
+.node-input { letter-spacing: -0.01em; }
+
+
+/* r10 contrast coherence */
+.toolbar { background: #24362c; border-bottom: 2px solid #4a6b58; }
+.sidebar { background: #22352c; }
+.app-toast, .save-pill.status-saved { background: #2a4538; color: var(--chalk); }
+.edge-line { stroke: #bce8d6; }
+.map-node .node-body { fill: #1c3228; }
+.canvas-wrap::after { background: rgba(8, 14, 11, 0.14); }

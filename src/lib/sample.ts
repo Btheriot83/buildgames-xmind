@@ -11,13 +11,13 @@ export function buildSampleMap(): MindMap {
     text: 'Friday I-10 diesel pull',
     x: 340,
     y: 250,
-    width: 248,
+    width: 236,
     height: 72,
   })
   const yard = createNode({
     id: 'desk-yard',
     text: 'Yard trucks',
-    x: 680,
+    x: 640,
     y: 90,
     width: 168,
     height: 52,
@@ -26,7 +26,7 @@ export function buildSampleMap(): MindMap {
   const parts = createNode({
     id: 'desk-parts',
     text: 'Parts runs',
-    x: 680,
+    x: 640,
     y: 230,
     width: 168,
     height: 52,
@@ -35,7 +35,7 @@ export function buildSampleMap(): MindMap {
   const dispatch = createNode({
     id: 'desk-dispatch',
     text: 'Dispatch',
-    x: 680,
+    x: 640,
     y: 370,
     width: 168,
     height: 52,
@@ -44,7 +44,7 @@ export function buildSampleMap(): MindMap {
   const crew = createNode({
     id: 'desk-crew',
     text: 'Crew',
-    x: 680,
+    x: 640,
     y: 500,
     width: 168,
     height: 52,
@@ -53,7 +53,7 @@ export function buildSampleMap(): MindMap {
   const unit41 = createNode({
     id: 'desk-u41',
     text: 'Unit 41 — DEF sensor',
-    x: 920,
+    x: 860,
     y: 40,
     width: 190,
     height: 48,
@@ -62,7 +62,7 @@ export function buildSampleMap(): MindMap {
   const unit18 = createNode({
     id: 'desk-u18',
     text: 'Unit 18 — leak-down',
-    x: 920,
+    x: 860,
     y: 110,
     width: 190,
     height: 48,
@@ -71,7 +71,7 @@ export function buildSampleMap(): MindMap {
   const napa = createNode({
     id: 'desk-napa',
     text: 'NAPA on Bell Rd',
-    x: 920,
+    x: 860,
     y: 200,
     width: 180,
     height: 48,
@@ -80,7 +80,7 @@ export function buildSampleMap(): MindMap {
   const freightliner = createNode({
     id: 'desk-fl',
     text: 'Freightliner Chandler',
-    x: 920,
+    x: 860,
     y: 270,
     width: 200,
     height: 48,
@@ -89,7 +89,7 @@ export function buildSampleMap(): MindMap {
   const mesa = createNode({
     id: 'desk-mesa',
     text: 'Mesa yard — 06:30',
-    x: 920,
+    x: 860,
     y: 350,
     width: 180,
     height: 48,
@@ -98,7 +98,7 @@ export function buildSampleMap(): MindMap {
   const tonto = createNode({
     id: 'desk-tonto',
     text: 'Tonto Basin call-out',
-    x: 920,
+    x: 860,
     y: 420,
     width: 190,
     height: 48,
@@ -107,7 +107,7 @@ export function buildSampleMap(): MindMap {
   const luis = createNode({
     id: 'desk-luis',
     text: 'Luis + Mira on dual',
-    x: 920,
+    x: 860,
     y: 500,
     width: 180,
     height: 48,
