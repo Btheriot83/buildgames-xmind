@@ -136,13 +136,16 @@ export function MindCanvas() {
             const y1 = acy
             const x2 = toRight ? b.x : b.x + b.width
             const y2 = bcy
-            const dx = Math.max(56, Math.abs(x2 - x1) * 0.58)
-            const bend = ((e.id.charCodeAt(0) + e.id.charCodeAt(e.id.length - 1)) % 7) - 3
-            const dy = (y2 - y1) * 0.18 + bend * 4.5
+            /* Organic MindNode-like limbs: seed bend from edge id */
+            const seed = e.id.charCodeAt(0) + e.id.charCodeAt(Math.min(3, e.id.length - 1)) * 7
+            const dx = Math.max(72, Math.abs(x2 - x1) * 0.62)
+            const bend = ((seed % 11) - 5) * 1.35
+            const lift = ((seed % 5) - 2) * 3.2
+            const dy = (y2 - y1) * 0.22 + bend * 5.8
             const c1x = toRight ? x1 + dx : x1 - dx
-            const c2x = toRight ? x2 - dx : x2 + dx
-            const c1y = y1 + dy * 0.35
-            const c2y = y2 - dy * 0.55
+            const c2x = toRight ? x2 - dx * 0.92 : x2 + dx * 0.92
+            const c1y = y1 + dy * 0.28 + lift
+            const c2y = y2 - dy * 0.48 - lift * 0.4
             const d = `M ${x1} ${y1} C ${c1x} ${c1y}, ${c2x} ${c2y}, ${x2} ${y2}`
             return (
               <g key={e.id} className="edge-group">

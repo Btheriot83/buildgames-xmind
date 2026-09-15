@@ -4,9 +4,13 @@ import { useMapStore } from '../store/mapStore'
 import { NumberPop } from './NumberPop'
 
 export function Toolbar({
-  onOpenOutline,
+  viewMode,
+  onViewMode,
+  onOpenOutlineGrow,
 }: {
-  onOpenOutline: () => void
+  viewMode: 'map' | 'outline'
+  onViewMode: (m: 'map' | 'outline') => void
+  onOpenOutlineGrow: () => void
 }) {
   const map = useMapStore((s) => s.map)
   const stats = useMapStore((s) => s.stats)
@@ -51,6 +55,27 @@ export function Toolbar({
           <strong className="t-stagger-line t-stagger-line--1">Shop Chalk Map</strong>
           <span className="t-stagger-line t-stagger-line--2">Branch · Link · Export</span>
         </div>
+      </div>
+
+      <div className="view-switch" role="group" aria-label="Map or outline">
+        <button
+          type="button"
+          className={`view-switch-btn ${viewMode === 'map' ? 'is-active' : ''}`}
+          aria-pressed={viewMode === 'map'}
+          data-testid="view-map"
+          onClick={() => onViewMode('map')}
+        >
+          Map
+        </button>
+        <button
+          type="button"
+          className={`view-switch-btn ${viewMode === 'outline' ? 'is-active' : ''}`}
+          aria-pressed={viewMode === 'outline'}
+          data-testid="view-outline"
+          onClick={() => onViewMode('outline')}
+        >
+          Outline
+        </button>
       </div>
 
       <div className={`t-input-wrap title-wrap ${titleError ? 'is-error' : ''}`}>
@@ -142,7 +167,7 @@ export function Toolbar({
           {moreOpen && (
             <div className="more-menu" role="menu">
               <button type="button" role="menuitem" className="btn ghost" data-testid="ai-expand" disabled={!selectedId || aiBusy} onClick={() => { void expandSelectedAi(); setMoreOpen(false) }}>{aiBusy ? 'Expanding…' : 'AI Expand'}</button>
-              <button type="button" role="menuitem" className="btn ghost" data-testid="open-outline" onClick={() => { onOpenOutline(); setMoreOpen(false) }}>Outline</button>
+              <button type="button" role="menuitem" className="btn ghost" data-testid="open-outline" onClick={() => { onOpenOutlineGrow(); setMoreOpen(false) }}>Grow from outline</button>
               <button type="button" role="menuitem" className="btn ghost" onClick={() => { newMap(); setMoreOpen(false) }}>Blank board</button>
               <button type="button" role="menuitem" className="btn ghost" onClick={() => { fileRef.current?.click(); setMoreOpen(false) }}>Import</button>
             </div>
