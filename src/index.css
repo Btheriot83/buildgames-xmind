@@ -1709,3 +1709,14 @@ kbd { font-size: 0.7rem; font-weight: 700; padding: 1px 5px; }
 .node-input { letter-spacing: -0.015em; }
 .sidebar-foot { font-size: 0.72rem; line-height: 1.5; }
 .title-input input { font-family: var(--font-display); }
+
+
+/* r10 contrast coherence */
+.toolbar { background: #20342a; border-bottom: 2px solid #5a7a68; }
+.sidebar { background: #1e3228; border-right: 2px solid #4a6b58; }
+.app-toast, .save-pill.status-saved { background: #2c4a3c; color: var(--chalk); border-color: #6a8a78; }
+.edge-line { stroke: #cfeeda; }
+.map-node:not(.is-root) .node-body { fill: #182c24; stroke: #f2eee0; }
+.canvas-wrap { background: #172820; }
+.canvas-wrap::after { background: rgba(5, 10, 8, 0.08); }
+.brand-mark-img { border-color: var(--copper-hot); box-shadow: 4px 4px 0 #0c1611; }
