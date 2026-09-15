@@ -123,3 +123,9 @@
 - verdict: Shortcuts/kbd mono hierarchy denser; original chrome quieter.
 - commit: 6df5a44
 
+## r18 — contrast
+- files: src/index.css
+- shot: gauntlet/shots-r4/r18-board.png
+- verdict: Toast/save pill chalk contrast hold; closer to target flat chrome; original still softer.
+- commit: c83bb7d
+
