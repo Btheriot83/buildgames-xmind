@@ -1588,3 +1588,10 @@ kbd { font-size: 0.7rem; font-weight: 700; padding: 1px 5px; }
 .job-rail strong { color: var(--copper-hot); font-weight: 800; }
 .map-item .map-title { font-size: 0.86rem; font-weight: 600; }
 .brand-copy span { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.04em; }
+
+
+/* r6 contrast */
+.canvas-wrap::before { opacity: 0.42 !important; }
+.shader-bg-tooth { opacity: 0.34; }
+.map-node.is-selected .node-body { fill: #2a4a3a; stroke: var(--acid); stroke-width: 3.4; }
+.connect-hint { background: var(--copper); color: #14241c; border: 2px solid var(--copper-hot); font-weight: 800; }

@@ -54,3 +54,9 @@
 - shot: gauntlet/shots-r5/r5-board.png ; gauntlet/shots-r5/r5-bar-xmind.png
 - verdict: Job tape denser billboard; bar A/B — original marketing hero still outranks chalkboard chrome for photography.
 - commit: 1cd3f06
+
+## r6 — contrast
+- files: src/index.css
+- shot: gauntlet/shots-r5/r6-board.png
+- verdict: Chalk photo tooth stronger; selection wash clearer; original still preferred for light-map contrast theater.
+- commit: 44d46d9
