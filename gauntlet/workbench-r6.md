@@ -27,58 +27,62 @@
 - files: docs/IDENTITY.md,src/index.css,
 - shot: gauntlet/shots-r6/r1-board.png
 - verdict: Root/title/limb type denser and heavier vs R5 board; original still wins light editorial marketing type on white canvas.
-- commit: 3961e3a
+- commit: 104ec9b
 
 ## r2 — contrast
 - files: src/index.css,
 - shot: gauntlet/shots-r6/r2-board.png
 - verdict: Limb stroke and chalk labels hold harder on board tooth; original still brighter on white map photography.
-- commit: 848464b
+- commit: 9cc828e
 
 ## r3 — buttons
 - files: src/index.css,
 - shot: gauntlet/shots-r6/r3-board.png
 - verdict: Square chalk controls + Export copper primary with harder offset; original CTAs still quieter on light marketing UI.
-- commit: 190c445
+- commit: b4751b6
 
 ## r4 — bar gap
 - files: src/components/MindCanvas.tsx,src/index.css,src/lib/sample.ts,
 - shot: gauntlet/shots-r6/r4-board.png
 - verdict: Denser right-fan + brighter ports + copper root pill close dream-loop/Xmind limb silhouette; original still wins soft editorial bezier photography.
-- commit: fc05e0a
+- commit: 31fa0bf
 
 ## r5 — fonts
 - files: src/index.css,
 - shot: gauntlet/shots-r6/r5-board.png ; gauntlet/shots-r6/r5-bar-xmind.png
 - verdict: Job tape denser billboard + map-list weight; bar A/B — original marketing hero still outranks chalkboard chrome for photography.
-- commit: 6a9c878
+- commit: a0f1cb7
 
 ## r6 — contrast
 - files: src/index.css,
 - shot: gauntlet/shots-r6/r6-board.png
 - verdict: Chalk photo tooth stronger + selection wash clearer vs target; original still preferred for light-map contrast theater.
-- commit: 244f3b6
+- commit: 17aef93
 
 ## r7 — buttons
 - files: src/index.css,
 - shot: gauntlet/shots-r6/r7-board.png
 - verdict: Empty/job button family weights unified; danger quieter until hover; original still cleaner on light marketing CTAs.
-- commit: ebb2960
+- commit: 62ebf1a
 
 ## r8 — bar gap
 - files: src/components/MindCanvas.tsx,src/index.css,
 - shot: gauntlet/shots-r6/r8-board.png
 - verdict: Job-rail chalk strip + link handles closer to target map-tool chrome; original still subtler on product screenshots.
-- commit: 7cabc99
+- commit: 9f39b3a
 
 ## r9 — fonts
 - files: src/index.css,
 - shot: gauntlet/shots-r6/r9-board.png
 - verdict: Shortcuts/empty display hierarchy denser; title uses display face; original still wins editorial type polish.
-- commit: 8ca5a29
+- commit: 38bc0bd
 
 ## r10 — contrast
 - files: src/index.css,
 - shot: gauntlet/shots-r6/r10-board.png ; gauntlet/shots-r6/r10-bar-xmind.png
 - verdict: Final coherence — candidate closer on chalkboard map craft + photo tooth + copper root; original still preferred unlabeled A/B for marketing photography / light canvas product depth.
-- commit: c460551
+- commit: c407119
+
+
+## Visibility gate
+Each counted round left a spottable delta (type, contrast, buttons, limb/layout craft). Identity held Shop Chalk Map; flat no-gradient hard bar held.

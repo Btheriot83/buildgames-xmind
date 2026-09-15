@@ -1,0 +1,86 @@
+{
+  "slug": "xmind",
+  "product": "Copper Synapse",
+  "phase": "B6",
+  "status": "gauntlet_r6_complete",
+  "demoUrl": "https://buildgames-xmind.vercel.app",
+  "demo_url": "https://buildgames-xmind.vercel.app",
+  "barUrl": "https://xmind.app/",
+  "bar": "https://xmind.app/",
+  "path": "/workspace/build-games/apps/xmind",
+  "repo": "https://github.com/Btheriot83/buildgames-xmind",
+  "doNotMessageBrandon": true,
+  "identity": {
+    "name": "Shop Chalk Map",
+    "locked": true,
+    "reseededInR6": false,
+    "deepenedInR6": false,
+    "path": "docs/IDENTITY.md"
+  },
+  "phaseA": {
+    "done": true,
+    "techniquesDone": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "note": "Anshu deepen completed in R5; R6 is integrity-only under locked identity"
+  },
+  "roundsCounted": 10,
+  "roundShas": [
+    "104ec9b",
+    "9cc828e",
+    "b4751b6",
+    "31fa0bf",
+    "a0f1cb7",
+    "17aef93",
+    "62ebf1a",
+    "9f39b3a",
+    "38bc0bd",
+    "c407119"
+  ],
+  "shotCount": 13,
+  "barShotRounds": [
+    5,
+    10
+  ],
+  "honestNotes": [
+    "Original still preferred unlabeled A/B for marketing photography / light map theater.",
+    "Candidate closer on chalkboard map craft: copper root pill, denser fan/ports, square chalk controls, stronger photo tooth.",
+    "Identity name held (Shop Chalk Map); no reseed in R6.",
+    "No self-cheer numeric scores.",
+    "dream-loop closing rounds r4/r6/r8/r10.",
+    "transitions.dev wiring unchanged from R5 \u2014 still on real actions."
+  ],
+  "transitionsDev": {
+    "success-check": "Export SVG/PNG/JSON",
+    "toast": "Export ok/fail + AI/import messages",
+    "error-state-shake": "Empty map title validation",
+    "skeleton-reveal": "Boot LoadingShell",
+    "texts-reveal": "Brand + empty-state lines",
+    "number-pop-in": "Nodes/Links/Depth stats",
+    "panel-reveal": "Outline dock open/close"
+  },
+  "dreamLoop": {
+    "baseline": ".dream-loop/baseline.png",
+    "target": ".dream-loop/target.png",
+    "closingRounds": [
+      4,
+      6,
+      8,
+      10
+    ]
+  },
+  "workbench": "gauntlet/workbench-r6.md",
+  "branch": "gauntlet/xmind-r6",
+  "finishedAtUtc": "2026-09-15T07:15:29Z",
+  "finishedAtPt": "2026-09-15 12:15 AM PT",
+  "sha": "c407119",
+  "pr": null,
+  "live_smoke": null
+}
