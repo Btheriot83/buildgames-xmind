@@ -2540,3 +2540,12 @@ kbd { font-size: 0.7rem; font-weight: 700; padding: 1px 5px; }
 }
 .btn { font-size: 0.74rem; }
 .job-cluster .btn.job { letter-spacing: 0.02em; }
+
+
+/* elevate10: cut — Sibling demoted; primary job is Branch · Link · Export */
+.job-cluster { gap: 3px; padding: 2px 3px; }
+.btn.job { min-height: 30px; padding: 0 9px; }
+.btn.job-primary { min-height: 32px; padding: 0 14px; font-size: 0.76rem; }
+.workspace { grid-template-columns: 120px minmax(0, 1fr); }
+:root { --elevate-sidebar: 120px; }
+.sidebar-head .btn.sm { font-size: 0.62rem; padding: 2px 6px; }

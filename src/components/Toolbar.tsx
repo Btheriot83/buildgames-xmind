@@ -96,9 +96,6 @@ export function Toolbar({
           <button type="button" className="btn job" onClick={() => addChildToSelected()} disabled={!selectedId} data-testid="add-child">
             Branch
           </button>
-          <button type="button" className="btn job" onClick={() => addSiblingToSelected()} disabled={!selectedId} data-testid="add-sibling">
-            Sibling
-          </button>
           <button
             type="button"
             className="btn job"
@@ -144,6 +141,7 @@ export function Toolbar({
           </button>
           {moreOpen && (
             <div className="more-menu" role="menu">
+              <button type="button" role="menuitem" className="btn ghost" data-testid="add-sibling" onClick={() => { addSiblingToSelected(); setMoreOpen(false) }} disabled={!selectedId}>Sibling</button>
               <button type="button" role="menuitem" className="btn ghost" data-testid="ai-expand" disabled={!selectedId || aiBusy} onClick={() => { void expandSelectedAi(); setMoreOpen(false) }}>{aiBusy ? 'Expanding…' : 'AI Expand'}</button>
               <button type="button" role="menuitem" className="btn ghost" data-testid="open-outline" onClick={() => { onOpenOutlineGrow(); setMoreOpen(false) }}>Grow from outline</button>
               <button type="button" role="menuitem" className="btn ghost danger-text" onClick={() => { removeSelected(); setMoreOpen(false) }} disabled={!selectedId}>Delete</button>
