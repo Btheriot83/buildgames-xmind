@@ -2036,3 +2036,9 @@ kbd { font-size: 0.7rem; font-weight: 700; padding: 1px 5px; }
   letter-spacing: 0.04em;
   box-shadow: 3px 3px 0 #07100c;
 }
+
+
+/* beat14 cut — two stats only; title gets room */
+.stats-row { gap: 8px; margin-left: auto; }
+.stat-chip { min-width: 64px; }
+.title-wrap { flex: 1 1 280px; max-width: 420px; }

@@ -82,7 +82,6 @@ export function Toolbar({
 
       <div className="stats-row" aria-label="Map stats">
         <NumberPop value={stats.nodeCount} label="nodes" />
-        <NumberPop value={stats.depth} label="depth" />
         <NumberPop value={stats.edgeCount} label="links" />
       </div>
 
