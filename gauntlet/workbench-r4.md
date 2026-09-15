@@ -99,3 +99,9 @@
 - verdict: Job tape tracking denser billboard; still chalkboard vs Xmind photo hero.
 - commit: f91cb8c
 
+## r14 — contrast
+- files: src/index.css
+- shot: gauntlet/shots-r4/r14-board.png
+- verdict: Selected limb chalk wash + acid stroke; vs target selection clarity; original softer.
+- commit: 10c8c65
+

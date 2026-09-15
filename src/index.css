@@ -1465,3 +1465,7 @@ kbd {
 
 /* r13 — fonts */
 .job-tape { font-size: 0.73rem; letter-spacing: 0.15em; padding: 0.58rem 1rem; }
+
+/* r14 — contrast */
+.map-node.is-selected .node-body { fill: #274536; stroke: var(--acid); stroke-width: 3.3; }
+.map-node.is-root.is-selected .node-body { fill: var(--copper-hot); stroke: var(--acid); }
