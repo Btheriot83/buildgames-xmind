@@ -719,14 +719,14 @@ kbd {
   z-index: 20;
 }
 
-/* Synapse ignition flash on AI expand (Tech 5 keyframe craft) */
-@keyframes synapse-ignite {
+/* Chalk pulse on AI expand — materials only */
+@keyframes chalk-ignite {
   0% { filter: brightness(1); }
   35% { filter: brightness(1.35); }
   100% { filter: brightness(1); }
 }
 .app-shell.is-igniting .edge-line {
-  animation: synapse-ignite 700ms var(--check-ease-out);
+  animation: chalk-ignite 700ms var(--check-ease-out);
 }
 
 /* —— SHOP CHALK MAP — flat materials (Brandon hard bar: no decorative gradients/glow/glass) —— */
@@ -949,7 +949,7 @@ kbd {
 }
 
 /* Kill legacy glow ignition */
-@keyframes synapse-ignite {
+@keyframes chalk-ignite-dead {
   0%, 100% { filter: none; }
 }
 .app-shell.is-igniting .edge-line {
@@ -2435,3 +2435,18 @@ kbd { font-size: 0.7rem; font-weight: 700; padding: 1px 5px; }
 }
 .workspace { grid-template-columns: 132px minmax(0, 1fr); }
 :root { --elevate-sidebar: 132px; }
+
+
+/* elevate6: remove-ai-tells — kill soft decoration + acid digit glow */
+.t-digit-group { color: var(--chalk) !important; }
+.brand-mark-img { box-shadow: none !important; }
+.btn.job-primary, .btn.primary {
+  box-shadow: 2px 2px 0 #050a08 !important;
+}
+.map-list li.active .map-item { box-shadow: none !important; border-width: 1.5px; }
+.more-menu { box-shadow: 2px 2px 0 #050a08 !important; }
+.connect-hint { box-shadow: 2px 2px 0 #050a08 !important; }
+.app-toast { box-shadow: none !important; }
+.empty-hero-art { box-shadow: 2px 2px 0 #050a08 !important; }
+.outline-tree-row.is-selected > .outline-tree-item { box-shadow: none !important; }
+.stat-chip { box-shadow: none !important; }
