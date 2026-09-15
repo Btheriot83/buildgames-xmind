@@ -35,4 +35,4 @@
 - files: src/index.css
 - shot: gauntlet/shots-r5/r2-board.png
 - verdict: Limb stroke and chalk-dim labels hold harder on board; original still brighter on white map photography.
-- commit: PENDING
+- commit: 00b90c2
