@@ -24,3 +24,9 @@
 - shots: `gauntlet/shots-r5/phaseA-board.png`, baselines
 - commit: d419e40
 
+
+## r1 — fonts
+- files: src/index.css
+- shot: gauntlet/shots-r5/r1-board.png
+- verdict: Root/title display denser vs Phase A; original still wins editorial marketing type on light canvas.
+- commit: 27ef651
