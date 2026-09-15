@@ -72,3 +72,9 @@
 - shot: gauntlet/shots-r5/r8-board.png
 - verdict: Job-rail + link handles closer to target map-tool chrome; original still subtler on product screenshots.
 - commit: 5fa28a4
+
+## r9 — fonts
+- files: src/index.css
+- shot: gauntlet/shots-r5/r9-board.png
+- verdict: Shortcuts/empty display hierarchy denser; original still wins editorial type polish.
+- commit: a192481

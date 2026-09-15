@@ -1609,3 +1609,10 @@ kbd { font-size: 0.7rem; font-weight: 700; padding: 1px 5px; }
 .job-rail-hint { color: var(--bone-dim); font-size: 0.68rem; letter-spacing: 0.04em; }
 .link-handle { r: 7; stroke: #14241c; stroke-width: 1.5; }
 .map-node.is-linking .link-handle { fill: var(--acid); }
+
+
+/* r9 fonts */
+.shortcuts h3 { font-family: var(--font-display); font-size: 0.82rem; letter-spacing: 0.08em; font-weight: 700; }
+.shortcuts li { font-size: 0.76rem; }
+.empty-state .t-stagger-line--1 { font-size: clamp(1.65rem, 3.2vw, 2.15rem); }
+.node-input { letter-spacing: -0.01em; }
