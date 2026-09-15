@@ -75,3 +75,9 @@
 - verdict: Limb mono 13px denser; root display holds — target type hierarchy closer; original still wins editorial type.
 - commit: 6367ad2
 
+## r10 — contrast
+- files: src/index.css
+- shot: gauntlet/shots-r4/r10-board.png ; gauntlet/shots-r4/r10-bar-xmind.png
+- verdict: Limb stroke chalk-brighter on board; bar A/B — original light canvas contrast still preferred.
+- commit: 85621e0
+

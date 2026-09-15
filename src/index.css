@@ -1447,3 +1447,8 @@ kbd {
 .node-input { font-size: 13px; font-weight: 500; }
 .map-node.is-root .node-input { font-size: 17.5px; font-weight: 700; }
 .sidebar-head h2 { letter-spacing: 0.1em; }
+
+/* r10 — contrast */
+:root { --limb-stroke: #ebe6d4; --chalk-dim: #d6d1b8; }
+.map-node .node-body { stroke: var(--limb-stroke); stroke-width: 2.5; }
+.edge-line { stroke: #a8dcc9; }
