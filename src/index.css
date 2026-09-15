@@ -1491,3 +1491,9 @@ kbd { font-size: 0.7rem; font-weight: 700; padding: 1px 5px; }
 .map-item { border-radius: 4px; border-width: 2px; }
 .map-list li.active .map-item { box-shadow: 2px 2px 0 #0f1c16; }
 .btn.danger { color: #f0c4c4; border-color: var(--danger); }
+
+/* r20 — bar gap coherence */
+.toolbar { gap: 10px 12px; padding: 10px 14px; }
+.workspace { grid-template-columns: 220px 1fr; }
+.edge-line { stroke-width: 3.1; }
+.brand-copy strong { font-size: clamp(1.1rem, 1.6vw, 1.36rem); }

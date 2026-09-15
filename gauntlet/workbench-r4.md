@@ -135,3 +135,9 @@
 - verdict: Map-list cards square chalk + delete danger weight; original nav still cleaner.
 - commit: 9054344
 
+## r20 — bar gap
+- files: src/index.css
+- shot: gauntlet/shots-r4/r20-board.png ; gauntlet/shots-r4/r20-bar-xmind.png
+- verdict: Final coherence vs dream-loop target + bar: candidate closer on chalkboard map craft; original still preferred for marketing photography. Honest: original wins unlabeled A/B overall.
+- commit: a2517cb
+
