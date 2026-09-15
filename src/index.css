@@ -1565,3 +1565,12 @@ kbd { font-size: 0.7rem; font-weight: 700; padding: 1px 5px; }
 .edge-line { stroke: #b4e2d0; stroke-width: 3.55; }
 .stat-label, .job-cluster-label, .sidebar-foot { color: var(--bone-dim); }
 .save-pill { border-color: #5a7a68; color: var(--chalk); }
+
+
+/* r3 buttons */
+.job-cluster { gap: 5px; padding: 5px 6px; background: #24382e; border: 2px solid var(--line); }
+.btn.job { min-height: 36px; font-weight: 600; border-width: 2px; }
+.btn.job-primary, .btn.primary {
+  min-height: 36px; box-shadow: 4px 4px 0 #0f1c16; font-weight: 800; letter-spacing: 0.02em;
+}
+.btn.secondary { border-width: 2px; font-weight: 600; }

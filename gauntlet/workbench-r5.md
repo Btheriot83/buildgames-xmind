@@ -36,3 +36,9 @@
 - shot: gauntlet/shots-r5/r2-board.png
 - verdict: Limb stroke and chalk-dim labels hold harder on board; original still brighter on white map photography.
 - commit: 00b90c2
+
+## r3 — buttons
+- files: src/index.css
+- shot: gauntlet/shots-r5/r3-board.png
+- verdict: Export SVG sole copper primary with harder offset; original CTAs still quieter on light UI.
+- commit: PENDING
