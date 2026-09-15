@@ -136,12 +136,13 @@ export function MindCanvas() {
             const y1 = acy
             const x2 = toRight ? b.x : b.x + b.width
             const y2 = bcy
-            const dx = Math.max(48, Math.abs(x2 - x1) * 0.52)
-            const dy = (y2 - y1) * 0.12
+            const dx = Math.max(56, Math.abs(x2 - x1) * 0.58)
+            const bend = ((e.id.charCodeAt(0) + e.id.charCodeAt(e.id.length - 1)) % 7) - 3
+            const dy = (y2 - y1) * 0.18 + bend * 4.5
             const c1x = toRight ? x1 + dx : x1 - dx
             const c2x = toRight ? x2 - dx : x2 + dx
-            const c1y = y1 + dy
-            const c2y = y2 - dy
+            const c1y = y1 + dy * 0.35
+            const c2y = y2 - dy * 0.55
             const d = `M ${x1} ${y1} C ${c1x} ${c1y}, ${c2x} ${c2y}, ${x2} ${y2}`
             return (
               <g key={e.id} className="edge-group">

@@ -1855,3 +1855,32 @@ kbd { font-size: 0.7rem; font-weight: 700; padding: 1px 5px; }
   min-height: 40px;
   box-shadow: 3px 3px 0 #0a120e;
 }
+
+
+/* beat5 bar gap — map air + chalk curve room; hide resize until hover */
+.workspace { grid-template-columns: 188px 1fr; }
+.sidebar { padding: 10px 10px 14px; }
+.job-rail {
+  gap: 10px;
+  padding: 6px 12px;
+  border: 1.5px solid #4a6b58;
+  border-radius: 2px;
+  box-shadow: none;
+  background: rgba(20, 36, 28, 0.82);
+  font-size: 0.68rem;
+}
+.job-rail strong { color: var(--copper-hot); font-weight: 800; }
+.job-rail-hint { opacity: 0.75; font-size: 0.64rem; }
+.resize-handle { opacity: 0; transition: opacity 120ms linear; }
+.map-node:hover .resize-handle,
+.map-node.is-selected .resize-handle { opacity: 0.8; }
+.port-dot { opacity: 0.55; }
+.map-node:hover .port-dot,
+.map-node.is-selected .port-dot,
+.map-node.is-linking .port-dot { opacity: 1; }
+.link-handle { opacity: 0.35; }
+.map-node:hover .link-handle,
+.map-node.is-selected .link-handle,
+.map-node.is-linking .link-handle { opacity: 0.95; }
+.toolbar { padding: 8px 12px; gap: 8px 10px; }
+.stat-chip { padding: 4px 8px; }
