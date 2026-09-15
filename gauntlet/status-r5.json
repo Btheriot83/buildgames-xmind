@@ -91,7 +91,7 @@
   "branch": "gauntlet/xmind-r5",
   "finishedAtUtc": "2026-09-15T06:55:49Z",
   "finishedAtPt": "2026-09-14 11:55 PM PT",
-  "sha": "fcd5462",
+  "sha": "2ab62b4",
   "pr": "https://github.com/Btheriot83/buildgames-xmind/pull/5",
   "live_smoke": {
     "ok": true,
