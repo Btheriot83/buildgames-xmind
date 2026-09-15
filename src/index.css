@@ -2042,3 +2042,20 @@ kbd { font-size: 0.7rem; font-weight: 700; padding: 1px 5px; }
 .stats-row { gap: 8px; margin-left: auto; }
 .stat-chip { min-width: 64px; }
 .title-wrap { flex: 1 1 280px; max-width: 420px; }
+
+
+/* beat15 contrast — chalkboard frame + dust tooth */
+.canvas-wrap::before { opacity: 0.64 !important; }
+.shader-bg-tooth { opacity: 0.5; }
+.canvas-wrap::after {
+  background: rgba(4, 8, 6, 0.12);
+  box-shadow: inset 0 0 0 2px rgba(188, 232, 214, 0.14), inset 0 0 48px rgba(0, 0, 0, 0.22);
+}
+.toolbar { background: #182820; }
+.sidebar { background: #15241d; }
+.map-node.is-root .node-body {
+  fill: #e09a3e;
+  stroke: #f6c878;
+  stroke-width: 3.6;
+}
+.edge-line { stroke: #e8fbf2; stroke-width: 3.85; }
