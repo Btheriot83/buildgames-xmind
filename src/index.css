@@ -1595,3 +1595,10 @@ kbd { font-size: 0.7rem; font-weight: 700; padding: 1px 5px; }
 .shader-bg-tooth { opacity: 0.34; }
 .map-node.is-selected .node-body { fill: #2a4a3a; stroke: var(--acid); stroke-width: 3.4; }
 .connect-hint { background: var(--copper); color: #14241c; border: 2px solid var(--copper-hot); font-weight: 800; }
+
+
+/* r7 buttons */
+.empty-actions .btn.primary { box-shadow: 4px 4px 0 #0f1c16; font-weight: 800; min-height: 40px; }
+.empty-actions .btn.secondary { border-width: 2px; min-height: 40px; font-weight: 650; }
+.btn.danger { border-width: 2px; font-weight: 800; color: #f3c8c8; }
+.btn.ghost { font-weight: 600; }
