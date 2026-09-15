@@ -87,3 +87,9 @@
 - verdict: Export SVG sole copper primary with hard offset — matches target CTA weight; original still quieter.
 - commit: 87df507
 
+## r12 — bar gap
+- files: src/lib/model.ts, src/index.css
+- shot: gauntlet/shots-r4/r12-board.png
+- verdict: Right-fan sibling spacing denser toward dream-loop tree; original still wins fluid org layouts.
+- commit: ef1783a
+

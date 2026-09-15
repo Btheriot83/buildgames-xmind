@@ -51,10 +51,10 @@ export function addChild(map: MindMap, parentId: NodeId, text = 'New idea'): Min
   const parent = map.nodes.find((n) => n.id === parentId)
   if (!parent) return map
   const siblings = map.nodes.filter((n) => n.parentId === parentId)
-  const gap = 76
+  const gap = 64
   const child = createNode({
     text,
-    x: parent.x + parent.width + 120,
+    x: parent.x + parent.width + 108,
     y: parent.y + siblings.length * gap - ((siblings.length) * gap) / 2,
     parentId,
   })
@@ -66,7 +66,7 @@ export function addChild(map: MindMap, parentId: NodeId, text = 'New idea'): Min
   nodes = nodes.map((n) => {
     if (n.parentId !== parentId) return n
     const idx = kids.findIndex((k) => k.id === n.id)
-    return { ...n, x: parent.x + parent.width + 120, y: startY + idx * gap }
+    return { ...n, x: parent.x + parent.width + 108, y: startY + idx * gap }
   })
   return {
     ...map,

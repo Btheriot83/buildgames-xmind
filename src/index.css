@@ -1459,3 +1459,6 @@ kbd {
   box-shadow: 3px 3px 0 #0f1c16; font-weight: 700; font-size: 0.82rem;
 }
 .btn.secondary, .btn.accent { box-shadow: none; border: 2px solid var(--copper); }
+
+/* r12 — bar gap layout cue */
+.mind-svg { min-height: calc(100vh - 72px); }
