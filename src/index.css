@@ -2409,3 +2409,29 @@ kbd { font-size: 0.7rem; font-weight: 700; padding: 1px 5px; }
 .link-handle { opacity: 0.2; }
 .map-node:hover .link-handle,
 .map-node.is-selected .link-handle { opacity: 0.85; }
+
+
+/* elevate5: bar gap Heptabase — limb cards breathe on thinking canvas */
+.map-node:not(.is-root) .node-body {
+  fill: #0c1a14;
+  stroke: #fff8ea;
+  stroke-width: 2.1;
+}
+.map-node:not(.is-root) .node-input {
+  font-size: 13.1px;
+  font-weight: 550;
+  letter-spacing: -0.01em;
+  padding: 0 10px;
+}
+.node-html {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 2px 2px;
+}
+.canvas-wrap {
+  background: #0c1612;
+  box-shadow: inset 0 0 0 1.5px #2e4a3c;
+}
+.workspace { grid-template-columns: 132px minmax(0, 1fr); }
+:root { --elevate-sidebar: 132px; }

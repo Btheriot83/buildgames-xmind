@@ -18,8 +18,8 @@ export function createNode(
     text: sanitizeText(partial.text || 'Idea'),
     x: partial.x,
     y: partial.y,
-    width: clamp(partial.width ?? 180, MIN_NODE_W, MAX_NODE_W),
-    height: clamp(partial.height ?? 56, MIN_NODE_H, MAX_NODE_H),
+    width: clamp(partial.width ?? 188, MIN_NODE_W, MAX_NODE_W),
+    height: clamp(partial.height ?? 60, MIN_NODE_H, MAX_NODE_H),
     parentId: partial.parentId ?? null,
     color: partial.color,
   }
@@ -51,7 +51,7 @@ export function addChild(map: MindMap, parentId: NodeId, text = 'New idea'): Min
   const parent = map.nodes.find((n) => n.id === parentId)
   if (!parent) return map
   const siblings = map.nodes.filter((n) => n.parentId === parentId)
-  const gap = 64
+  const gap = 72
   const child = createNode({
     text,
     x: parent.x + parent.width + 108,
