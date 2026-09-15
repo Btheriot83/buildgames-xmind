@@ -2511,3 +2511,32 @@ kbd { font-size: 0.7rem; font-weight: 700; padding: 1px 5px; }
   .view-switch-pill { transition: none; }
   .outline-tree, .canvas-wrap { animation: none; }
 }
+
+
+/* elevate9: fonts — MindNode calm type ladder on outline + chrome */
+.outline-tree-head h2 {
+  font-size: 1.28rem;
+  font-weight: 750;
+  letter-spacing: -0.028em;
+}
+.outline-tree-item {
+  font-size: 0.88rem;
+  line-height: 1.35;
+  min-height: 34px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+.outline-tree-row.is-root > .outline-tree-item {
+  font-size: 1.12rem;
+  margin-bottom: 14px;
+}
+.brand-copy strong {
+  font-size: clamp(0.98rem, 1.4vw, 1.18rem);
+  font-weight: 750;
+}
+.title-input input {
+  font-size: 1.02rem;
+  font-weight: 650;
+}
+.btn { font-size: 0.74rem; }
+.job-cluster .btn.job { letter-spacing: 0.02em; }
