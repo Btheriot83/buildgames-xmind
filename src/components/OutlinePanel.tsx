@@ -20,10 +20,14 @@ export function OutlinePanel({ open, onClose }: { open: boolean; onClose: () => 
   const [text, setText] = useState(DESK_OUTLINE)
   const [useAi, setUseAi] = useState(false)
 
-  if (!open) return null
-
   return (
-    <div className="outline-panel panel-reveal is-open" role="dialog" aria-label="Outline to map">
+    <div
+      className={`outline-panel t-panel-slide ${open ? 'is-docked' : ''}`}
+      data-open={open ? 'true' : 'false'}
+      role="dialog"
+      aria-label="Outline to map"
+      hidden={!open}
+    >
       <header className="outline-head">
         <div>
           <h2>Outline → map</h2>

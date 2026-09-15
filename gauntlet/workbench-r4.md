@@ -8,6 +8,18 @@
 **Focus pool:** fonts · contrast · buttons · bar gap  
 **Rule:** one commit per counted round (`rN: <focus>`); no batch; honest verdict vs original (no self-cheer scores)
 
+
+## transitions.dev wiring (real actions)
+| Recipe | Fires on |
+|--------|----------|
+| success-check | Export SVG/PNG/JSON (`flashSuccess`) |
+| toast | Export ok/fail, AI/import messages (`flashToast`) |
+| error-state-shake | Empty map title validation |
+| skeleton-reveal | Boot `LoadingShell` → ready |
+| texts-reveal | Brand + empty-state staggered lines |
+| number-pop-in | Nodes/Links stats when counts change |
+| panel-reveal | Outline dock open/close (`t-panel-slide data-open`) |
+
 ## r1 — fonts
 - files: src/index.css
 - shot: gauntlet/shots-r4/r1-board.png
@@ -18,5 +30,12 @@
 - files: src/index.css
 - shot: gauntlet/shots-r4/r2-board.png
 - verdict: Limb stroke and chalk-dim labels hold on board green; original still wins bright editorial contrast on light canvases.
+- commit: faedfbc
+
+## r3 — buttons
+- files: src/components/OutlinePanel.tsx, src/components/Sidebar.tsx, src/components/SuccessOverlay.tsx, src/index.css, gauntlet/workbench-r4.md
+- shot: gauntlet/shots-r4/r3-board.png
+- verdict: Outline dock uses real panel-reveal; success-check chalk flat on export — original still quieter on chrome motion.
 - commit: PENDING
+- dream-loop: target locked at .dream-loop/target.png (from live baseline refine); critic also vs bar
 

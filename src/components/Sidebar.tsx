@@ -8,7 +8,7 @@ export function Sidebar() {
   const seedSample = useMapStore((s) => s.seedSample)
 
   return (
-    <aside className="sidebar panel-reveal is-open" aria-label="Maps">
+    <aside className="sidebar t-panel-slide" data-open="true" aria-label="Maps">
       <div className="sidebar-head">
         <h2>Maps</h2>
         <button type="button" className="btn ghost sm" onClick={() => seedSample()} data-testid="load-sample">

@@ -1378,3 +1378,43 @@ kbd {
 .stat-label, .job-cluster-label, .sidebar-foot, .shortcuts h3 {
   color: var(--chalk-dim);
 }
+
+/* r3 — buttons + transitions.dev: panel-reveal on real outline dock */
+.outline-panel.t-panel-slide {
+  position: fixed;
+  right: 18px;
+  top: 120px;
+  width: min(420px, 92vw);
+  z-index: 30;
+  transform: translateX(18px);
+  opacity: 0;
+  pointer-events: none;
+}
+.outline-panel.t-panel-slide[data-open="true"] {
+  transform: translateX(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+.outline-panel.t-panel-slide[hidden] {
+  display: block !important; /* keep for transition; visibility via data-open */
+}
+.outline-panel.t-panel-slide:not([data-open="true"]) {
+  visibility: hidden;
+}
+.sidebar.t-panel-slide {
+  transform: none;
+  opacity: 1;
+}
+.success-overlay {
+  border-radius: 4px;
+  border: 2px solid var(--line);
+  background: #24382e;
+  box-shadow: 4px 4px 0 #0f1c16;
+}
+.success-overlay p {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--chalk);
+}

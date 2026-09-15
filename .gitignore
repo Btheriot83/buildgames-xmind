@@ -39,3 +39,5 @@ public/art/brand-mark.png
 
 .vercel
 .env*
+
+.dream-loop/
