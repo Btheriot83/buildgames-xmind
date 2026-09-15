@@ -63,3 +63,9 @@
 - verdict: Job cluster square denser matching target chrome; original CTAs still cleaner on light UI.
 - commit: 2061c4b
 
+## r8 — bar gap
+- files: src/components/MindCanvas.tsx, src/index.css
+- shot: gauntlet/shots-r4/r8-board.png
+- verdict: Chalk link ports on node edges — closer to dream-loop anchors; original still subtler.
+- commit: fc09014
+
