@@ -51,3 +51,9 @@
 - verdict: Brand/title type denser vs target; bar A/B — original marketing hero still outranks chalkboard chrome.
 - commit: 798245d
 
+## r6 — contrast
+- files: src/index.css
+- shot: gauntlet/shots-r4/r6-board.png
+- verdict: Desk photo underlay killed — flat chalk board closer to dream-loop target; original still wins light map photography.
+- commit: c0129d3
+
