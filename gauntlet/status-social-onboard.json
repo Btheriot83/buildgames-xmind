@@ -1,0 +1,62 @@
+{
+  "slug": "xmind",
+  "product": "Shop Chalk Map",
+  "phase": "SOCIAL_ONBOARD_TCEBC",
+  "status": "shipped",
+  "demoUrl": "https://buildgames-xmind.vercel.app",
+  "vercel": "READY",
+  "prs": [
+    "https://github.com/Btheriot83/buildgames-xmind/pull/11",
+    "https://github.com/Btheriot83/buildgames-xmind/pull/12"
+  ],
+  "repo": "https://github.com/Btheriot83/buildgames-xmind",
+  "path": "/workspace/build-games/apps/xmind",
+  "tcEbc": {
+    "task": "social-content mind map (hooks → pillars → posts)",
+    "context": "creators planning a content week",
+    "elements": ["canvas", "Map|Outline", "nodes", "preset packs", "onboarding cards"],
+    "behavior": "pick preset → expand branches → outline export",
+    "constraints": ["zero diesel/shop biz", "chalkboard materials OK", "friend onboarding ≤5 cards", "chalk-on-slate palette"]
+  },
+  "onboarding": {
+    "cardCount": 4,
+    "skipAlways": true,
+    "persistKey": "scm-onboard-v1",
+    "activation": "first social-content map with at least one editable branch (seeded Week of hooks)",
+    "doc": "docs/ONBOARDING.md"
+  },
+  "paletteNote": "Modern chalk-on-slate for creators: cool slate board (#151a21), cleaner chalk bone, cream amber root (#e8b86d), mint links — less muddy green, flat materials, no vibe-purple glass.",
+  "presets": ["week-of-hooks", "reel-batch", "carousel-series"],
+  "identityLocked": "Shop Chalk Map",
+  "copperSynapseInDom": 0,
+  "dieselShopBizInDom": 0,
+  "smoke": {
+    "firstVisitComplete": true,
+    "skip": true,
+    "returnNoReplay": true,
+    "sampleSocialThemed": true,
+    "uiGrepClean": true
+  },
+  "visibleDeltas": [
+    "Week of hooks social-content sample (not diesel/shop)",
+    "4-card friend onboarding with Skip + localStorage persist",
+    "Chalk-on-slate palette refresh (cleaner contrast)",
+    "Sidebar preset packs: Week of hooks / Reel batch / Carousel series",
+    "Brand subtitle + empty copy retargeted to social content maps"
+  ],
+  "shots": "gauntlet/shots-social-onboard/",
+  "catalogTechniques": [
+    "hand-rewrite-copy",
+    "remove-ai-tells",
+    "cut-elements",
+    "specify-the-look",
+    "make-it-alive",
+    "tc-ebc-task",
+    "tc-ebc-context",
+    "tc-ebc-elements",
+    "tc-ebc-behavior",
+    "tc-ebc-constraints"
+  ],
+  "finishedAtUtc": "2026-09-15T18:13:00Z",
+  "finishedAtPt": "2026-09-15 11:13 AM PT"
+}
