@@ -17,7 +17,7 @@ import {
   mapFromOutlineTree,
   parseOutlineText,
 } from '../lib/outline'
-import { buildSampleMap } from '../lib/sample'
+import { buildSampleMap, CONTENT_PRESETS, type ContentPresetId } from '../lib/sample'
 import {
   deleteMap as dbDelete,
   getLastMapId,
@@ -53,6 +53,7 @@ interface MapStore {
   openMap: (id: string) => Promise<void>
   removeMap: (id: string) => Promise<void>
   seedSample: () => Promise<void>
+  loadPreset: (id: ContentPresetId) => Promise<void>
   patchTitle: (title: string) => void
   addChildToSelected: () => void
   move: (id: NodeId, x: number, y: number) => void
@@ -157,16 +158,22 @@ export const useMapStore = create<MapStore>((set, get) => ({
   },
 
   seedSample: async () => {
+    await get().loadPreset('week-of-hooks')
+  },
+
+  loadPreset: async (id) => {
+    const pack = CONTENT_PRESETS.find((p) => p.id === id)
+    if (!pack) return
     const existing = await listMaps()
     for (const m of existing) {
       if (m.isSample) await dbDelete(m.id)
     }
-    const sample = buildSampleMap()
-    sample.id = 'sample-week-of-hooks'
+    const sample = pack.build()
+    sample.id = `sample-${id}`
+    sample.isSample = true
     await saveMap(sample)
     const maps = await listMaps()
     set({ maps, map: sample, selectedId: sample.nodes[0]?.id ?? null, stats: statsOf(sample), loadStatus: 'ready' })
-    // beat21 cut: no seed toast — board itself is the confirmation
   },
 
   patchTitle: (title) => {
