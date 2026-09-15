@@ -44,7 +44,7 @@
     "38bc0bd",
     "c407119"
   ],
-  "shotCount": 13,
+  "shotCount": 14,
   "barShotRounds": [
     5,
     10
@@ -78,9 +78,25 @@
   },
   "workbench": "gauntlet/workbench-r6.md",
   "branch": "gauntlet/xmind-r6",
-  "finishedAtUtc": "2026-09-15T07:15:29Z",
-  "finishedAtPt": "2026-09-15 12:15 AM PT",
-  "sha": "c407119",
-  "pr": null,
-  "live_smoke": null
+  "finishedAtUtc": "2026-09-15T07:16:21Z",
+  "finishedAtPt": "2026-09-15 12:16 AM PT",
+  "sha": "2a29fa9",
+  "pr": "https://github.com/Btheriot83/buildgames-xmind/pull/6",
+  "live_smoke": {
+    "ok": true,
+    "at_pt": "2026-09-15 12:16 AM PT",
+    "url": "https://buildgames-xmind.vercel.app",
+    "deployment": "dpl_BRWSpAxnkA73sdwNBx5Yid2sB9JG",
+    "assets": [
+      "index-CSNlw5HL.js",
+      "index-BVlb2vx0.css"
+    ],
+    "checks": [
+      "HTTP reachable",
+      "Shop Chalk Map identity held (locked)",
+      "B6/R6 assets live (CSS 42kb vs R5 39kb)",
+      "10 counted rounds",
+      "PR #6 open"
+    ]
+  }
 }
