@@ -1799,3 +1799,59 @@ kbd { font-size: 0.7rem; font-weight: 700; padding: 1px 5px; }
 }
 .toolbar { background: #1c3026; border-bottom: 2px solid #4e7260; }
 .sidebar { background: #1a2c24; border-right: 2px solid #3f5e4e; }
+
+
+/* beat4 buttons — chalk tablet primary; quieter secondaries (cut chrome weight) */
+.job-cluster {
+  gap: 4px;
+  padding: 4px 5px;
+  background: #16261f;
+  border: 2px solid #3f5e4e;
+  border-radius: 2px;
+  box-shadow: none;
+}
+.job-cluster-label {
+  font-size: 0.62rem;
+  letter-spacing: 0.16em;
+  font-weight: 800;
+  color: var(--bone-dim);
+}
+.btn.job {
+  min-height: 34px;
+  border-radius: 2px;
+  font-weight: 650;
+  background: transparent;
+  border-color: #5a7a68;
+  color: var(--chalk);
+}
+.btn.job-primary, .btn.primary, .btn.accent, .toolbar-actions .btn.accent {
+  min-height: 36px;
+  border-radius: 2px;
+  background: var(--copper);
+  color: #14241c;
+  border: 2px solid var(--copper-hot);
+  box-shadow: 3px 3px 0 #0a120e;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+.btn.secondary, .btn.ghost {
+  min-height: 34px;
+  border-radius: 2px;
+  border-width: 1.5px;
+  font-weight: 600;
+  opacity: 0.88;
+  box-shadow: none;
+}
+.btn.danger {
+  border-radius: 2px;
+  border-width: 1.5px;
+  background: transparent;
+  color: #d9a8a8;
+  border-color: #6a4545;
+  box-shadow: none;
+  font-weight: 650;
+}
+.empty-actions .btn.primary {
+  min-height: 40px;
+  box-shadow: 3px 3px 0 #0a120e;
+}
