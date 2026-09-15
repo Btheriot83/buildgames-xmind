@@ -2106,3 +2106,25 @@ kbd { font-size: 0.7rem; font-weight: 700; padding: 1px 5px; }
   padding: 0 10px;
   opacity: 0.65;
 }
+
+
+/* beat19 contrast — chalk stick limbs (studio materials) */
+.edge-line-under {
+  stroke-width: 9;
+  opacity: 0.62;
+  stroke: #0a120e;
+}
+.edge-line {
+  stroke-width: 4.4;
+  stroke: #f2fff8;
+  opacity: 0.92;
+}
+.map-node:not(.is-root) .node-body {
+  fill: #0f1f18;
+  stroke: #f7f3e6;
+  stroke-width: 2.4;
+}
+.map-node.is-root .node-body {
+  filter: none;
+  stroke-width: 3.8;
+}
