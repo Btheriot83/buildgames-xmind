@@ -1,0 +1,92 @@
+{
+  "slug": "xmind",
+  "product": "Shop Chalk Map",
+  "phase": "ELEVATE_PRO_BARS",
+  "status": "elevate_complete_honest",
+  "demoUrl": "https://buildgames-xmind.vercel.app",
+  "barUrls": [
+    "https://www.mindnode.com/",
+    "https://heptabase.com/"
+  ],
+  "cloneOriginal": "https://xmind.app/",
+  "path": "/workspace/build-games/apps/xmind",
+  "repo": "https://github.com/Btheriot83/buildgames-xmind",
+  "identityLocked": "Shop Chalk Map",
+  "identityReseeded": false,
+  "copperSynapseInDom": 0,
+  "jobClarity": "Center topic → Branch → Link → Export (+ Map|Outline dual)",
+  "jobUnder3s": true,
+  "flatMaterials": true,
+  "decorativeGradients": 0,
+  "catalog": {
+    "guide": "/workspace/build-games/narrow/DESIGN_CATALOG_GUIDE.md",
+    "promptsJson": "https://design-catalog-three.vercel.app/data/prompts.json",
+    "techniquesUsed": [
+      "specify-the-look",
+      "critic-subagents",
+      "cut-elements",
+      "remove-ai-tells",
+      "hand-rewrite-copy",
+      "make-it-alive",
+      "design-system-from-assets",
+      "thinking-before-prompt",
+      "give-real-context"
+    ]
+  },
+  "roundsCounted": 12,
+  "cap": 12,
+  "stoppedEarly": false,
+  "stopReason": "12/12 elevate loops complete; independent screenshot-only critic vs MindNode/Heptabase says elevated (~7.4) but does not win overall vs pro product UIs",
+  "critic": {
+    "studioScore": 7.4,
+    "vsMindNode": 7.2,
+    "vsHeptabase": 7.3,
+    "winsVsBars": false,
+    "elevatedCraft": true,
+    "doc": "docs/CRITIC_ELEVATE.md",
+    "abShot": "gauntlet/shots-elevate/critic-ab-elevate12.png",
+    "method": "local Read of paired PNGs (vision APIs unavailable)"
+  },
+  "stealApplied": [
+    "Map|Outline dual switch (MindNode)",
+    "organic limb curves + chalk stick weight",
+    "Heptabase card air on limb nodes",
+    "generous canvas / quieter chrome",
+    "sliding view pill (transitions.dev tabs-sliding)"
+  ],
+  "roundShas": ["c35fb14", "4a4687c", "8694b1d", "37b13ea", "fdaa8f0", "0476c02", "bdb5a7c", "a7e9698", "dc54379"],
+  "roundMessages": [
+    "elevate1: specify-the-look — Map|Outline dual switch + organic limbs",
+    "elevate2: cut-elements — Delete/Keys/stats off chrome; map owns frame",
+    "elevate3: design-system-from-assets — tokens + DESIGN_SYSTEM.md",
+    "elevate4: bar gap MindNode — organic chalk limbs",
+    "elevate5: bar gap Heptabase — limb cards breathe",
+    "elevate6: remove-ai-tells — kill soft shadows + acid digit glow",
+    "elevate7: hand-rewrite-copy — shop-short Map·Outline·Export voice",
+    "elevate8: make-it-alive — sliding Map|Outline pill + outline→map jump",
+    "elevate9: fonts — MindNode calm type ladder",
+    "elevate10: cut — Sibling demoted; wider map",
+    "elevate11: canvas generosity — map theater + quieter chrome",
+    "elevate12: critic-subagents — A/B vs MindNode/Heptabase + polish"
+  ],
+  "honestNotes": [
+    "Identity stayed Shop Chalk Map — no reseed; 0× Copper Synapse in live DOM",
+    "Primary bars were MindNode + Heptabase (not only xmind.app)",
+    "Critic screenshots-only vs bars; stop rule outside critic prompt",
+    "Does NOT claim win over MindNode or Heptabase product UIs — elevated to ~7.4",
+    "Zero decorative color gradients; flat chalkboard materials",
+    "Cloud Agents unavailable on plan — worked local checkout",
+    "Did not message Brandon"
+  ],
+  "doNotMessageBrandon": true,
+  "branch": "elevate/shop-chalk-map-pro-bars",
+  "finishedAtUtc": "2026-09-15T13:49:51Z",
+  "finishedAtPt": "2026-09-15 6:49 AM PT",
+  "pr_url": null,
+  "pr_merged": false,
+  "vercel_status": null,
+  "shotCount": 21,
+  "shotsDir": "gauntlet/shots-elevate",
+  "workbench": "gauntlet/workbench-elevate.md",
+  "ledger": "gauntlet/shots-elevate/LEDGER.md"
+}
