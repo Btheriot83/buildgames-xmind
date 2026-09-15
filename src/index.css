@@ -2360,3 +2360,25 @@ kbd { font-size: 0.7rem; font-weight: 700; padding: 1px 5px; }
 .toolbar { min-height: 52px; padding: 6px 10px; }
 .brand-mark-img { width: 34px; height: 34px; }
 .brand-copy strong { font-size: clamp(1.05rem, 1.6vw, 1.28rem); }
+
+
+/* elevate3: design-system-from-assets — space tokens + quieter chrome ladder */
+:root {
+  --elevate-sidebar: 148px;
+  --elevate-toolbar-h: 52px;
+  --elevate-outline-pad-x: 36px;
+  --elevate-outline-indent: 18px;
+  --elevate-card-pad-y: 10px;
+  --elevate-hairline: #3a5848;
+}
+.workspace { grid-template-columns: var(--elevate-sidebar) minmax(0, 1fr); }
+.toolbar { min-height: var(--elevate-toolbar-h); }
+.outline-tree { padding-left: var(--elevate-outline-pad-x); padding-right: var(--elevate-outline-pad-x); }
+.outline-tree-branch { margin-left: var(--elevate-outline-indent); }
+.title-input {
+  border-radius: 2px;
+  border: 1.5px solid var(--elevate-hairline);
+  background: #12201a;
+  box-shadow: none;
+}
+.view-switch { border-color: var(--elevate-hairline); }
