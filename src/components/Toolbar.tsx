@@ -26,6 +26,7 @@ export function Toolbar({
   const fileRef = useRef<HTMLInputElement>(null)
   const [titleError, setTitleError] = useState(false)
   const [moreOpen, setMoreOpen] = useState(false)
+  const [exportOpen, setExportOpen] = useState(false)
 
   if (!map) return null
 
@@ -36,6 +37,7 @@ export function Toolbar({
       else downloadJson(map)
       flashSuccess()
       flashToast(`Exported ${kind.toUpperCase()}`, 'ok')
+      setExportOpen(false)
     } catch {
       flashToast('Export failed', 'err')
     }
@@ -44,10 +46,10 @@ export function Toolbar({
   return (
     <header className="toolbar" role="banner">
       <div className="brand">
-        <img className="brand-mark-img" src="/art/brand-mark-sm.png" width={48} height={48} alt="" />
+        <img className="brand-mark-img" src="/art/brand-mark-sm.png" width={44} height={44} alt="" />
         <div className="t-stagger is-shown brand-copy">
           <strong className="t-stagger-line t-stagger-line--1">Copper Synapse</strong>
-          <span className="t-stagger-line t-stagger-line--2">machinist desk · midnight maps</span>
+          <span className="t-stagger-line t-stagger-line--2">Branch · Link · Export</span>
         </div>
       </div>
 
@@ -85,38 +87,67 @@ export function Toolbar({
       </div>
 
       <div className="toolbar-actions">
-        <button type="button" className="btn" onClick={() => addChildToSelected()} disabled={!selectedId} data-testid="add-child">
-          Child
-        </button>
-        <button type="button" className="btn" onClick={() => addSiblingToSelected()} disabled={!selectedId} data-testid="add-sibling">
-          Sibling
-        </button>
+        <div className="job-cluster" aria-label="Core job actions">
+          <span className="job-cluster-label">Job</span>
+          <button type="button" className="btn job" onClick={() => addChildToSelected()} disabled={!selectedId} data-testid="add-child">
+            Branch
+          </button>
+          <button type="button" className="btn job" onClick={() => addSiblingToSelected()} disabled={!selectedId} data-testid="add-sibling">
+            Sibling
+          </button>
+          <button
+            type="button"
+            className="btn job"
+            onClick={() => selectedId && setConnectFrom(selectedId)}
+            disabled={!selectedId}
+            data-testid="connect"
+          >
+            Link
+          </button>
+          <button
+            type="button"
+            className="btn job-primary primary"
+            onClick={() => void onExport('svg')}
+            data-testid="export-svg"
+          >
+            Export SVG
+          </button>
+          <div className="more-wrap">
+            <button
+              type="button"
+              className="btn ghost sm"
+              onClick={() => setExportOpen((v) => !v)}
+              aria-expanded={exportOpen}
+              aria-label="More export formats"
+            >
+              ▾
+            </button>
+            {exportOpen && (
+              <div className="more-menu" role="menu">
+                <button type="button" role="menuitem" className="btn ghost" onClick={() => void onExport('png')}>
+                  PNG
+                </button>
+                <button type="button" role="menuitem" className="btn ghost" onClick={() => void onExport('json')}>
+                  JSON
+                </button>
+              </div>
+            )}
+          </div>
+        </div>
         <button
           type="button"
-          className="btn accent"
+          className="btn secondary"
           onClick={() => void expandSelectedAi()}
           disabled={!selectedId || aiBusy}
           data-testid="ai-expand"
         >
           {aiBusy ? 'Expanding…' : 'AI Expand'}
         </button>
-        <button type="button" className="btn" onClick={onOpenOutline} data-testid="open-outline">
+        <button type="button" className="btn ghost" onClick={onOpenOutline} data-testid="open-outline">
           Outline
-        </button>
-        <button
-          type="button"
-          className="btn"
-          onClick={() => selectedId && setConnectFrom(selectedId)}
-          disabled={!selectedId}
-          data-testid="connect"
-        >
-          Link
         </button>
         <button type="button" className="btn danger" onClick={() => removeSelected()} disabled={!selectedId}>
           Delete
-        </button>
-        <button type="button" className="btn accent" onClick={() => onExport('svg')} data-testid="export-svg">
-          SVG
         </button>
         <div className="more-wrap">
           <button type="button" className="btn ghost" onClick={() => setMoreOpen((v) => !v)} aria-expanded={moreOpen}>
@@ -126,8 +157,6 @@ export function Toolbar({
             <div className="more-menu" role="menu">
               <button type="button" role="menuitem" className="btn ghost" onClick={() => { newMap(); setMoreOpen(false) }}>New</button>
               <button type="button" role="menuitem" className="btn ghost" onClick={() => { fileRef.current?.click(); setMoreOpen(false) }}>Import</button>
-              <button type="button" role="menuitem" className="btn ghost" onClick={() => { void onExport('png'); setMoreOpen(false) }}>PNG</button>
-              <button type="button" role="menuitem" className="btn ghost" onClick={() => { void onExport('json'); setMoreOpen(false) }}>JSON</button>
             </div>
           )}
         </div>

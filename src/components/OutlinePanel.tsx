@@ -1,31 +1,37 @@
 import { useState } from 'react'
 import { useMapStore } from '../store/mapStore'
 
-const SAMPLE = `Product launch
-  Audience
-    Beta cohort
-    Early adopters
-  Channels
-    Press kit
-    Launch webinar
-  Risks
-    Supply slip
-    Messaging drift`
+const DESK_OUTLINE = `Friday I-10 diesel pull
+  Yard trucks
+    Unit 41 — DEF sensor
+    Unit 18 — leak-down
+  Parts runs
+    NAPA on Bell Rd
+    Freightliner Chandler
+  Dispatch
+    Mesa yard — 06:30
+    Tonto Basin call-out
+  Crew
+    Luis + Mira on dual`
 
 export function OutlinePanel({ open, onClose }: { open: boolean; onClose: () => void }) {
   const outlineToMap = useMapStore((s) => s.outlineToMap)
   const aiBusy = useMapStore((s) => s.aiBusy)
-  const [text, setText] = useState(SAMPLE)
+  const [text, setText] = useState(DESK_OUTLINE)
   const [useAi, setUseAi] = useState(false)
 
-  if (!open) return null
-
   return (
-    <div className="outline-panel panel-reveal is-open" role="dialog" aria-label="Outline to map">
+    <div
+      className={`outline-panel t-panel-slide ${open ? 'is-docked' : ''}`}
+      data-open={open ? 'true' : 'false'}
+      role="dialog"
+      aria-label="Outline to map"
+      hidden={!open}
+    >
       <header className="outline-head">
         <div>
           <h2>Outline → map</h2>
-          <p>Indent with spaces or bullets. AI reshapes when keyed; otherwise local parse.</p>
+          <p>Indent with spaces or bullets. Grow into a branched desk map — then link & export.</p>
         </div>
         <button type="button" className="btn ghost sm" onClick={onClose} aria-label="Close outline">
           Close

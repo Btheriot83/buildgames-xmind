@@ -1,0 +1,95 @@
+{
+  "slug": "xmind",
+  "product": "Copper Synapse",
+  "phase": "B4",
+  "status": "gauntlet_r4_complete",
+  "demoUrl": "https://buildgames-xmind.vercel.app",
+  "demo_url": "https://buildgames-xmind.vercel.app",
+  "barUrl": "https://xmind.app/",
+  "bar": "https://xmind.app/",
+  "path": "/workspace/build-games/apps/xmind",
+  "repo": "https://github.com/Btheriot83/buildgames-xmind",
+  "doNotMessageBrandon": true,
+  "identity": {
+    "name": "Shop Chalk Map",
+    "locked": true,
+    "path": "docs/IDENTITY.md"
+  },
+  "roundsCounted": 20,
+  "roundShas": [
+    "c71688d",
+    "faedfbc",
+    "a55680c",
+    "a9a5682",
+    "8b4f065",
+    "33d3875",
+    "1ce06d2",
+    "91f0af7",
+    "5e2105c",
+    "9b6f6ac",
+    "976ba48",
+    "682c4de",
+    "a50e878",
+    "9627ece",
+    "8c355aa",
+    "a6f496b",
+    "77a8882",
+    "57f1a3e",
+    "5427501",
+    "b72d10a"
+  ],
+  "shotCount": 24,
+  "barShotRounds": [
+    5,
+    10,
+    15,
+    20
+  ],
+  "honestNotes": [
+    "Original still preferred unlabeled A/B for marketing photography / light map theater.",
+    "Candidate closer on chalkboard map craft: side-attach limbs, flat board, one Export primary, square chalk controls.",
+    "No self-cheer numeric scores.",
+    "r15 bar shot retried after browser close mid-round; board shot counted in-round.",
+    "dream-loop target at .dream-loop/target.png; closing rounds r4/r6/r8/r12/r16/r20.",
+    "transitions.dev wired to real actions (export success-check/toast, boot skeleton, title shake, outline panel-reveal, stats number-pop, brand texts-reveal)."
+  ],
+  "transitionsDev": {
+    "success-check": "Export SVG/PNG/JSON",
+    "toast": "Export ok/fail + AI/import messages",
+    "error-state-shake": "Empty map title validation",
+    "skeleton-reveal": "Boot LoadingShell",
+    "texts-reveal": "Brand + empty-state lines",
+    "number-pop-in": "Nodes/Links/Depth stats",
+    "panel-reveal": "Outline dock open/close"
+  },
+  "dreamLoop": {
+    "baseline": ".dream-loop/baseline.png",
+    "target": ".dream-loop/target.png",
+    "closingRounds": [
+      4,
+      6,
+      8,
+      12,
+      16,
+      20
+    ]
+  },
+  "workbench": "gauntlet/workbench-r4.md",
+  "branch": "gauntlet/xmind-r4",
+  "finishedAtUtc": "2026-09-15T05:18:00Z",
+  "finishedAtPt": "2026-09-14 10:18 PM PT",
+  "sha": "981c0d6",
+  "pr": "https://github.com/Btheriot83/buildgames-xmind/pull/4",
+  "live_smoke": {
+    "ok": true,
+    "at_pt": "2026-09-14 10:18 PM PT",
+    "url": "https://buildgames-xmind.vercel.app",
+    "deployment": "dpl_FUAYRX4MfpwvedjVBZ4K66dCaLBy",
+    "checks": [
+      "HTTP reachable",
+      "Shop Chalk Map locked",
+      "B4 assets live",
+      "20 counted rounds"
+    ]
+  }
+}

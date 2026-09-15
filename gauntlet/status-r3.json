@@ -1,0 +1,105 @@
+{
+  "slug": "xmind",
+  "product": "Copper Synapse",
+  "phase": "B3",
+  "status": "gauntlet_r3_complete",
+  "demo_url": "https://buildgames-xmind.vercel.app",
+  "demoUrl": "https://buildgames-xmind.vercel.app",
+  "bar": "https://xmind.app/",
+  "barUrl": "https://xmind.app/",
+  "path": "/workspace/build-games/apps/xmind",
+  "repo": "https://github.com/Btheriot83/buildgames-xmind",
+  "doNotMessageBrandon": true,
+  "identity": {
+    "name": "Shop Chalk Map",
+    "locked": true,
+    "path": "docs/IDENTITY.md",
+    "reseededInB3": false
+  },
+  "phaseA": {
+    "reseeded": true,
+    "done": true,
+    "techniquesDone": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "identityName": "Shop Chalk Map"
+  },
+  "phaseB2": {
+    "roundsCompleted": 10,
+    "roundsTarget": 10,
+    "workbench": "gauntlet/workbench-r2.md",
+    "finalScore": 6.8
+  },
+  "phaseB3": {
+    "roundsCompleted": 20,
+    "roundsTarget": 20,
+    "workbench": "gauntlet/workbench-r3.md",
+    "identityHeld": true,
+    "focus": [
+      "fonts",
+      "contrast",
+      "buttons",
+      "xmind-map-craft-ab",
+      "flat-no-gradient"
+    ],
+    "brandonHardBar": {
+      "gradientsStripped": true,
+      "glassBlurKilled": true,
+      "glowKilled": true,
+      "materials": "flat fills + real photo underlay"
+    },
+    "baselineScore": 6.8,
+    "finalScore": 8.0,
+    "shots": [
+      "gauntlet/shots/r3-bar-xmind-home.png",
+      "gauntlet/shots/r3-baseline-live.png",
+      "gauntlet/shots/r3-board.png",
+      "gauntlet/shots/r3-selected.png",
+      "gauntlet/shots/r3-empty.png"
+    ],
+    "craftHighlights": [
+      "solid chalk limbs (dash only while linking)",
+      "single copper primary Export; AI Expand secondary",
+      "square chalk button family; danger/ghost weights",
+      "root capsule + limb cards; type hierarchy",
+      "chalk-dim contrast lift; acid reserved for selection"
+    ]
+  },
+  "ai": {
+    "endpoint": "/api/ai",
+    "actions": [
+      "expand",
+      "outline"
+    ],
+    "clientSecrets": false
+  },
+  "finishedAtUtc": "2026-09-15T04:39:00Z",
+  "finishedAtPt": "2026-09-14 9:39 PM PT",
+  "branch": "gauntlet/xmind-r3",
+  "live_smoke": {
+    "ok": true,
+    "at_pt": "2026-09-14 9:39 PM PT",
+    "url": "https://buildgames-xmind.vercel.app",
+    "deployment": "dpl_3ziGp982XVEidhWYRtWbFrkM88m9",
+    "assets": [
+      "index-BoX7DZ_x.js",
+      "index-DlMPqRWp.css"
+    ],
+    "checks": [
+      "HTTP 200",
+      "Shop Chalk Map identity held",
+      "solid limbs / square buttons / single Export primary",
+      "flat no-gradient hard bar",
+      "B3 assets live"
+    ]
+  },
+  "pr": "https://github.com/Btheriot83/buildgames-xmind/pull/3",
+  "sha": "66aac82"
+}

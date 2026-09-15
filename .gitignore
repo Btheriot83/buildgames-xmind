@@ -36,3 +36,8 @@ gauntlet/shots/
 public/art/empty-desk.png
 public/art/brand-mark.png
 .local/
+
+.vercel
+.env*
+
+.dream-loop/

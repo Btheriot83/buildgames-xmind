@@ -100,7 +100,7 @@ export function MindCanvas() {
   const byId = new Map(map.nodes.map((n) => [n.id, n]))
 
   return (
-    <div className="canvas-wrap" data-testid="mind-canvas">
+    <div className={`canvas-wrap ${connectFrom ? 'is-linking' : ''}`} data-testid="mind-canvas">
       <svg
         ref={svgRef}
         className="mind-svg"
@@ -127,23 +127,25 @@ export function MindCanvas() {
             const a = byId.get(e.from)
             const b = byId.get(e.to)
             if (!a || !b) return null
-            const x1 = a.x + a.width / 2
-            const y1 = a.y + a.height / 2
-            const x2 = b.x + b.width / 2
-            const y2 = b.y + b.height / 2
-            const mx = (x1 + x2) / 2
-            const dash = 8 + (Math.sin(pulse * 2 + x1 * 0.01) + 1) * 4
+            const acx = a.x + a.width / 2
+            const acy = a.y + a.height / 2
+            const bcx = b.x + b.width / 2
+            const bcy = b.y + b.height / 2
+            const toRight = bcx >= acx
+            const x1 = toRight ? a.x + a.width : a.x
+            const y1 = acy
+            const x2 = toRight ? b.x : b.x + b.width
+            const y2 = bcy
+            const dx = Math.max(40, Math.abs(x2 - x1) * 0.45)
+            const c1x = toRight ? x1 + dx : x1 - dx
+            const c2x = toRight ? x2 - dx : x2 + dx
             return (
               <g key={e.id} className="edge-group">
                 <path
-                  d={`M ${x1} ${y1} C ${mx} ${y1}, ${mx} ${y2}, ${x2} ${y2}`}
-                  className="edge-glow"
-                  strokeDasharray={`${dash} 14`}
-                  strokeDashoffset={-pulse * 28}
-                />
-                <path
-                  d={`M ${x1} ${y1} C ${mx} ${y1}, ${mx} ${y2}, ${x2} ${y2}`}
+                  d={`M ${x1} ${y1} C ${c1x} ${y1}, ${c2x} ${y2}, ${x2} ${y2}`}
                   className="edge-line"
+                  strokeDasharray={connectFrom ? '8 6' : undefined}
+                  strokeDashoffset={connectFrom ? -pulse * 18 : undefined}
                 />
               </g>
             )
@@ -164,7 +166,7 @@ export function MindCanvas() {
                 <rect
                   width={n.width}
                   height={n.height}
-                  rx={12}
+                  rx={isRoot ? 999 : 5}
                   className="node-body"
                 />
                 <foreignObject width={n.width} height={n.height}>
@@ -189,6 +191,8 @@ export function MindCanvas() {
                   onPointerDown={(e) => onResizeDown(e, n)}
                   aria-label="Resize node"
                 />
+                <circle className="port-dot" cx={0} cy={n.height / 2} r={4} aria-hidden />
+                <circle className="port-dot" cx={n.width} cy={n.height / 2} r={4} aria-hidden />
                 <circle
                   cx={n.width}
                   cy={n.height / 2}
@@ -205,9 +209,15 @@ export function MindCanvas() {
           })}
         </g>
       </svg>
-      {connectFrom && (
+      {connectFrom ? (
         <div className="connect-hint" role="status">
-          Click another node to connect · Esc to cancel
+          Click a node to link · Esc cancels
+        </div>
+      ) : (
+        <div className="job-rail" aria-hidden>
+          <span><strong>Tab</strong> branch</span>
+          <span><strong>C</strong> link</span>
+          <span><strong>Export</strong> SVG</span>
         </div>
       )}
     </div>
