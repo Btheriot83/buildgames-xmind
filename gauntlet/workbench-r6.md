@@ -46,3 +46,9 @@
 - shot: gauntlet/shots-r6/r4-board.png
 - verdict: Denser right-fan + brighter ports + copper root pill close dream-loop/Xmind limb silhouette; original still wins soft editorial bezier photography.
 - commit: fc05e0a
+
+## r5 — fonts
+- files: src/index.css,
+- shot: gauntlet/shots-r6/r5-board.png ; gauntlet/shots-r6/r5-bar-xmind.png
+- verdict: Job tape denser billboard + map-list weight; bar A/B — original marketing hero still outranks chalkboard chrome for photography.
+- commit: 6a9c878

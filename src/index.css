@@ -1663,3 +1663,11 @@ kbd { font-size: 0.7rem; font-weight: 700; padding: 1px 5px; }
 .edge-line { stroke-width: 4; stroke-linecap: round; }
 .map-node.is-root .node-body { fill: var(--copper); stroke: var(--copper-hot); stroke-width: 3.2; }
 .map-node.is-root .node-input { color: #14241c; }
+
+
+/* r5 fonts */
+.job-tape { font-size: 0.82rem; letter-spacing: 0.18em; font-weight: 800; text-transform: uppercase; }
+.job-rail strong { color: var(--copper-hot); font-weight: 800; font-size: 0.8rem; }
+.map-item .map-title, .map-item-title { font-size: 0.9rem; font-weight: 700; letter-spacing: -0.01em; }
+.brand-copy span { font-size: 0.8rem; font-weight: 800; letter-spacing: 0.06em; }
+.stat-chip .t-digit-group { font-size: 1.28rem; font-weight: 800; }
