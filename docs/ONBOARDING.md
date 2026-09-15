@@ -1,10 +1,18 @@
 # Onboarding — Shop Chalk Map (social content)
 
+## TC-EBC
+
+- **Task:** social-content mind map (hooks → pillars → posts)
+- **Context:** creators planning a content week
+- **Elements:** canvas, Map|Outline, nodes, preset packs, onboarding cards
+- **Behavior:** pick preset → expand branches → outline export
+- **Constraints:** zero diesel/shop biz; chalkboard materials OK; friend onboarding ≤5 cards; chalk-on-slate palette
+
 ## Activation event
 
 **First social-content map with at least one branch the user can edit.**
 
-We seed a “Week of hooks” sample (hooks → pillars → formats → CTAs) on first boot so the board is already a content plan. The walkthrough teaches Branch / Map|Outline / Export without leaving the real canvas.
+We seed a “Week of hooks” sample on first boot. Preset packs (Week of hooks / Reel batch / Carousel series) let creators swap plans. The walkthrough teaches Branch / Map|Outline / Export over the real canvas.
 
 ## Copy deck (4 cards)
 
@@ -23,16 +31,10 @@ We seed a “Week of hooks” sample (hooks → pillars → formats → CTAs) on
 - Shape: `{ completed: boolean, step: number, skipped?: boolean }`
 - Return visits: if `completed === true`, never replay
 
-## Shape
-
-- Cards float over the real Map canvas (sample already loaded)
-- One CTA per card + Skip
-- Friend voice, second person, no feature dump
-- Empty-state coach (if all maps deleted): “New board” + “Load week of hooks”
-
 ## Smoke
 
 1. First visit → complete all cards → land on canvas with sample map
 2. First visit → Skip → canvas, no further cards
 3. Return visit → no replay
-4. Sample title/nodes are social-content themed (not diesel/shop)
+4. Preset packs load Reel batch / Carousel series
+5. Sample is social-content themed (not diesel/shop)
