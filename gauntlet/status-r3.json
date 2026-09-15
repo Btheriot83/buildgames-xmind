@@ -80,12 +80,26 @@
     ],
     "clientSecrets": false
   },
-  "finishedAtUtc": "2026-09-15T04:38:09Z",
-  "finishedAtPt": "2026-09-14 9:38 PM PT",
+  "finishedAtUtc": "2026-09-15T04:39:00Z",
+  "finishedAtPt": "2026-09-14 9:39 PM PT",
   "branch": "gauntlet/xmind-r3",
   "live_smoke": {
-    "ok": false,
-    "pendingRedeploy": true,
-    "url": "https://buildgames-xmind.vercel.app"
-  }
+    "ok": true,
+    "at_pt": "2026-09-14 9:39 PM PT",
+    "url": "https://buildgames-xmind.vercel.app",
+    "deployment": "dpl_3ziGp982XVEidhWYRtWbFrkM88m9",
+    "assets": [
+      "index-BoX7DZ_x.js",
+      "index-DlMPqRWp.css"
+    ],
+    "checks": [
+      "HTTP 200",
+      "Shop Chalk Map identity held",
+      "solid limbs / square buttons / single Export primary",
+      "flat no-gradient hard bar",
+      "B3 assets live"
+    ]
+  },
+  "pr": "https://github.com/Btheriot83/buildgames-xmind/pull/3",
+  "sha": "a8875d3"
 }
