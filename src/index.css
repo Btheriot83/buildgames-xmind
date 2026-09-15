@@ -1486,3 +1486,8 @@ kbd { font-size: 0.7rem; font-weight: 700; padding: 1px 5px; }
 /* r18 — contrast */
 .app-toast { border-radius: 4px; border: 2px solid var(--line); background: #24382e; box-shadow: 3px 3px 0 #0f1c16; }
 .save-pill { border-radius: 4px; border-width: 2px; font-weight: 700; }
+
+/* r19 — buttons */
+.map-item { border-radius: 4px; border-width: 2px; }
+.map-list li.active .map-item { box-shadow: 2px 2px 0 #0f1c16; }
+.btn.danger { color: #f0c4c4; border-color: var(--danger); }

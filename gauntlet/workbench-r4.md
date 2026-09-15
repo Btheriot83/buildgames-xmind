@@ -129,3 +129,9 @@
 - verdict: Toast/save pill chalk contrast hold; closer to target flat chrome; original still softer.
 - commit: c83bb7d
 
+## r19 — buttons
+- files: src/index.css
+- shot: gauntlet/shots-r4/r19-board.png
+- verdict: Map-list cards square chalk + delete danger weight; original nav still cleaner.
+- commit: 9054344
+
