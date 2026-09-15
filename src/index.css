@@ -1550,3 +1550,10 @@ kbd { font-size: 0.7rem; font-weight: 700; padding: 1px 5px; }
 .success-overlay .t-success-check, .success-overlay p { position: relative; z-index: 2; }
 .success-overlay p { font-family: var(--font-display); font-weight: 700; letter-spacing: 0.04em; }
 .app-shell.is-igniting .edge-line { animation: none; filter: none; }
+
+
+/* r1 fonts */
+.brand-copy strong { font-size: clamp(1.22rem, 1.85vw, 1.52rem); font-weight: 700; letter-spacing: -0.035em; }
+.map-node.is-root .node-input { font-size: 18.5px; font-weight: 700; }
+.title-input input { font-size: 1.16rem; font-weight: 650; }
+.sidebar-head h2 { font-size: 0.92rem; font-weight: 700; letter-spacing: 0.12em; }
