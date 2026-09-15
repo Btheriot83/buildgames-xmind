@@ -2887,3 +2887,38 @@ body {
 .canvas-wrap.is-linking .edge-line {
   stroke: #e6de6a !important;
 }
+
+/* craft3: canvas air — Heptabase thinking canvas quiet + chalk tooth */
+.canvas-wrap {
+  min-height: calc(100vh - 46px) !important;
+  background: #10151c !important;
+  box-shadow: inset 0 0 0 1px #2a3340 !important;
+  border-left: 0 !important;
+}
+.canvas-wrap::before {
+  background: url("/art/chalk-board.jpg") center / cover no-repeat !important;
+  opacity: 0.34 !important;
+  mix-blend-mode: soft-light !important;
+}
+.canvas-wrap::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background: rgba(8, 10, 14, 0.18) !important;
+  box-shadow: inset 0 0 48px rgba(0, 0, 0, 0.22), inset 0 0 0 1px rgba(184, 239, 224, 0.06) !important;
+}
+.toolbar {
+  min-height: 46px !important;
+  padding: 4px 10px !important;
+  background: #141a22 !important;
+}
+.sidebar {
+  background: #121820 !important;
+  border-right: 1px solid #2a3340 !important;
+}
+.workspace {
+  grid-template-columns: 152px minmax(0, 1fr) !important;
+}
+:root { --elevate-sidebar: 152px; }
