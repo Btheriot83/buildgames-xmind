@@ -159,7 +159,7 @@ export const useMapStore = create<MapStore>((set, get) => ({
     await saveMap(sample)
     const maps = await listMaps()
     set({ maps, map: sample, selectedId: sample.nodes[0]?.id ?? null, stats: statsOf(sample), loadStatus: 'ready' })
-    get().flashToast('Diesel week map on the board — delete anytime', 'info')
+    get().flashToast('Diesel week on the board — delete anytime', 'info')
   },
 
   patchTitle: (title) => {

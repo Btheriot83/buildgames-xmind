@@ -22,15 +22,15 @@ export function EmptyState() {
       <div className={`t-stagger ${shown ? 'is-shown' : ''}`}>
         <strong className="t-stagger-line t-stagger-line--1">Shop Chalk Map</strong>
         <span className="t-stagger-line t-stagger-line--2">
-          Chalk the center. Amber root. Chalk limbs. Link sideways. Export the board.
+          One center topic. Branch. Link. Export.
         </span>
       </div>
       <div className="empty-actions">
         <button type="button" className="btn primary" onClick={() => newMap()} data-testid="new-map">
-          New map
+          Blank board
         </button>
         <button type="button" className="btn secondary" onClick={() => seedSample()} data-testid="load-sample">
-          Load diesel week
+          Open diesel week
         </button>
       </div>
     </div>

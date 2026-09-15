@@ -77,7 +77,7 @@ export function Toolbar({
             }}
           />
         </div>
-        <p className="t-error-msg">Give the map a name.</p>
+        <p className="t-error-msg">Name the map.</p>
       </div>
 
       <div className="stats-row" aria-label="Map stats">

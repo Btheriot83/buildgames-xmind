@@ -34,7 +34,7 @@ export function Sidebar() {
         ))}
       </ul>
       <p className="sidebar-foot">
-        Local-first Shop Chalk Map. Export JSON before you wipe site data.
+        Lives in this browser. Export JSON before a wipe.
       </p>
       <div className="shortcuts">
         <h3>Keys</h3>

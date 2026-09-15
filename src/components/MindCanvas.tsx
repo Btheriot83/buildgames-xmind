@@ -217,14 +217,14 @@ export function MindCanvas() {
       </svg>
       {connectFrom ? (
         <div className="connect-hint" role="status">
-          Click a limb to link · Esc cancels
+          Click a limb · Esc cancels
         </div>
       ) : (
         <div className="job-rail" aria-hidden>
           <span><strong>Tab</strong> branch</span>
           <span><strong>C</strong> link</span>
-          <span><strong>Export</strong> SVG</span>
-          <span className="job-rail-hint">drag limbs · scroll zoom</span>
+          <span><strong>Export</strong></span>
+          <span className="job-rail-hint">drag · scroll</span>
         </div>
       )}
     </div>
