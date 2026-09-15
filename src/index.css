@@ -1700,3 +1700,12 @@ kbd { font-size: 0.7rem; font-weight: 700; padding: 1px 5px; }
 .map-node.is-linking .link-handle { fill: var(--acid); stroke: #14241c; }
 .edge-line { stroke: #c8f0de; stroke-width: 4.1; }
 .resize-handle { fill: #8fc9b4; opacity: 0.75; }
+
+
+/* r9 fonts */
+.shortcuts h3 { font-family: var(--font-display); font-size: 0.86rem; letter-spacing: 0.1em; font-weight: 800; }
+.shortcuts li { font-size: 0.78rem; line-height: 1.35; }
+.empty-state .t-stagger-line--1 { font-size: clamp(1.75rem, 3.4vw, 2.25rem); letter-spacing: -0.03em; }
+.node-input { letter-spacing: -0.015em; }
+.sidebar-foot { font-size: 0.72rem; line-height: 1.5; }
+.title-input input { font-family: var(--font-display); }

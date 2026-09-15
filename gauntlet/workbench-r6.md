@@ -70,3 +70,9 @@
 - shot: gauntlet/shots-r6/r8-board.png
 - verdict: Job-rail chalk strip + link handles closer to target map-tool chrome; original still subtler on product screenshots.
 - commit: 7cabc99
+
+## r9 — fonts
+- files: src/index.css,
+- shot: gauntlet/shots-r6/r9-board.png
+- verdict: Shortcuts/empty display hierarchy denser; title uses display face; original still wins editorial type polish.
+- commit: 8ca5a29
