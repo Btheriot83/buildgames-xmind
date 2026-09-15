@@ -16,38 +16,49 @@ function pack(
   rootText: string,
   branches: { label: string; kids: string[] }[],
 ): MindMap {
+  /* Organic fan — MindNode air, not grid columns */
   const root = createNode({
     id: `${id}-root`,
     text: rootText,
-    x: 180,
-    y: 220,
-    width: Math.min(280, Math.max(200, rootText.length * 11)),
-    height: 70,
+    x: 168,
+    y: 248,
+    width: Math.min(292, Math.max(208, rootText.length * 11)),
+    height: 72,
   })
   const nodes = [root]
   const edges = [] as ReturnType<typeof createEdge>[]
-  const y0 = 30
-  const gap = Math.max(110, Math.floor(420 / Math.max(branches.length, 1)))
+  const n = Math.max(branches.length, 1)
+  const fanSpan = Math.min(520, 96 + n * 108)
+  const y0 = 248 - fanSpan / 2
+  const gap = fanSpan / Math.max(n - 1, 1)
   branches.forEach((b, i) => {
+    const t = n === 1 ? 0.5 : i / (n - 1)
+    const bow = Math.sin(t * Math.PI) // outer branches farther
+    const branchX = 508 + Math.round(bow * 36) + (i % 2 === 0 ? -6 : 10)
+    const branchY = n === 1 ? 248 : y0 + i * gap + ((i % 3) - 1) * 8
     const branch = createNode({
       id: `${id}-b${i}`,
       text: b.label,
-      x: 520,
-      y: y0 + i * gap,
-      width: 160,
-      height: 48,
+      x: branchX,
+      y: Math.round(branchY),
+      width: Math.min(176, Math.max(148, b.label.length * 10)),
+      height: 50,
       parentId: root.id,
     })
     nodes.push(branch)
     edges.push(createEdge(root.id, branch.id))
+    const kidCount = Math.max(b.kids.length, 1)
     b.kids.forEach((kid, j) => {
+      const jt = kidCount === 1 ? 0.5 : j / (kidCount - 1)
+      const leafX = branchX + 212 + Math.round(Math.sin(jt * Math.PI) * 18) + (j % 2) * 8
+      const leafY = branch.y - 18 + j * 62 + ((j + i) % 2) * 6
       const leaf = createNode({
         id: `${id}-b${i}-k${j}`,
         text: kid,
-        x: 740,
-        y: branch.y - 12 + j * 58,
-        width: Math.min(210, Math.max(140, kid.length * 9)),
-        height: 44,
+        x: leafX,
+        y: Math.round(leafY),
+        width: Math.min(228, Math.max(148, kid.length * 9)),
+        height: 46,
         parentId: branch.id,
       })
       nodes.push(leaf)
