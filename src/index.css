@@ -1473,3 +1473,7 @@ kbd {
 /* r15 — buttons */
 .btn.accent { background: var(--limb-fill); color: var(--chalk); border: 2px solid var(--copper); font-weight: 600; }
 .btn.danger { border-width: 2px; font-weight: 700; }
+
+/* r16 — bar gap */
+.map-node.is-root .node-body { stroke-width: 3.4; }
+.node-html { padding: 8px 14px; }

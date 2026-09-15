@@ -166,7 +166,7 @@ export function MindCanvas() {
                 <rect
                   width={n.width}
                   height={n.height}
-                  rx={isRoot ? 999 : 6}
+                  rx={isRoot ? 999 : 5}
                   className="node-body"
                 />
                 <foreignObject width={n.width} height={n.height}>

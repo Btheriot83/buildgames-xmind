@@ -111,3 +111,9 @@
 - verdict: AI Expand outline secondary vs Export primary; bar A/B — original CTA hierarchy cleaner on light UI.
 - commit: a5b8b84
 
+## r16 — bar gap
+- files: src/components/MindCanvas.tsx, src/index.css
+- shot: gauntlet/shots-r4/r16-board.png
+- verdict: Root capsule + limb cards tighter rx — dream-loop node silhouette; original still polished.
+- commit: 87779c1
+
