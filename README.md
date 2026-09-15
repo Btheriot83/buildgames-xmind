@@ -1,10 +1,10 @@
-# Copper Synapse — Xmind replacement
+# Shop Chalk Map — Xmind replacement
 
 Local-first browser mind mapping. Drag, resize, connect, keyboard shortcuts, **AI Expand** / outline→map, autosave to IndexedDB, export **SVG / PNG / JSON**.
 
 **Live demo:** https://buildgames-xmind.vercel.app
 
-**Aesthetic:** Copper Synapse (charcoal drafting desk + oxidized copper nodes + teal synapse links + acid lime stats). No accounts, ads, telemetry, or purple SaaS chrome.
+**Aesthetic:** Shop Chalk Map (green chalkboard + chalk limbs + amber root pill + teal chalk links). No accounts, ads, telemetry, or purple SaaS chrome.
 
 Motion recipes from [transitions.dev](https://transitions.dev/) (free): success-check on export, skeleton reveal on boot, texts-reveal on brand/empty, error shake on empty title, toast confirmations, number-pop-in for node/depth/link counts.
 
@@ -76,6 +76,6 @@ Static Vite app: framework preset **Vite**, build `npm run build`, output `dist`
 
 ## Design notes (Lenny)
 
-- Seed-derived **Copper Synapse** palette (never shown in UI).
+- Seed-derived **Shop Chalk Map** palette (seed never shown in UI).
 - WebGL ink/grid shader backdrop + pulsing connection dashes.
 - Anti-slop: no vibe-purple, no Inter, no 3-card marketing grid, no fake stats.

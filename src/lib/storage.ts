@@ -1,7 +1,7 @@
 import { openDB, type DBSchema, type IDBPDatabase } from 'idb'
 import type { MindMap } from './types'
 
-interface SynapseDB extends DBSchema {
+interface ChalkMapDB extends DBSchema {
   maps: {
     key: string
     value: MindMap
@@ -16,11 +16,11 @@ interface SynapseDB extends DBSchema {
 const DB_NAME = 'copper-synapse-xmind'
 const DB_VERSION = 1
 
-let dbPromise: Promise<IDBPDatabase<SynapseDB>> | null = null
+let dbPromise: Promise<IDBPDatabase<ChalkMapDB>> | null = null
 
 export function getDb() {
   if (!dbPromise) {
-    dbPromise = openDB<SynapseDB>(DB_NAME, DB_VERSION, {
+    dbPromise = openDB<ChalkMapDB>(DB_NAME, DB_VERSION, {
       upgrade(db) {
         const maps = db.createObjectStore('maps', { keyPath: 'id' })
         maps.createIndex('by-updated', 'updatedAt')

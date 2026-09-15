@@ -730,7 +730,7 @@ kbd {
 }
 
 /* —— SHOP CHALK MAP — flat materials (Brandon hard bar: no decorative gradients/glow/glass) —— */
-.copper-tape, .job-tape {
+.job-tape {
   display: flex; gap: 1.25rem; align-items: center; justify-content: center; flex-wrap: wrap;
   background: var(--copper); color: var(--ink);
   border-bottom: 3px solid #0f1c16;

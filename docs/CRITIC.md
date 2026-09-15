@@ -5,7 +5,7 @@
 **Date:** 2026-09-14 PT
 
 ## Aesthetic name (candidate)
-Copper Synapse drafting desk — charcoal grid, oxidized copper root, teal synapse curves, acid lime telemetry. Bricolage Grotesque + IBM Plex Mono.
+Shop Chalk Map — green chalkboard, amber root pill, chalk limbs, teal chalk curves. Bricolage Grotesque + IBM Plex Mono. Bricolage Grotesque + IBM Plex Mono.
 
 ## What the original does as the bar
 - Polished multi-structure mind maps with rich topic chrome (notes, markers, images, stickers).
