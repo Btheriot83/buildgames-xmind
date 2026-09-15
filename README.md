@@ -2,6 +2,8 @@
 
 Local-first browser mind mapping. Drag, resize, connect, keyboard shortcuts, autosave to IndexedDB, export **SVG / PNG / JSON**.
 
+**Live demo:** https://buildgames-xmind.vercel.app
+
 **Aesthetic:** Copper Synapse (charcoal drafting desk + oxidized copper nodes + teal synapse links + acid lime stats). No accounts, ads, telemetry, or purple SaaS chrome.
 
 Motion recipes from [transitions.dev](https://transitions.dev/) (free): success-check on export, skeleton reveal on boot, texts-reveal on brand/empty, error shake on empty title, toast confirmations, number-pop-in for node/depth/link counts.
