@@ -219,14 +219,7 @@ export function MindCanvas() {
         <div className="connect-hint" role="status">
           Click a limb · Esc cancels
         </div>
-      ) : (
-        <div className="job-rail" aria-hidden>
-          <span><strong>Tab</strong> branch</span>
-          <span><strong>C</strong> link</span>
-          <span><strong>Export</strong></span>
-          <span className="job-rail-hint">drag · scroll</span>
-        </div>
-      )}
+      ) : null}
     </div>
   )
 }

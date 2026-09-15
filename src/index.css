@@ -1921,3 +1921,13 @@ kbd { font-size: 0.7rem; font-weight: 700; padding: 1px 5px; }
   border-radius: 2px;
 }
 .empty-hero-art { box-shadow: 3px 3px 0 #0a120e; border-radius: 2px; }
+
+
+/* beat8 cut — less toolbar chrome; map owns the frame */
+.job-cluster-label { display: none !important; }
+.job-rail { display: none !important; }
+.toolbar-actions { gap: 6px; }
+.job-cluster { padding: 3px 4px; }
+.stats-row { gap: 6px; }
+.stat-chip .t-digit-group { font-size: 1.05rem; font-weight: 800; }
+.stat-label { font-size: 0.58rem; letter-spacing: 0.12em; }
