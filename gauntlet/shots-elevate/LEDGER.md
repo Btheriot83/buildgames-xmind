@@ -11,3 +11,4 @@ Identity locked: Shop Chalk Map (0× Copper Synapse). Flat chalkboard materials.
 | 5 | Limb card air on canvas | bar gap Heptabase | elevate5-card-air.png | fdaa8f0 |
 | 6 | Kill soft shadows / acid glow | remove-ai-tells | elevate6-anti-tells.png | 0476c02 |
 | 7 | Shop-short copy wired | hand-rewrite-copy | elevate7-hand-copy.png | bdb5a7c |
+| 8 | Sliding Map\|Outline + outline jump | make-it-alive | elevate8-alive-switch.png | a7e9698 |
