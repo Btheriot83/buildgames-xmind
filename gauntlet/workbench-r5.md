@@ -42,3 +42,9 @@
 - shot: gauntlet/shots-r5/r3-board.png
 - verdict: Export SVG sole copper primary with harder offset; original CTAs still quieter on light UI.
 - commit: 6177056
+
+## r4 — bar gap
+- files: src/lib/sample.ts, src/components/MindCanvas.tsx, src/index.css
+- shot: gauntlet/shots-r5/r4-board.png
+- verdict: Denser right-fan + brighter ports close dream-loop/Xmind limb silhouette; original still wins soft editorial bezier photography.
+- commit: 2b9f4de

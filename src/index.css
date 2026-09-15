@@ -1574,3 +1574,10 @@ kbd { font-size: 0.7rem; font-weight: 700; padding: 1px 5px; }
   min-height: 36px; box-shadow: 4px 4px 0 #0f1c16; font-weight: 800; letter-spacing: 0.02em;
 }
 .btn.secondary { border-width: 2px; font-weight: 600; }
+
+
+/* r4 bar gap */
+.port-dot { r: 4.5; fill: #b4e2d0; }
+.link-handle { fill: var(--copper); opacity: 0.85; }
+.edge-line { stroke-width: 3.7; }
+.map-node.is-root .node-body { rx: 999; }
