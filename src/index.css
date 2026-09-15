@@ -3111,3 +3111,47 @@ body {
   padding: 0 12px !important;
   font-weight: 700 !important;
 }
+
+/* craft7: cut — map owns frame; presets stay, chrome shrinks */
+.workspace {
+  grid-template-columns: 148px minmax(0, 1fr) !important;
+}
+:root { --elevate-sidebar: 148px; }
+.elevate-quiet-stats {
+  opacity: 0.55;
+  transform: scale(0.92);
+  transform-origin: center;
+}
+.sidebar-head h2 {
+  font-size: 0.62rem !important;
+  letter-spacing: 0.16em !important;
+  margin: 0 0 6px !important;
+}
+.preset-item {
+  padding: 6px 7px !important;
+  border-radius: 3px !important;
+}
+.preset-item-title { font-size: 0.72rem !important; }
+.preset-item-blurb {
+  font-size: 0.58rem !important;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.map-item-title { font-size: 0.72rem !important; }
+.sidebar-foot {
+  font-size: 0.58rem !important;
+  line-height: 1.35 !important;
+  margin-top: 8px !important;
+}
+.brand-copy span {
+  font-size: 0.52rem !important;
+  letter-spacing: 0.16em !important;
+}
+.resize-handle { opacity: 0; }
+.map-node:hover .resize-handle,
+.map-node.is-selected .resize-handle { opacity: 0.85; }
+.link-handle { opacity: 0.12 !important; }
+.map-node:hover .link-handle,
+.map-node.is-selected .link-handle { opacity: 0.8 !important; }
