@@ -199,7 +199,7 @@ export function MindCanvas() {
                 <circle
                   cx={n.width}
                   cy={n.height / 2}
-                  r={7}
+                  r={7.5}
                   className="link-handle"
                   onPointerDown={(e) => {
                     e.stopPropagation()
