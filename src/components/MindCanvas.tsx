@@ -137,8 +137,8 @@ export function MindCanvas() {
                 <path
                   d={`M ${x1} ${y1} C ${mx} ${y1}, ${mx} ${y2}, ${x2} ${y2}`}
                   className="edge-line"
-                  strokeDasharray="10 8"
-                  strokeDashoffset={-pulse * 18}
+                  strokeDasharray={connectFrom ? '8 6' : undefined}
+                  strokeDashoffset={connectFrom ? -pulse * 18 : undefined}
                 />
               </g>
             )
@@ -159,7 +159,7 @@ export function MindCanvas() {
                 <rect
                   width={n.width}
                   height={n.height}
-                  rx={isRoot ? 28 : 10}
+                  rx={isRoot ? 999 : 6}
                   className="node-body"
                 />
                 <foreignObject width={n.width} height={n.height}>

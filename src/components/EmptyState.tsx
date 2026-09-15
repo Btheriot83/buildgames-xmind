@@ -13,9 +13,9 @@ export function EmptyState() {
   return (
     <div className="empty-state" data-testid="empty-state">
       <svg className="empty-mini-map" viewBox="0 0 420 160" aria-hidden="true">
-        <path d="M210 80 C 270 80, 270 40, 330 40" fill="none" stroke="#8fc9b4" strokeWidth="3" strokeDasharray="6 5" />
-        <path d="M210 80 C 270 80, 270 80, 330 80" fill="none" stroke="#8fc9b4" strokeWidth="3" strokeDasharray="6 5" />
-        <path d="M210 80 C 270 80, 270 120, 330 120" fill="none" stroke="#8fc9b4" strokeWidth="3" strokeDasharray="6 5" />
+        <path d="M210 80 C 270 80, 270 40, 330 40" fill="none" stroke="#8fc9b4" strokeWidth="3"  />
+        <path d="M210 80 C 270 80, 270 80, 330 80" fill="none" stroke="#8fc9b4" strokeWidth="3"  />
+        <path d="M210 80 C 270 80, 270 120, 330 120" fill="none" stroke="#8fc9b4" strokeWidth="3"  />
         <rect x="118" y="52" width="92" height="56" rx="28" fill="#e09a3e" stroke="#f0b45c" strokeWidth="3" />
         <text x="164" y="86" textAnchor="middle" fill="#1a2c23" fontFamily="Bricolage Grotesque, sans-serif" fontSize="13" fontWeight="700">Center</text>
         <rect x="318" y="22" width="78" height="36" rx="8" fill="#24382e" stroke="#f3efe2" strokeWidth="2" />
@@ -37,10 +37,10 @@ export function EmptyState() {
         <span>Export</span>
       </div>
       <div className="empty-actions">
-        <button type="button" className="btn accent" onClick={() => newMap()}>
+        <button type="button" className="btn primary" onClick={() => newMap()}>
           New map
         </button>
-        <button type="button" className="btn job" onClick={() => seedSample()}>
+        <button type="button" className="btn secondary" onClick={() => seedSample()}>
           Load diesel week
         </button>
       </div>

@@ -106,7 +106,7 @@ export function Toolbar({
           </button>
           <button
             type="button"
-            className="btn job-primary"
+            className="btn job-primary primary"
             onClick={() => void onExport('svg')}
             data-testid="export-svg"
           >
@@ -136,14 +136,14 @@ export function Toolbar({
         </div>
         <button
           type="button"
-          className="btn accent"
+          className="btn secondary"
           onClick={() => void expandSelectedAi()}
           disabled={!selectedId || aiBusy}
           data-testid="ai-expand"
         >
           {aiBusy ? 'Expanding…' : 'AI Expand'}
         </button>
-        <button type="button" className="btn" onClick={onOpenOutline} data-testid="open-outline">
+        <button type="button" className="btn ghost" onClick={onOpenOutline} data-testid="open-outline">
           Outline
         </button>
         <button type="button" className="btn danger" onClick={() => removeSelected()} disabled={!selectedId}>

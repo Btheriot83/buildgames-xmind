@@ -51,7 +51,8 @@ Still **Copper Synapse** (repo/product). Aesthetic identity = **Shop Chalk Map**
 ## One job
 Mind map: **central topic → branch → connect → export** (+ AI Expand / outline→map).
 
-## Will NOT change in Phase B2
+## Will NOT change in Phase B2 / B3
 - Aesthetic name Shop Chalk Map, palette, type pairing, chalkboard field
 - Product name Copper Synapse
 - Local-first IndexedDB
+- B3 only: fonts hierarchy, contrast, button weight, map-limb craft vs live Xmind — no reseed
