@@ -117,3 +117,9 @@
 - verdict: Root capsule + limb cards tighter rx — dream-loop node silhouette; original still polished.
 - commit: 87779c1
 
+## r17 — fonts
+- files: src/index.css
+- shot: gauntlet/shots-r4/r17-board.png
+- verdict: Shortcuts/kbd mono hierarchy denser; original chrome quieter.
+- commit: 6df5a44
+
