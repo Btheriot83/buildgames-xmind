@@ -1469,3 +1469,7 @@ kbd {
 /* r14 — contrast */
 .map-node.is-selected .node-body { fill: #274536; stroke: var(--acid); stroke-width: 3.3; }
 .map-node.is-root.is-selected .node-body { fill: var(--copper-hot); stroke: var(--acid); }
+
+/* r15 — buttons */
+.btn.accent { background: var(--limb-fill); color: var(--chalk); border: 2px solid var(--copper); font-weight: 600; }
+.btn.danger { border-width: 2px; font-weight: 700; }

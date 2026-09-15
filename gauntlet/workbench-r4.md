@@ -105,3 +105,9 @@
 - verdict: Selected limb chalk wash + acid stroke; vs target selection clarity; original softer.
 - commit: 10c8c65
 
+## r15 — buttons
+- files: src/index.css
+- shot: gauntlet/shots-r4/r15-board.png ; gauntlet/shots-r4/r15-bar-xmind.png
+- verdict: AI Expand outline secondary vs Export primary; bar A/B — original CTA hierarchy cleaner on light UI.
+- commit: a5b8b84
+
