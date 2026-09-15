@@ -2852,3 +2852,38 @@ body {
   grid-template-columns: 168px minmax(0, 1fr);
 }
 :root { --elevate-sidebar: 168px; }
+
+/* ===== CONTEST CRAFT WAVE — MindNode/Heptabase bars (chalk-on-slate) ===== */
+
+/* craft1: organic limbs — chalk grit dual-stick, grown S-curves */
+.edge-group {
+  opacity: 0.98;
+}
+.edge-line-under {
+  stroke: #070a0f !important;
+  stroke-width: 12.5 !important;
+  opacity: 0.58 !important;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.edge-line-dust {
+  fill: none;
+  stroke: #d8fff2;
+  stroke-width: 1.55;
+  opacity: 0.42;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  pointer-events: none;
+}
+.edge-line {
+  stroke: #b8efe0 !important;
+  stroke-width: 3.85 !important;
+  opacity: 0.96 !important;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.canvas-wrap.is-linking .edge-line {
+  stroke: #e6de6a !important;
+}
